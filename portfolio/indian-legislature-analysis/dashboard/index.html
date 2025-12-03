@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Legislature Analysis 2024 | RK</title>
+    <title>Indian Legislature Analysis 2024 | Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -13,7 +14,7 @@
             min-height: 100vh;
             padding: 20px;
         }
-        .container { max-width: 1400px; margin: 0 auto; }
+        .container { max-width: 1600px; margin: 0 auto; }
         header {
             text-align: center;
             padding: 40px 20px;
@@ -42,50 +43,32 @@
         .stat-number { font-size: 3em; font-weight: bold; color: #4CAF50; }
         .stat-label { font-size: 1.1em; margin-top: 10px; }
         
-        .charts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .chart-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
+        .chart-section {
+            background: white;
             border-radius: 20px;
-            text-align: center;
-            transition: all 0.3s;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         
-        .chart-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .chart-card h2 {
-            font-size: 1.5em;
+        .chart-section h2 {
+            color: #667eea;
+            font-size: 1.8em;
             margin-bottom: 20px;
-            color: #fff;
+            text-align: center;
         }
         
-        .chart-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        .chart-container {
+            width: 100%;
+            height: 600px;
+            position: relative;
         }
         
-        .chart-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
         }
         
         .back-link {
@@ -99,29 +82,33 @@
             border-radius: 5px;
         }
         
+        .back-link:hover { background: rgba(255,255,255,0.3); }
+        
         footer {
             text-align: center;
             padding: 30px 20px;
             margin-top: 40px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
+            color: white;
         }
         
         footer a { color: #4CAF50; text-decoration: none; font-weight: bold; }
         
         @media (max-width: 768px) {
-            .charts-grid { grid-template-columns: 1fr; }
+            .two-column { grid-template-columns: 1fr; }
             h1 { font-size: 2em; }
+            .chart-container { height: 400px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="/portfolio/indian-legislature-analysis/" class="back-link">← Back to Project Page</a>
+        <a href="../" class="back-link">← Back to Project Page</a>
         
         <header>
             <h1>🏛️ Indian Legislature Analysis 2024</h1>
-            <p class="subtitle">Interactive Data Visualizations</p>
+            <p class="subtitle">Interactive Dashboard - All Visualizations</p>
         </header>
 
         <div class="stats-grid">
@@ -143,54 +130,75 @@
             </div>
         </div>
 
-        <div class="charts-grid">
-            <div class="chart-card">
+        <div class="two-column">
+            <div class="chart-section">
                 <h2>📊 Party Distribution</h2>
-                <p style="margin: 15px 0; opacity: 0.9;">Independent vs Political Party candidates</p>
-                <a href="charts/ind_vs_parties.html" class="chart-btn" target="_blank">View Chart →</a>
+                <div class="chart-container">
+                    <iframe src="charts/ind_vs_parties.html" 
+                            style="width:100%; height:100%; border:none;" 
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
             </div>
             
-            <div class="chart-card">
-                <h2>⚖️ Criminal Cases</h2>
-                <p style="margin: 15px 0; opacity: 0.9;">Distribution of candidates with criminal cases</p>
-                <a href="charts/criminal_cases.html" class="chart-btn" target="_blank">View Chart →</a>
+            <div class="chart-section">
+                <h2>⚖️ Criminal Cases Distribution</h2>
+                <div class="chart-container">
+                    <iframe src="charts/criminal_cases.html" 
+                            style="width:100%; height:100%; border:none;"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
             </div>
-            
-            <div class="chart-card">
-                <h2>🏛️ Top 10 Political Parties</h2>
-                <p style="margin: 15px 0; opacity: 0.9;">Major parties by candidate count</p>
-                <a href="charts/party_dominance.html" class="chart-btn" target="_blank">View Chart →</a>
+        </div>
+
+        <div class="chart-section">
+            <h2>🏛️ Top 10 Political Parties (Excluding Independents)</h2>
+            <div class="chart-container">
+                <iframe src="charts/party_dominance.html" 
+                        style="width:100%; height:100%; border:none;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
             </div>
-            
-            <div class="chart-card">
-                <h2>🎓 Education Levels</h2>
-                <p style="margin: 15px 0; opacity: 0.9;">Educational qualifications breakdown</p>
-                <a href="charts/education_levels.html" class="chart-btn" target="_blank">View Chart →</a>
+        </div>
+
+        <div class="chart-section">
+            <h2>🎓 Education Levels</h2>
+            <div class="chart-container">
+                <iframe src="charts/education_levels.html" 
+                        style="width:100%; height:100%; border:none;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
             </div>
-            
-            <div class="chart-card">
-                <h2>💰 Assets Distribution</h2>
-                <p style="margin: 15px 0; opacity: 0.9;">Wealth distribution by category</p>
-                <a href="charts/assets_distribution.html" class="chart-btn" target="_blank">View Chart →</a>
+        </div>
+
+        <div class="chart-section">
+            <h2>💰 Assets Distribution by Category</h2>
+            <div class="chart-container">
+                <iframe src="charts/assets_distribution.html" 
+                        style="width:100%; height:100%; border:none;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
             </div>
-            
-            <div class="chart-card">
-                <h2>📈 Criminal Cases vs Assets</h2>
-                <p style="margin: 15px 0; opacity: 0.9;">Correlation between wealth and criminality</p>
-                <a href="charts/criminal_vs_assets.html" class="chart-btn" target="_blank">View Chart →</a>
+        </div>
+
+        <div class="chart-section">
+            <h2>📈 Criminal Cases vs Assets</h2>
+            <div class="chart-container">
+                <iframe src="charts/criminal_vs_assets.html" 
+                        style="width:100%; height:100%; border:none;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
             </div>
-            
-            <div class="chart-card">
-                <h2>🏆 Top 10 Richest Candidates</h2>
-                <p style="margin: 15px 0; opacity: 0.9;">Candidates with highest declared assets</p>
-                <a href="charts/top_richest.html" class="chart-btn" target="_blank">View Chart →</a>
+        </div>
+
+        <div class="chart-section">
+            <h2>🏆 Top 10 Richest Candidates</h2>
+            <div class="chart-container">
+                <iframe src="charts/top_richest.html" 
+                        style="width:100%; height:100%; border:none;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
             </div>
         </div>
 
         <footer>
             <p>📊 Data Source: MyNeta (Association for Democratic Reforms)<br>
             🗳️ 2024 Lok Sabha General Elections<br><br>
-            Created by <a href="https://rkjat.in" target="_blank">RK</a> • Data Analyst</p>
+            Created by <a href="https://rkjat.in">RK</a> • Data Analyst</p>
         </footer>
     </div>
 </body>
