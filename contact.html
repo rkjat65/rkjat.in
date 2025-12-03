@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | DAwithRK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>DA</span>withRK</a>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="section" style="padding-top: 120px; min-height: 100vh;">
+    <div class="container text-center">
+      <h1>Get In Touch</h1>
+      <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 500px; margin: 16px auto 40px;">
+        Have a data problem that needs solving? I'd love to hear about it.
+      </p>
+      
+      <!-- 
+        FORM SETUP OPTIONS:
+        
+        Option 1: Formspree (Recommended - 50 free/month)
+        - Go to formspree.io, create account
+        - Create new form, get your form ID
+        - Replace YOUR_FORM_ID below
+        
+        Option 2: Netlify Forms (if using Netlify)
+        - Add: data-netlify="true" to form
+        - Add: name="contact" to form
+        
+        Option 3: Google Forms
+        - Create Google Form, embed iframe
+      -->
+      
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+      
+      <p style="color: var(--text-secondary); margin: 40px 0 20px;">— or connect directly —</p>
+      
+      <div class="contact-links">
+        <a href="mailto:radhakishanjat65@gmail.com" class="contact-link">
+          ✉️ radhakishanjat65@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/rkjat" class="contact-link" target="_blank">
+          💼 LinkedIn
+        </a>
+        <a href="https://github.com/rkjat65" class="contact-link" target="_blank">
+          🐙 GitHub
+        </a>
+      </div>
+      
+      <p style="color: var(--text-secondary); font-size: 14px; margin-top: 40px;">
+        Based in India · Open to remote opportunities
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 DAwithRK. Built with passion for data.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

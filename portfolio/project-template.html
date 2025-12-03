@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Template | DAwithRK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>DA</span>withRK</a>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section class="section" style="padding-top: 120px;">
+    <div class="content">
+      <h1>📋 Project Template Guide</h1>
+      <p style="font-size: 1.25rem; color: var(--text-secondary);">
+        This template shows you how to add different types of content to your portfolio projects.
+      </p>
+      
+      <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
+      
+      <!-- ============================================ -->
+      <h2>1. Embed Streamlit App</h2>
+      <p>If your app is hosted on Streamlit Cloud:</p>
+      
+      <pre><code>&lt;iframe 
+  src="https://your-app.streamlit.app/?embedded=true" 
+  width="100%" 
+  height="700"
+  style="border: none; border-radius: 12px;"&gt;
+&lt;/iframe&gt;</code></pre>
+      
+      <p><strong>Note:</strong> Add <code>?embedded=true</code> to hide Streamlit's header/footer.</p>
+      
+      <!-- ============================================ -->
+      <h2>2. Embed Dash/Flask App</h2>
+      <p>If hosted on Render, Railway, or Heroku:</p>
+      
+      <pre><code>&lt;iframe 
+  src="https://your-dash-app.onrender.com" 
+  width="100%" 
+  height="700"
+  style="border: none; border-radius: 12px;"&gt;
+&lt;/iframe&gt;</code></pre>
+      
+      <!-- ============================================ -->
+      <h2>3. Embed Jupyter Notebook</h2>
+      <p>Convert notebook to HTML and embed:</p>
+      
+      <pre><code># In terminal:
+jupyter nbconvert --to html your_notebook.ipynb
+
+# Then embed:
+&lt;iframe 
+  src="../assets/notebooks/your_notebook.html" 
+  width="100%" 
+  height="800"
+  style="border: none;"&gt;
+&lt;/iframe&gt;</code></pre>
+      
+      <p>Or use <strong>nbviewer</strong>:</p>
+      <pre><code>&lt;iframe 
+  src="https://nbviewer.org/github/username/repo/blob/main/notebook.ipynb" 
+  width="100%" 
+  height="800"&gt;
+&lt;/iframe&gt;</code></pre>
+      
+      <!-- ============================================ -->
+      <h2>4. Embed PDF Report</h2>
+      <p>Place PDF in <code>assets/pdf/</code> folder:</p>
+      
+      <pre><code>&lt;iframe 
+  src="../assets/pdf/your-report.pdf" 
+  width="100%" 
+  height="600"
+  style="border: 1px solid var(--border); border-radius: 12px;"&gt;
+&lt;/iframe&gt;</code></pre>
+      
+      <p>Or provide download link:</p>
+      <pre><code>&lt;a href="../assets/pdf/your-report.pdf" class="asset-link" target="_blank"&gt;
+  &lt;span class="icon"&gt;📄&lt;/span&gt;
+  &lt;div class="info"&gt;
+    &lt;strong&gt;Project Report&lt;/strong&gt;
+    &lt;span&gt;PDF • 2.5 MB&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+      
+      <!-- ============================================ -->
+      <h2>5. Embed PowerPoint</h2>
+      <p>Option A: Convert to PDF and embed</p>
+      <p>Option B: Use Google Slides embed:</p>
+      
+      <pre><code>&lt;iframe 
+  src="https://docs.google.com/presentation/d/YOUR_ID/embed" 
+  width="100%" 
+  height="500"
+  frameborder="0" 
+  allowfullscreen="true"&gt;
+&lt;/iframe&gt;</code></pre>
+      
+      <p>Option C: Direct download link:</p>
+      <pre><code>&lt;a href="../assets/ppt/presentation.pptx" class="asset-link"&gt;
+  &lt;span class="icon"&gt;📊&lt;/span&gt;
+  &lt;div class="info"&gt;
+    &lt;strong&gt;Presentation Deck&lt;/strong&gt;
+    &lt;span&gt;PowerPoint • 5.2 MB&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+      
+      <!-- ============================================ -->
+      <h2>6. Embed Plotly Charts (No Server Needed)</h2>
+      <p>Export chart from Python, then embed:</p>
+      
+      <pre><code># In Python/Jupyter:
+import plotly.express as px
+
+fig = px.line(df, x='date', y='value', title='My Chart')
+fig.write_html('chart.html', include_plotlyjs='cdn')
+
+# Then in your HTML page:
+&lt;iframe 
+  src="../assets/charts/chart.html" 
+  width="100%" 
+  height="500"
+  style="border: none;"&gt;
+&lt;/iframe&gt;</code></pre>
+      
+      <!-- ============================================ -->
+      <h2>7. Complete Project Folder</h2>
+      <p>Include all project files for download:</p>
+      
+      <div class="assets-list">
+        <a href="#" class="asset-link">
+          <span class="icon">📁</span>
+          <div class="info">
+            <strong>Complete Project Files</strong>
+            <span>ZIP • 15 MB</span>
+          </div>
+        </a>
+        <a href="#" class="asset-link">
+          <span class="icon">📓</span>
+          <div class="info">
+            <strong>Jupyter Notebook</strong>
+            <span>IPYNB • 2.1 MB</span>
+          </div>
+        </a>
+        <a href="#" class="asset-link">
+          <span class="icon">📄</span>
+          <div class="info">
+            <strong>Analysis Report</strong>
+            <span>PDF • 3.5 MB</span>
+          </div>
+        </a>
+        <a href="#" class="asset-link">
+          <span class="icon">📊</span>
+          <div class="info">
+            <strong>Presentation</strong>
+            <span>PPTX • 8.2 MB</span>
+          </div>
+        </a>
+        <a href="#" class="asset-link">
+          <span class="icon">📋</span>
+          <div class="info">
+            <strong>Dataset</strong>
+            <span>CSV • 1.2 MB</span>
+          </div>
+        </a>
+      </div>
+      
+      <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
+      
+      <h2>📁 Recommended Folder Structure</h2>
+      <pre><code>your-website/
+├── index.html
+├── about.html
+├── contact.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── images/
+│   └── profile.jpg
+├── portfolio/
+│   ├── index.html
+│   ├── project-1.html
+│   └── project-2.html
+├── blog/
+│   ├── index.html
+│   └── post-1.html
+└── assets/
+    ├── pdf/
+    │   └── report.pdf
+    ├── ppt/
+    │   └── presentation.pptx
+    ├── notebooks/
+    │   └── analysis.html
+    └── charts/
+        └── chart.html</code></pre>
+      
+      <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
+      
+      <h2>🚀 Best Hosting Options for Apps</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Best For</th>
+            <th>Sleep?</th>
+            <th>Free Tier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Render</strong></td>
+            <td>Dash, Flask</td>
+            <td>Yes (15 min)</td>
+            <td>750 hours/month</td>
+          </tr>
+          <tr>
+            <td><strong>Railway</strong></td>
+            <td>Any Python app</td>
+            <td>No</td>
+            <td>$5 free credit</td>
+          </tr>
+          <tr>
+            <td><strong>Koyeb</strong></td>
+            <td>Always-on apps</td>
+            <td>No</td>
+            <td>Free nano instance</td>
+          </tr>
+          <tr>
+            <td><strong>Hugging Face Spaces</strong></td>
+            <td>Streamlit, Gradio</td>
+            <td>Yes</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td><strong>Streamlit Cloud</strong></td>
+            <td>Streamlit only</td>
+            <td>Yes (7 days)</td>
+            <td>Free (public repos)</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="text-center mt-40">
+        <a href="index.html" class="btn btn-secondary">← Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 DAwithRK. Built with passion for data.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
