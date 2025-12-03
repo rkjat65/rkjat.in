@@ -716,3 +716,89 @@ h3 { font-size: 1.25rem; }
 .text-center { text-align: center; }
 .mt-40 { margin-top: 40px; }
 .mb-40 { margin-bottom: 40px; }
+
+/* ============================================
+   Social Share Buttons
+   ============================================ */
+.share-section {
+  margin: 40px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.share-section h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+  color: white;
+}
+
+.share-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.share-btn.twitter {
+  background: #000000;
+  color: white;
+}
+
+.share-btn.linkedin {
+  background: #0A66C2;
+  color: white;
+}
+
+.share-btn.facebook {
+  background: #1877F2;
+  color: white;
+}
+
+.share-btn.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.share-btn.copy {
+  background: var(--bg-secondary);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.share-btn.copy:hover {
+  color: var(--text);
+}
+
+.share-btn.copy.copied {
+  background: #34c759;
+  color: white;
+  border-color: #34c759;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,12 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V7XW1QPZ8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-4V7XW1QPZ8');
 </script>
+
 <body>
   <!-- Navigation -->
   <nav class="nav">
@@ -49,13 +51,15 @@
   <section class="section">
     <div class="container container-wide">
       <div class="grid grid-2">
-        
+
         <!-- Project 1: India Economic Pulse -->
         <article class="card">
-          <div class="card-image-placeholder"> <img src="images/dash1.png" alt="dashboard1"></div>
+          <div class="card-image-placeholder"> <img src="/images/dash1.png" alt="dashboard1"
+              style="width: 100%; height: auto; border-radius: 6px;" loading="lazy"></div>
           <div class="card-body">
             <h3><a href="india-economic-pulse.html">India Economic Pulse</a></h3>
-            <p>Interactive dashboard tracking India's key economic indicators (2012-2025) with real-time visualizations</p>
+            <p>Interactive dashboard tracking India's key economic indicators (2012-2025) with real-time visualizations
+            </p>
             <div class="tags">
               <span class="tag">Python</span>
               <span class="tag">Streamlit</span>
@@ -64,22 +68,35 @@
             </div>
           </div>
         </article>
-        
+
+        <!-- Add after India Economic Pulse -->
+        <div class="project-card">
+          <h3>🏛️ Indian Legislature Analysis</h3>
+          <p>Analysis of 8,338 Lok Sabha candidates examining party dynamics, criminal cases, education, and assets</p>
+          <div class="tags">
+            <span>Python</span>
+            <span>Selenium</span>
+            <span>Plotly</span>
+          </div>
+          <a href="/portfolio/indian-legislature-analysis/">View Project →</a>
+        </div>
+
         <!-- Project 2: Template -->
         <article class="card">
-          <div class="card-image-placeholder">📈</div>
+          <div class="card-image-placeholder"><img src="/images/templ.jpg" alt="template style=" width: 100%; height:
+              auto; border-radius: 6px;" loading="lazy"></div>
           <div class="card-body">
             <h3><a href="project-template.html">Project Template</a></h3>
             <p>Use this template to add new projects with embedded dashboards, PDFs, and more</p>
             <div class="tags">
               <span class="tag">Template</span>
-              <span class="tag">How-To</span>
+              <span class="tag">Upcoming</span>
             </div>
           </div>
         </article>
-        
+
         <!-- Add more projects here by copying the card structure -->
-        
+
       </div>
     </div>
   </section>
@@ -89,6 +106,7 @@
     <div class="container">
       <p>&copy; 2025 DAwithRK. Built with passion for data.</p>
       <div class="footer-links">
+        <a href="https://X.com/rkjat65" target="_blank">X</a>
         <a href="https://github.com/rkjat65" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/rkjat" target="_blank">LinkedIn</a>
       </div>
@@ -97,4 +115,5 @@
 
   <script src="../js/main.js"></script>
 </body>
+
 </html>
