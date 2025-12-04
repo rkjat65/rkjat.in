@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 20px;
+        }
+        .container { max-width: 1800px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        h1 { font-size: 3em; margin-bottom: 15px; }
+        .chart-section {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            width: 100%;
+            height: 700px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ INDIAN LEGISLATURE ANALYSIS 2024</h1>
+            <p>Premium Interactive Dashboard</p>
+        </header>
+
+        <div class="chart-section">
+            <div class="chart-container">
+                <iframe src="charts/premium/criminal_gauge.html"></iframe>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-container">
+                <iframe src="charts/premium/top_parties_horizontal.html"></iframe>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-container">
+                <iframe src="charts/premium/education_treemap.html"></iframe>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-container">
+                <iframe src="charts/premium/criminal_assets_scatter.html"></iframe>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-container">
+                <iframe src="charts/premium/top_richest_premium.html"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
