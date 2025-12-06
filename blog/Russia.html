@@ -10,16 +10,42 @@
         content="India Russia summit, India-Russia relations, nuclear energy cooperation, Arctic partnership, bilateral trade, Modi Putin, geopolitics">
     <meta name="author" content="Strategic Affairs Analyst">
     <meta name="robots" content="index, follow">
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn, WhatsApp) -->
     <meta property="og:title"
         content="India and Russia Cement Strategic Partnership with Major Pacts on Arctic, Atomic Energy, and Trade">
     <meta property="og:description"
         content="23rd India-Russia Annual Summit establishes expansive energy and trade collaborations with major commitments to nuclear, space, and Arctic cooperation.">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://example.com/india-russia-summit.jpg">
+    <meta property="og:image" content="https://example.com/images/RussiaR/R1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="India-Russia Strategic Partnership Summit 2024">
+    <meta property="og:url" content="https://rkjat.in/blog/india-russia-summit">
+    <meta property="og:site_name" content="DAwithRK">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags (Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rkjat65">
+    <meta name="twitter:creator" content="@rkjat65">
     <meta name="twitter:title" content="India-Russia Strategic Partnership: Arctic, Nuclear, Trade Pacts">
     <meta name="twitter:description"
         content="PM Modi and President Putin establish 2030 collaboration framework with $100B trade target and nuclear cooperation expansion.">
+    <meta name="twitter:image" content="https://example.com/images/RussiaR/R1.png">
+    <meta name="twitter:image:alt" content="India-Russia Strategic Partnership Summit 2024">
+    
+    <!-- Pinterest Meta Tags -->
+    <meta name="pinterest:media" content="https://example.com/images/RussiaR/R1.png">
+    <meta name="pinterest:description" content="India and Russia Cement Strategic Partnership with Major Pacts on Arctic, Atomic Energy, and Trade">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta property="article:published_time" content="2024-12-06T00:00:00Z">
+    <meta property="article:modified_time" content="2024-12-06T00:00:00Z">
+    <meta property="article:author" content="DAwithRK">
+    <meta property="article:section" content="Geopolitics">
+    <meta property="article:tag" content="India-Russia">
+    <meta property="article:tag" content="Geopolitics">
+    <meta property="article:tag" content="Strategic Partnership">
 
     <title>India-Russia Strategic Partnership 2024: Arctic, Nuclear & Trade Pacts | Summit Analysis</title>
 
@@ -178,6 +204,26 @@
             object-fit: cover;
             border-radius: 12px;
             transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: block;
+        }
+
+        .image-wrapper picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .image-wrapper picture img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
         .image-wrapper:hover img {
@@ -200,13 +246,22 @@
         picture {
             display: block;
             width: 100%;
+            height: auto;
         }
 
-        .hero-image {
+        picture img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            max-width: 100% !important;
+        }
+
+        /* .hero-image {
             width: 100%;
             max-height: 500px;
             object-fit: cover;
             border-radius: 0;
+            display: block; */
         }
 
         @media (max-width: 768px) {
@@ -251,10 +306,10 @@
             font-size: 1.1rem;
             opacity: 0.95;
             max-width: 800px;
-            color: yellow;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            color: yellow;
         }
 
         .hero-image-container {
@@ -735,6 +790,7 @@
         }
 
         /* ============ FOOTER ============ */
+        /* ============ FOOTER ============ */
         .footer {
             background: #f9fafb;
             padding: 30px 25px;
@@ -749,6 +805,216 @@
             color: #1e3c72;
             margin-bottom: 15px;
             animation: slideInDown 0.6s ease-out;
+        }
+
+        /* ============ FOOTER SECTION ============ */
+        .footer-section {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 40px 30px;
+            text-align: center;
+            border-top: 3px solid #1e3c72;
+            margin-top: 50px;
+            border-radius: 12px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .footer-section h3 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .footer-section p {
+            color: #666;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        /* ============ SOCIAL LINKS ============ */
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            color: white;
+            border: 2px solid transparent;
+            animation: slideInUp 0.6s ease-out;
+            animation-fill-mode: both;
+            cursor: pointer;
+        }
+
+        .social-btn:nth-child(1) { animation-delay: 0.1s; }
+        .social-btn:nth-child(2) { animation-delay: 0.2s; }
+        .social-btn:nth-child(3) { animation-delay: 0.3s; }
+        .social-btn:nth-child(4) { animation-delay: 0.4s; }
+
+        .social-icon {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .social-text {
+            font-size: 0.95rem;
+        }
+
+        /* Twitter/X Button */
+        .social-btn.twitter {
+            background: linear-gradient(135deg, #1DA1F2 0%, #1a8cd8 100%);
+        }
+
+        .social-btn.twitter:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(29, 161, 242, 0.4);
+            border-color: #1DA1F2;
+        }
+
+        /* LinkedIn Button */
+        .social-btn.linkedin {
+            background: linear-gradient(135deg, #0A66C2 0%, #084393 100%);
+        }
+
+        .social-btn.linkedin:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(10, 102, 194, 0.4);
+            border-color: #0A66C2;
+        }
+
+        /* Facebook Button */
+        .social-btn.facebook {
+            background: linear-gradient(135deg, #1877F2 0%, #0A66C2 100%);
+        }
+
+        .social-btn.facebook:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(24, 119, 242, 0.4);
+            border-color: #1877F2;
+        }
+
+        /* WhatsApp Button */
+        .social-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #1ea854 100%);
+        }
+
+        .social-btn.whatsapp:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.4);
+            border-color: #25D366;
+        }
+
+        /* ============ CONNECT SECTION ============ */
+        .connect-section {
+            margin: 30px 0;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .connect-section h4 {
+            color: #1e3c72;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .connect-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .connect-btn {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            animation: slideInUp 0.6s ease-out;
+            animation-fill-mode: both;
+            display: inline-block;
+        }
+
+        .connect-links a:nth-child(1) { animation-delay: 0.1s; }
+        .connect-links a:nth-child(2) { animation-delay: 0.2s; }
+        .connect-links a:nth-child(3) { animation-delay: 0.3s; }
+        .connect-links a:nth-child(4) { animation-delay: 0.4s; }
+
+        .connect-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(30, 60, 114, 0.3);
+        }
+
+        /* ============ FOOTER NOTE ============ */
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+            animation: slideInUp 1.2s ease-out;
+        }
+
+        .footer-note p {
+            margin: 8px 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .footer-note strong {
+            color: #1e3c72;
+        }
+
+        /* ============ MOBILE FOOTER ============ */
+        @media (max-width: 768px) {
+            .footer-section {
+                padding: 25px 15px;
+            }
+
+            .footer-section h3 {
+                font-size: 1.4rem;
+            }
+
+            .social-links {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .social-btn {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+
+            .social-icon {
+                font-size: 1.1rem;
+            }
+
+            .social-text {
+                display: none;
+            }
+
+            .connect-links {
+                grid-template-columns: 1fr;
+            }
+
+            .connect-btn {
+                width: 100%;
+                text-align: center;
+            }
         }
 
         .hashtags {
@@ -855,6 +1121,34 @@
 
             .image-wrapper {
                 padding-bottom: 75%;
+                margin: 20px 0;
+            }
+
+            picture {
+                width: 100%;
+                display: block;
+            }
+
+            picture img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .hero-image-container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .hero-image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .hero-image {
+                max-height: 300px;
             }
         }
 
@@ -891,7 +1185,7 @@
     <!-- HERO IMAGE WITH RESPONSIVE DESIGN -->
     <div class="hero-image-container">
         <picture>
-            <source media="(max-width: 268px)" srcset="/images/RussiaR/R1.png">
+            <source media="(max-width: 768px)" srcset="/images/RussiaR/R1.png">
             <source media="(min-width: 769px)" srcset="/images/RussiaR/R1.png">
             <img class="hero-image" src="/images/RussiaR/R1.png" alt="India-Russia Strategic Partnership Summit" loading="lazy">
         </picture>
@@ -1099,7 +1393,7 @@
         <!-- RESPONSIVE IMAGE -->
         <div class="image-wrapper animate-on-scroll">
             <picture>
-                <source media="(max-width: 768px)" srcset="/images/RussiaR/People.png">
+                <source media="(max-width: 768px)" srcset="/images/RussiaR/people.png">
                 <source media="(min-width: 769px)" srcset="/images/RussiaR/people.png">
                 <img src="/images/RussiaR/people.png" alt="People Exchange Programme" loading="lazy">
             </picture>
@@ -1220,20 +1514,49 @@
                 positioning both nations as independent actors in a multipolar world.</p>
         </div>
 
-        <!-- FOOTER -->
-        <div class="footer animate-on-scroll">
-            <h3>Share This Analysis</h3>
-            <p>This comprehensive analysis of the India-Russia 23rd Annual Summit covers nuclear cooperation, Arctic
-                engagement, trade expansion, and strategic implications for global geopolitics.</p>
-            <div class="hashtags">
-                <span>#IndiaRussiaSummit</span>
-                <span>#StrategicPartnership</span>
-                <span>#NuclearCooperation</span>
-                <span>#IndianGeopolitics</span>
-                <span>#Modi-Putin</span>
-                <span>#TradeExpansion</span>
-                <span>#ArcticCooperation</span>
-                <span>#Multipolar</span>
+        <!-- FOOTER WITH SOCIAL SHARING -->
+        <div class="footer-section animate-on-scroll">
+            <h3>📢 Share & Connect</h3>
+            <p>Found this analysis valuable? Share it with your network and follow for more insights on geopolitics and data analytics.</p>
+            
+            <div class="social-links">
+                <a href="https://twitter.com/intent/tweet?url=https://rkjat.in/blog/india-russia-summit&text=India-Russia%20Strategic%20Partnership%3A%20Arctic%2C%20Nuclear%20%26%20Trade%20Pacts&via=rkjat65" 
+                   target="_blank" class="social-btn twitter" title="Share on Twitter/X">
+                    <span class="social-icon">𝕏</span>
+                    <span class="social-text">Share on Twitter/X</span>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rkjat.in/blog/india-russia-summit" 
+                   target="_blank" class="social-btn linkedin" title="Share on LinkedIn">
+                    <span class="social-icon">in</span>
+                    <span class="social-text">Share on LinkedIn</span>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://rkjat.in/blog/india-russia-summit" 
+                   target="_blank" class="social-btn facebook" title="Share on Facebook">
+                    <span class="social-icon">f</span>
+                    <span class="social-text">Share on Facebook</span>
+                </a>
+                <a href="https://wa.me/?text=Check%20out%20this%20analysis%3A%20India-Russia%20Strategic%20Partnership%20https://rkjat.in/blog/india-russia-summit" 
+                   target="_blank" class="social-btn whatsapp" title="Share on WhatsApp">
+                    <span class="social-icon">W</span>
+                    <span class="social-text">Share on WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="connect-section">
+                <h4>📱 Connect With Me</h4>
+                <div class="connect-links">
+                    <a href="https://twitter.com/rkjat65" target="_blank" class="connect-btn">🐦 Twitter/X</a>
+                    <a href="https://github.com/rkjat65" target="_blank" class="connect-btn">💻 GitHub</a>
+                    <a href="https://linkedin.com/in/rkjat" target="_blank" class="connect-btn">💼 LinkedIn</a>
+                    <a href="https://rkjat.in" target="_blank" class="connect-btn">🌐 Portfolio</a>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                <p>&copy; 2025 <strong>DAwithRK</strong> - Data Analytics & Geopolitical Insights</p>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 8px;">
+                    Transforming data into compelling narratives on economics, geopolitics, and technology.
+                </p>
             </div>
         </div>
     </div>
