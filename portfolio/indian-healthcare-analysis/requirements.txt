@@ -1,0 +1,29 @@
+# Python Dependencies for Indian Healthcare Analysis Project
+
+# Data manipulation and analysis
+pandas==2.1.4
+numpy==1.26.2
+
+# Database
+sqlite3  # Built-in with Python, no need to install
+
+# Data visualization (optional for EDA)
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Excel file handling
+openpyxl==3.1.2
+xlrd==2.0.1
+
+# Jupyter notebook
+jupyter==1.0.0
+ipykernel==6.27.1
+
+# Data validation
+great-expectations==0.18.5  # Optional: For data quality checks
+
+# Progress bars
+tqdm==4.66.1
+
+# File handling
+chardet==5.2.0  # For detecting file encodings
