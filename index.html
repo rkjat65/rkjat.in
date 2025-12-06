@@ -86,34 +86,9 @@
         <p>A selection of my recent data analysis work</p>
       </div>
 
-      <div class="grid grid-2">
-        <!-- Project 1 -->
-        <article class="card">
-          <div class="card-image-placeholder"><img src="images/dash1.png" alt="dashboard1"></div>
-          <div class="card-body">
-            <h3><a href="/portfolio/india-economic-pulse.html">India Economic Pulse</a></h3>
-            <p>Interactive dashboard tracking India's key economic indicators (2012-2025)</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">Plotly</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Add more projects here -->
-        <article class="card">
-          <div class="card-image-placeholder"><img src="images/dash2.png" alt=""></div>
-          <div class="card-body">
-            <h3><a href="/portfolio/indian-legislature-analysis/index.html"> Indian Legislature Analysis</a></h3>
-            <p>2024 Lok Sabha Election</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Selenium</span>
-              <span class="tag">Plotly</span>
-            </div>
-          </div>
-        </article>
+      <div class="grid grid-2" id="featured-projects">
+        <!-- Projects will be loaded dynamically from content-index.json -->
+        <div class="loading-placeholder">Loading projects...</div>
       </div>
 
       <div class="text-center mt-40">
@@ -130,19 +105,9 @@
         <p>Thoughts on data Analysis, and Current Affairs</p>
       </div>
 
-      <div class="grid grid-3">
-        <!-- Blog 1 -->
-        <article class="card">
-          <div class="card-body">
-            <p class="blog-meta">Dec 4, 2025 · 6 min read</p>
-            <h3><a href="/blog/deepfake.html">AI and Deepfake crisis</a></h3>
-            <p>AI advancement and danger of Deepfakes to Society</p>
-            <img src="blog/fishbowl.png" alt="deepfake"
-              style="width: 100%; height: auto; max-width: 1200px; display: block; margin: 0 auto;" loading="lazy">
-          </div>
-        </article>
-
-        <!-- Add more blog posts here -->
+      <div class="grid grid-3" id="latest-blogs">
+        <!-- Blog posts will be loaded dynamically from content-index.json -->
+        <div class="loading-placeholder">Loading blog posts...</div>
       </div>
 
 

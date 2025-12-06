@@ -220,6 +220,30 @@ h3 {
   .nav-links.active {
     display: flex;
   }
+
+  .hero {
+    padding: 100px 16px 60px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ============================================
@@ -304,11 +328,14 @@ h3 {
   text-align: center;
   padding: 120px 24px 80px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .hero-content {
   max-width: 900px;
+  width: 100%;
   position: relative;
   z-index: 2;
   animation: fadeInUp 0.8s ease-out;
@@ -926,6 +953,22 @@ h3 {
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+
+/* ============================================
+   Loading Placeholder
+   ============================================ */
+.loading-placeholder {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-light);
+  font-style: italic;
+  animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
 }
 
 /* ============================================

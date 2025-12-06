@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "id": "indian-healthcare-analysis",
+      "title": "Indian Healthcare System Analysis",
+      "description": "Comprehensive analysis of 707 districts across India using NFHS-5 data, examining healthcare improvements and challenges.",
+      "date": "2024-11-15",
+      "tags": ["Python", "SQL", "Power BI", "Healthcare"],
+      "image": "portfolio/indian-healthcare-analysis/images/page1-national-overview.png",
+      "link": "portfolio/indian-healthcare-analysis/",
+      "featured": true
+    },
+    {
+      "id": "indian-legislature-analysis",
+      "title": "Indian Legislature Analysis",
+      "description": "Analysis of 8,338 Lok Sabha 2024 candidates examining party dynamics, criminal cases, education, and wealth declarations.",
+      "date": "2024-10-20",
+      "tags": ["Python", "Plotly", "Data Analysis", "Politics"],
+      "image": "images/dash2.png",
+      "link": "portfolio/indian-legislature-analysis/",
+      "featured": true
+    },
+    {
+      "id": "india-economic-pulse",
+      "title": "India Economic Pulse Dashboard",
+      "description": "Interactive dashboard analyzing India's economic indicators including GDP, inflation, employment, and trade data.",
+      "date": "2024-09-10",
+      "tags": ["Streamlit", "Python", "Economics", "Dashboard"],
+      "image": "portfolio/preview-economic.png",
+      "link": "portfolio/india-economic-pulse.html",
+      "featured": false
+    }
+  ],
+  "blogs": [
+    {
+      "id": "india-russia-summit",
+      "title": "India-Russia Strategic Partnership",
+      "description": "Comprehensive analysis of the 23rd India-Russia Annual Summit covering nuclear cooperation, space partnership, and $100B trade target.",
+      "date": "2024-12-06",
+      "tags": ["Geopolitics", "India", "Russia", "Analysis"],
+      "category": "Geopolitics",
+      "readTime": "10 min",
+      "image": "images/RussiaR/R0.png",
+      "link": "blog/Russia.html",
+      "featured": true
+    },
+    {
+      "id": "deepfake-crisis",
+      "title": "Privacy in a 'Fishbowl Society': India's Deepfake Crisis",
+      "description": "India's Deepfake Crisis: Why Current Laws Fail Women & What Needs to Change. Analysis of NCII abuse and systemic legal failure.",
+      "date": "2024-12-05",
+      "tags": ["AI", "Privacy", "India", "Current Affairs"],
+      "category": "Current Affairs",
+      "readTime": "6 min",
+      "image": "blog/deepfake-preview.jpg",
+      "link": "blog/deepfake.html",
+      "featured": true
+    },
+    {
+      "id": "ukraine-peace",
+      "title": "Why Is There No Peace in Ukraine?",
+      "description": "A look at the prolonged invasion and the controversial new peace proposals. Analysis of geopolitical shifts and the Trump Plan.",
+      "date": "2024-12-01",
+      "tags": ["Geopolitics", "Ukraine", "Russia", "Analysis"],
+      "category": "Geopolitics",
+      "readTime": "8 min",
+      "image": "blog/ukraine1.jpg",
+      "link": "blog/ukraine.html",
+      "featured": true
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-12-06",
+    "version": "1.0"
+  }
+}

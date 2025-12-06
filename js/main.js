@@ -121,9 +121,10 @@ function initCanvas() {
   let width, height;
   let particles = [];
 
-  // Configuration
-  const particleCount = 60;
-  const connectionDistance = 150;
+  // Configuration - reduce particles on mobile for better performance
+  const isMobile = window.innerWidth < 768;
+  const particleCount = isMobile ? 30 : 60;
+  const connectionDistance = isMobile ? 120 : 150;
 
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -267,4 +268,85 @@ function generateShareButtons() {
         <span id="copy-text">Copy Link</span>
       </button>
     `;
+}
+
+// ============================================
+// Dynamic Content Loading for Homepage
+// ============================================
+async function loadDynamicContent() {
+  try {
+    const response = await fetch('/content-index.json');
+    const data = await response.json();
+
+    // Load featured projects (latest 2)
+    loadFeaturedProjects(data.projects);
+
+    // Load latest blog posts (latest 3)
+    loadLatestBlogs(data.blogs);
+  } catch (error) {
+    console.error('Error loading content:', error);
+    // If loading fails, hide the loading placeholders
+    const projectsContainer = document.getElementById('featured-projects');
+    const blogsContainer = document.getElementById('latest-blogs');
+    if (projectsContainer) projectsContainer.innerHTML = '<p>Unable to load projects at this time.</p>';
+    if (blogsContainer) blogsContainer.innerHTML = '<p>Unable to load blog posts at this time.</p>';
+  }
+}
+
+function loadFeaturedProjects(projects) {
+  const container = document.getElementById('featured-projects');
+  if (!container) return;
+
+  // Sort by date (newest first) and get top 2
+  const sortedProjects = projects
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 2);
+
+  container.innerHTML = sortedProjects.map(project => `
+    <article class="card">
+      <div class="card-image-placeholder">
+        <img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
+      </div>
+      <div class="card-body">
+        <h3><a href="/${project.link}">${project.title}</a></h3>
+        <p>${project.description}</p>
+        <div class="tags">
+          ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function loadLatestBlogs(blogs) {
+  const container = document.getElementById('latest-blogs');
+  if (!container) return;
+
+  // Sort by date (newest first) and get top 3
+  const sortedBlogs = blogs
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3);
+
+  container.innerHTML = sortedBlogs.map(blog => {
+    const blogDate = new Date(blog.date);
+    const formattedDate = blogDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+    return `
+      <article class="card">
+        <div class="card-body">
+          <p class="blog-meta">${formattedDate} · ${blog.readTime}</p>
+          <h3><a href="/${blog.link}">${blog.title}</a></h3>
+          <p>${blog.description}</p>
+          <div class="tags">
+            ${blog.tags.slice(0, 3).map(tag => `<span class="tag">${tag}</span>`).join('')}
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+// Initialize dynamic content loading when DOM is ready
+if (document.getElementById('featured-projects') || document.getElementById('latest-blogs')) {
+  loadDynamicContent();
 }
