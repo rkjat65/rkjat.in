@@ -79,10 +79,22 @@
       "image": "images/Gemini/cover.jpg",
       "link": "blog/gemini3win.html",
       "featured": true
+    },
+    {
+      "id": "sam-altman",
+      "title": "Inside the AI Battleground",
+      "description": "Why Sam Altman Declared Emergency Mode at OpenAI as Google Surges Ahead",
+      "date": "2024-12-08",
+      "tags": ["AI", "Tech", "Industry", "CodeRed"],
+      "category": "Tech",
+      "readTime": "6 min",
+      "image": "images/Sam/cover.png",
+      "link": "blog/samaltman.html",
+      "featured": true
     }
   ],
   "metadata": {
-    "lastUpdated": "2024-12-07",
+    "lastUpdated": "2024-12-08",
     "version": "1.0"
   }
 }
