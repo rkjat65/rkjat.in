@@ -333,6 +333,9 @@ function loadLatestBlogs(blogs) {
 
     return `
       <article class="card">
+        <div class="card-image-placeholder">
+          <img src="${blog.image}" alt="${blog.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
+        </div>
         <div class="card-body">
           <p class="blog-meta">${formattedDate} · ${blog.readTime}</p>
           <h3><a href="/${blog.link}">${blog.title}</a></h3>

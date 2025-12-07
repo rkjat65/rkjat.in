@@ -52,7 +52,7 @@
       "tags": ["AI", "Privacy", "India", "Current Affairs"],
       "category": "Current Affairs",
       "readTime": "6 min",
-      "image": "blog/deepfake-preview.jpg",
+      "image": "blog/fishbowl.png",
       "link": "blog/deepfake.html",
       "featured": true
     },
@@ -66,11 +66,23 @@
       "readTime": "8 min",
       "image": "blog/ukraine1.jpg",
       "link": "blog/ukraine.html",
+      "featured": false
+    },
+    {
+      "id": "gemini-ai",
+      "title": "Gemini 3: Google's New AI King",
+      "description": "How Google's Revolutionary AI Model Challenges Nvidia's Hardware Empire and Reshapes the AI Industry",
+      "date": "2024-12-07",
+      "tags": ["AI", "Tech", "Industry", "ChiWar"],
+      "category": "Tech",
+      "readTime": "7 min",
+      "image": "images/Gemini/cover.jpg",
+      "link": "blog/gemini3win.html",
       "featured": true
     }
   ],
   "metadata": {
-    "lastUpdated": "2024-12-06",
+    "lastUpdated": "2024-12-07",
     "version": "1.0"
   }
 }
