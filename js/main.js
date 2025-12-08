@@ -337,7 +337,7 @@ function loadFeaturedProjects(projects) {
   // Sort by date (newest first) and get top 2
   const sortedProjects = projects
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 2);
+    .slice(0, 3);
 
   container.innerHTML = sortedProjects.map(project => `
     <article class="card">
