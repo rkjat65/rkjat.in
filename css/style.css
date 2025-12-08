@@ -645,14 +645,25 @@ h3 {
 }
 
 .card-body {
-  padding: 32px;
-  background: var(--glass);
-  backdrop-filter: blur(20px);
+  padding: 24px;
+  background: var(--bg);
+  /* Default standard background */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-top: 1px solid var(--border);
+}
+
+/* Featured Projects Overlay Style */
+#featured-projects .card-body {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 32px;
 }
 
 .card:hover .card-body {
@@ -904,12 +915,15 @@ h3 {
 }
 
 /* Bento Grid Specific Overlay */
+/* Bento Grid Specific Overlay Refinement */
 #featured-projects .card-body {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) 70%, transparent);
   backdrop-filter: blur(10px);
   border-top: none;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: white;
+  justify-content: flex-end;
+  /* Align content to bottom */
 }
 
 #featured-projects .card-body h3 a,
