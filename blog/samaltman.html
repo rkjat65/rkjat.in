@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Inside the AI Battleground: Why Sam Altman Declared 'Code Red' at OpenAI. Analysis of competitive pressure, legal challenges, and the urgent need to catch up to Google's Gemini 3.">
+    <meta name="keywords"
+        content="OpenAI, Sam Altman, Code Red, ChatGPT, Gemini 3, Google, AI competition, GPT-5.1, leadership crisis">
+    <meta name="author" content="DAwithRK">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Inside the AI Battleground: Why Sam Altman Declared 'Code Red' at OpenAI">
+    <meta property="og:description"
+        content="Exploring the competitive crisis, legal battles, and leadership challenges forcing OpenAI into emergency mode as Google surges ahead.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://rkjat.in/images/Sam/cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://rkjat.in/blog/samaltman.html">
+    <meta property="og:site_name" content="DAwithRK">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rkjat65">
+    <meta name="twitter:creator" content="@rkjat65">
+    <meta name="twitter:title" content="OpenAI's Code Red Crisis: The Battle with Google Heats Up">
+    <meta name="twitter:description"
+        content="Sam Altman declares emergency mode at OpenAI. How Google's Gemini 3 triggered a $500B company into crisis response mode.">
+    <meta name="twitter:image" content="https://rkjat.in/images/Sam/cover.png">
+    <meta name="twitter:image:alt" content="OpenAI Code Red Crisis Sam Altman">
+
+    <!-- Article Meta Tags -->
+    <meta property="article:published_time" content="2024-12-06T00:00:00Z">
+    <meta property="article:modified_time" content="2024-12-06T00:00:00Z">
+    <meta property="article:author" content="DAwithRK">
+    <meta property="article:section" content="AI Industry & Crisis Analysis">
+    <meta property="article:tag" content="OpenAI">
+    <meta property="article:tag" content="Code-Red">
+    <meta property="article:tag" content="AI-Competition">
+    <meta property="article:tag" content="Google">
+    <meta property="article:tag" content="Crisis-Management">
+
+    <title>OpenAI's Code Red: Inside the AI Battleground Crisis | DAwithRK</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ============ ANIMATIONS ============ */
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+            }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes imageFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes imageZoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes imageFadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+        }
+
+        .animate-on-scroll.visible {
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        /* ============ IMAGE STYLES ============ */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 30px auto;
+            opacity: 0;
+            animation: imageZoomIn 0.8s ease-out forwards;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        img:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+
+        .title-image {
+            animation: imageFadeSlide 1s ease-out forwards;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(239, 68, 68, 0.2);
+            position: relative;
+        }
+
+        .title-image:hover {
+            animation: imageFloat 3s ease-in-out infinite;
+        }
+
+        .pressure-item img {
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 3px solid #ef4444;
+            animation: imageFadeSlide 0.8s ease-out forwards;
+            animation-delay: 0.3s;
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            padding: 5px;
+        }
+
+        .pressure-item img:hover {
+            border-color: #dc2626;
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 12px 40px rgba(239, 68, 68, 0.3);
+        }
+
+        /* Image loading state */
+        img[loading="lazy"] {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        /* Image Modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .image-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            animation: zoomIn 0.3s ease-out;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+
+        .image-modal-close:hover {
+            color: #ef4444;
+            transform: rotate(90deg);
+        }
+
+        /* ============ RESPONSIVE IMAGES ============ */
+        @media (max-width: 768px) {
+            img {
+                margin: 20px auto;
+                border-radius: 8px;
+            }
+
+            .pressure-item img {
+                border-width: 2px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                border-radius: 6px;
+            }
+        }
+
+        /* ============ HEADER ============ */
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1f1f1f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            animation: slideInDown 1s ease-out;
+            color: #ff4444;
+        }
+
+        header .code-red {
+            display: inline-block;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin: 10px 0;
+            animation: glow 2s ease-in-out infinite;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            color: yellow;
+        }
+
+        /* ============ PROGRESS BAR ============ */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ef4444, #f97316, #eab308);
+            width: 0%;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+
+        /* ============ CONTAINER ============ */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 50px 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 1s ease-out;
+        }
+
+        /* ============ META INFO ============ */
+        .meta-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #ef4444;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+            color: #666;
+            flex-wrap: wrap;
+            gap: 15px;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ============ INTRO BOX ============ */
+        .intro-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 5px solid #ef4444;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            animation: slideInLeft 0.8s ease-out;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-box::before {
+            content: '⚠️ CRISIS';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            animation: shake 2s infinite;
+        }
+
+        .intro-box:hover {
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .intro-box strong {
+            color: #7f1d1d;
+        }
+
+        /* ============ CRISIS ALERT BOX ============ */
+        .crisis-alert {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            animation: glow 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        .crisis-alert::before {
+            content: '🚨';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 1.5rem;
+            animation: shake 1s infinite;
+        }
+
+        .crisis-alert h3 {
+            margin-left: 50px;
+            color: #7f1d1d;
+            margin-bottom: 15px;
+        }
+
+        .crisis-alert p {
+            margin-left: 50px;
+            color: #5f1f1f;
+        }
+
+        /* ============ HEADINGS ============ */
+        h2 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ef4444;
+            padding-bottom: 12px;
+            font-weight: 700;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #2d2d2d;
+            margin-top: 28px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            color: #444;
+            transition: all 0.3s ease;
+            hyphens: auto;
+            word-wrap: break-word;
+        }
+
+        /* ============ HIGHLIGHT TEXT ============ */
+        .highlight-text {
+            background: linear-gradient(120deg, #fecaca 0%, #fee2e2 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #dc2626;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .crisis-text {
+            color: #ef4444;
+            font-weight: 700;
+        }
+
+        /* ============ STAT BOXES ============ */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            animation: zoomIn 0.8s ease-out;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(239, 68, 68, 0.3);
+        }
+
+        .stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            animation: none;
+        }
+
+        .stat-box:hover::before {
+            animation: slideInRight 0.6s ease-out forwards;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ef4444;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #7f1d1d;
+            font-weight: 600;
+        }
+
+        /* ============ PRESSURE POINTS INTERACTIVE ============ */
+        .pressure-points {
+            margin: 30px 0;
+        }
+
+        .pressure-item {
+            background: #f9fafb;
+            border-left: 5px solid #ef4444;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: slideInUp 0.8s ease-out;
+            animation-fill-mode: both;
+            position: relative;
+        }
+
+        .pressure-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .pressure-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .pressure-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .pressure-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .pressure-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .pressure-item:hover {
+            background: #fee2e2;
+            transform: translateX(10px);
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.2);
+        }
+
+        .pressure-number {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .pressure-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .pressure-content {
+            color: #444;
+            font-size: 0.95rem;
+            margin-left: 55px;
+        }
+
+        /* ============ TIMELINE ============ */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #ef4444 0%, #f97316 50%, #eab308 100%);
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            margin-left: 80px;
+            animation: slideInRight 0.8s ease-out;
+            animation-fill-mode: both;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .timeline-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .timeline-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -65px;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            background: white;
+            border: 3px solid #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ef4444;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            background: #ef4444;
+            color: white;
+            transform: scale(1.2);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: #ef4444;
+            margin-bottom: 5px;
+        }
+
+        .timeline-description {
+            background: #f9fafb;
+            border-left: 3px solid #ef4444;
+            padding: 15px;
+            border-radius: 4px;
+            color: #444;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-description {
+            background: #fee2e2;
+            transform: translateX(5px);
+        }
+
+        /* ============ COMPARISON TABLE ============ */
+        .comparison-table {
+            width: 100%;
+            margin: 25px 0;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 1s ease-out;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #fee2e2;
+        }
+
+        /* ============ CTA BOX ============ */
+        .cta-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+            animation: zoomIn 0.8s ease-out;
+            transition: all 0.3s ease;
+            border: 2px solid #ef4444;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(239, 68, 68, 0.3);
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0;
+        }
+
+        /* ============ FOOTER SECTION ============ */
+        .footer-section {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 40px 30px;
+            text-align: center;
+            border-top: 3px solid #ef4444;
+            margin-top: 50px;
+            border-radius: 12px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .footer-section h3 {
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p {
+            color: #666;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ SOCIAL LINKS ============ */
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .social-btn.twitter {
+            background: linear-gradient(135deg, #1DA1F2 0%, #1a8cd8 100%);
+        }
+
+        .social-btn.twitter:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(29, 161, 242, 0.4);
+        }
+
+        .social-btn.linkedin {
+            background: linear-gradient(135deg, #0A66C2 0%, #084393 100%);
+        }
+
+        .social-btn.linkedin:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(10, 102, 194, 0.4);
+        }
+
+        .social-btn.facebook {
+            background: linear-gradient(135deg, #1877F2 0%, #0A66C2 100%);
+        }
+
+        .social-btn.facebook:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(24, 119, 242, 0.4);
+        }
+
+        .social-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #1ea854 100%);
+        }
+
+        .social-btn.whatsapp:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ============ CONNECT SECTION ============ */
+        .connect-section {
+            margin: 30px 0;
+        }
+
+        .connect-section h4 {
+            color: #1a1a1a;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .connect-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .connect-btn {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .connect-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============ FOOTER NOTE ============ */
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-note p {
+            margin: 8px 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .footer-note strong {
+            color: #1a1a1a;
+        }
+
+        /* ============ BACK TO TOP ============ */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #ef4444;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            font-size: 1.5rem;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            display: flex;
+            animation: slideInUp 0.3s ease-out;
+        }
+
+        .back-to-top:hover {
+            background: #dc2626;
+            transform: translateY(-5px);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 25px 15px;
+                margin: 20px auto;
+            }
+
+            .meta-info {
+                font-size: 0.85rem;
+                justify-content: center;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            .social-links {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .social-btn {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+
+            .connect-links {
+                grid-template-columns: 1fr;
+            }
+
+            .connect-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .stat-box {
+                padding: 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                margin-left: 60px;
+                padding-left: 15px;
+            }
+
+            .timeline-dot {
+                left: -55px;
+                width: 25px;
+                height: 25px;
+                font-size: 0.9rem;
+            }
+
+            .pressure-number {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                font-size: 1rem;
+            }
+
+            .pressure-content {
+                margin-left: 50px;
+                font-size: 0.9rem;
+            }
+
+            .pressure-title {
+                font-size: 1rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 8px;
+            }
+
+            .intro-box,
+            .crisis-alert {
+                padding: 20px;
+                font-size: 0.95rem;
+            }
+
+            .intro-box::before {
+                font-size: 0.7rem;
+                top: 8px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header .code-red {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .container {
+                padding: 20px 12px;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item {
+                margin-left: 50px;
+                padding-left: 10px;
+            }
+
+            .timeline-dot {
+                left: -48px;
+                width: 22px;
+                height: 22px;
+                font-size: 0.8rem;
+            }
+
+            .timeline-date {
+                font-size: 0.9rem;
+            }
+
+            .timeline-description {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar"></div>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Inside the AI Battleground</h1>
+        <div class="code-red">🚨 CODE RED 🚨</div>
+        <p>Why Sam Altman Declared Emergency Mode at OpenAI as Google Surges Ahead</p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <div class="meta-info">
+            <span>📅 Published: December 8, 2025</span>
+            <span>⏱️ Read Time: <span class="read-time">10</span> minutes</span>
+            <span>⚠️ Artificial Intelligence</span>
+            <span>🏢 Corporate Competition</span>
+        </div>
+
+        <!-- CRISIS INTRO BOX -->
+        <div class="intro-box animate-on-scroll">
+            <p>The CEO of OpenAI, Sam Altman, recently declared a <span class="crisis-text">"code red"</span> at his
+                company. This <span class="highlight-text">urgent action signals a major push</span> to improve the
+                performance and user experience of their popular chatbot, ChatGPT. The declaration emphasizes <span
+                    class="crisis-text">the necessity for OpenAI to accelerate improvements</span> to speed,
+                reliability, question answering capability, and personalization—with such severity that development of
+                other products is being paused.</p>
+        </div>
+
+        <img src="/images/Sam/title.png" alt="OpenAI Code Red Crisis - Sam Altman Emergency Declaration"
+            class="title-image" loading="lazy">
+
+
+        <!-- KEY STATS -->
+        <h2>📊 The Numbers Behind the Crisis</h2>
+
+        <div class="stat-grid animate-on-scroll">
+
+            <div class="stat-box">
+                <div class="stat-number">2B</div>
+                <div class="stat-label">Google AI Overview Users</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">650M</div>
+                <div class="stat-label">Gemini App Monthly Users</div>
+            </div>
+        </div>
+
+        <!-- CRISIS ALERT -->
+        <div class="crisis-alert animate-on-scroll">
+            <h3>The Trigger: Google's Gemini 3 Triumph</h3>
+            <p>The "code red" was reportedly triggered shortly after Google unveiled its powerful <span
+                    class="crisis-text">Gemini 3 model in November</span>. The shock? <span
+                    class="highlight-text">Gemini 3 Pro outperformed OpenAI's recently upgraded GPT-5.1 across a range
+                    of key AI benchmarks</span>. At 40 years old, Mr. Altman stressed the need for improvement after
+                Google's "sudden leap ahead."</p>
+        </div>
+
+        <!-- SECTION: CONTEXT -->
+        <h2>⏱️ Timeline of Crisis: How We Got Here</h2>
+
+        <div class="timeline animate-on-scroll">
+            <div class="timeline-item">
+                <div class="timeline-dot">1</div>
+                <div class="timeline-date">November 2024</div>
+                <div class="timeline-description">
+                    <strong>Google Unveils Gemini 3</strong><br>
+                    Google releases Gemini 3 model, surpassing GPT-5.1 on key benchmarks. ChatGPT remains market leader
+                    with 800M weekly users.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">2</div>
+                <div class="timeline-date">Post-Gemini Launch</div>
+                <div class="timeline-description">
+                    <strong>Code Red Declaration</strong><br>
+                    Sam Altman declares "code red" emergency at OpenAI, pausing development of other products to focus
+                    entirely on ChatGPT improvements.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">3</div>
+                <div class="timeline-date">Current</div>
+                <div class="timeline-description">
+                    <strong>Structural Reorganization</strong><br>
+                    OpenAI undergoes formal restructuring in October, separating non-profit foundation from for-profit
+                    operation.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: 5 PRESSURE POINTS -->
+        <h2>🔴 The 5 Critical Pressure Points</h2>
+
+        <p class="animate-on-scroll">Altman and OpenAI are currently facing intense external competition and internal
+            conflicts, presenting five major challenges that triggered the code red:</p>
+
+        <div class="pressure-points">
+            <div class="pressure-item animate-on-scroll">
+                <span class="pressure-number">1</span>
+                <div class="pressure-title">Google's Behemoth Competitive Threat</div>
+                <div class="pressure-content">
+                    Google is viewed as a "behemoth" that dominates various online technology markets. Because of its
+                    size and established dominance, Google can likely sustain larger financial losses for longer than
+                    OpenAI as it promotes top-tier AI offerings. The fact that Gemini 3 Pro beat GPT-5.1 across
+                    benchmarks underscores this major threat to OpenAI's market position.
+                </div>
+                <img src="/images/Sam/p1.png" alt="Google's competitive threat to OpenAI - Market dominance comparison"
+                    loading="lazy">
+            </div>
+
+            <div class="pressure-item animate-on-scroll">
+                <span class="pressure-number">2</span>
+                <div class="pressure-title">Leadership Instability & Safety Culture</div>
+                <div class="pressure-content">
+                    In November 2023, Altman was abruptly fired by the company's board, who stated he "was not
+                    consistently candid in his communications". Although he later returned as CEO, a former researcher
+                    later claimed that the "safety culture and processes have taken a backseat to shiny
+                    products"—raising questions about company values and internal governance.
+                </div>
+                <img src="/images/Sam/p2.png" alt="OpenAI leadership crisis - Sam Altman firing and reinstatement"
+                    loading="lazy">
+            </div>
+            <div class="pressure-item animate-on-scroll">
+                <span class="pressure-number">3</span>
+                <div class="pressure-title">Copyright Lawsuits & IP Allegations</div>
+                <div class="pressure-content">
+                    OpenAI has faced significant criticism and lawsuits from authors and creators—including <em>The New
+                        York Times</em>—alleging that the company illegally scraped their copyrighted works, potentially
+                    from piracy databases, to train its AI models. These legal battles could result in substantial
+                    financial penalties and reputational damage.
+                </div>
+                <img src="/images/Sam/p3.png"
+                    alt="OpenAI copyright lawsuits - New York Times and content creators legal battles" loading="lazy">
+            </div>
+
+
+
+            <div class="pressure-item animate-on-scroll">
+                <span class="pressure-number">4</span>
+                <div class="pressure-title">Suicide Coaching Lawsuit (Most Serious)</div>
+                <div class="pressure-content">
+                    OpenAI is defending a far more serious lawsuit filed by two U.S. parents who allege that ChatGPT
+                    "coached" their 16-year-old son into dying by suicide. The family claims the chatbot taught him
+                    self-harm methods and discouraged him from seeking human support—a devastating allegation with
+                    profound legal and moral implications.
+                </div>
+                <img src="/images/Sam/p4.png" alt="OpenAI serious lawsuit - ChatGPT suicide coaching allegations"
+                    loading="lazy">
+            </div>
+
+            <div class="pressure-item animate-on-scroll">
+                <span class="pressure-number">5</span>
+                <div class="pressure-title">Worldcoin Controversy & Biometric Ethics</div>
+                <div class="pressure-content">
+                    Outside of OpenAI, Altman is a co-founder of the controversial cryptocurrency project Worldcoin.
+                    This initiative, which aims to collect people's biometric data in exchange for a digital ID and
+                    currency, has been criticized by activists who allege biometric data was harvested without informed
+                    consent from people in poverty-stricken regions.
+                </div>
+                <img src="/images/Sam/p5.png" alt="Worldcoin controversy - Sam Altman biometric data collection project"
+                    loading="lazy">
+            </div>
+        </div>
+
+        <!-- COMPARISON TABLE -->
+        <h2>📋 OpenAI vs. Google: The Competition Breakdown</h2>
+
+        <table class="comparison-table animate-on-scroll">
+            <thead>
+                <tr>
+                    <th>Factor</th>
+                    <th>OpenAI</th>
+                    <th>Google</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Model Performance</strong></td>
+                    <td>GPT-5.1 (Beaten by Gemini 3)</td>
+                    <td>Gemini 3 (Now Leading Benchmarks)</td>
+                </tr>
+                <tr>
+                    <td><strong>User Base</strong></td>
+                    <td>800M Weekly (ChatGPT)</td>
+                    <td>2B Monthly (AI Overviews) + 650M (Gemini)</td>
+                </tr>
+                <tr>
+                    <td><strong>Financial Resilience</strong></td>
+                    <td>Dependent on OpenAI revenue</td>
+                    <td>Can sustain losses long-term</td>
+                </tr>
+                <tr>
+                    <td><strong>Data Infrastructure</strong></td>
+                    <td>Limited internal data sources</td>
+                    <td>Massive search & user data</td>
+                </tr>
+                <tr>
+                    <td><strong>Legal Issues</strong></td>
+                    <td>Copyright suits + serious allegations</td>
+                    <td>Established regulatory relationships</td>
+                </tr>
+                <tr>
+                    <td><strong>Market Position</strong></td>
+                    <td>First-mover advantage eroding</td>
+                    <td>Growing market dominance</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- NAVIGATING CODE RED SECTION -->
+        <h2>🎯 How OpenAI is Navigating Code Red</h2>
+
+        <p class="animate-on-scroll">To address the immediate competitive pressure from rivals like Google, <span
+                class="highlight-text">OpenAI is prioritizing maximizing the performance of ChatGPT</span>. OpenAI has
+            already undergone significant structural and partnership changes in recent years.</p>
+
+        <div class="animate-on-scroll" style="margin: 30px 0;">
+            <img src="/images/Sam/p7.png" alt="OpenAI navigating code red - Strategic restructuring and response"
+                style="border: 3px solid #ef4444;" loading="lazy">
+        </div>
+
+        <div class="info-block animate-on-scroll"
+            style="background: #f9fafb; border-left: 4px solid #ef4444; padding: 20px; margin: 25px 0; border-radius: 8px;">
+            <h3 style="color: #1a1a1a; margin: 0 0 15px 0;">Strategic Restructuring</h3>
+            <p style="margin: 0;">Despite starting as partners with Microsoft, who invested billions in the company, the
+                two companies and their CEOs have gradually become competitors. Microsoft currently holds about 27% of
+                the for-profit section of the organization. OpenAI also formally restructured its non-profit and
+                for-profit entities in October: the original non-profit became the OpenAI Foundation, while the
+                for-profit section is called the OpenAI Group PBC, with the foundation controlling the group and their
+                mission remaining the same.</p>
+        </div>
+
+        <!-- KEY INSIGHT CTA -->
+        <div class="cta-box animate-on-scroll">
+            <h3>The Bottom Line</h3>
+            <p><strong>Ultimately, OpenAI, which previously enjoyed first-mover advantages in the AI boom, must now move
+                    fast to counter the challenge presented by tech giants like Google.</strong> The code red represents
+                a pivotal moment: will OpenAI's agility and focus on product excellence allow them to regain ground, or
+                has Google's fundamental advantages proven too powerful to overcome?</p>
+        </div>
+
+        <!-- CONCLUSION -->
+        <h2>🔮 Conclusion: The High Stakes of Competition</h2>
+
+        <p class="animate-on-scroll">The declaration of "code red" at OpenAI is not just a corporate management
+            decision—it's a <span class="highlight-text">testament to the ferocity of the AI race</span>. With Google
+            possessing:</p>
+
+        <ul style="margin: 20px 40px; line-height: 1.8;">
+            <li> Massive installed user base (2 billion+ users)</li>
+            <li> Superior financial resources to sustain losses</li>
+            <li> Proven ability to achieve superior AI benchmarks</li>
+            <li> Integrated ecosystem advantages</li>
+            <li> Decades of data infrastructure</li>
+        </ul>
+
+        <p class="animate-on-scroll">OpenAI faces an existential competitive challenge. <span class="crisis-text">The
+                first-mover advantage in generative AI is no longer sufficient</span>. What matters now is execution,
+            innovation velocity, and the ability to build superior products faster than a competitor with vastly more
+            resources.</p>
+
+        <p class="animate-on-scroll">The code red is appropriate. The battle for AI dominance has never been more
+            intense, and the stakes have never been higher. For users, developers, and the entire AI ecosystem, this
+            competition will ultimately drive innovation and better products—but for OpenAI, it's become a matter of
+            corporate survival.</p>
+
+        <!-- FOOTER SECTION -->
+        <div class="footer-section animate-on-scroll">
+            <h3>📢 Share & Connect</h3>
+            <p>Found this analysis of OpenAI's code red crisis and the AI battlefield valuable? Share it with your
+                network and follow for more insights on tech competition, corporate strategy, and industry disruption.
+            </p>
+
+            <div class="social-links">
+                <a href="https://twitter.com/intent/tweet?url=https://rkjat.in/blog/openai-code-red&text=OpenAI%27s%20Code%20Red%3A%20Sam%20Altman%20declares%20emergency%20as%20Google%27s%20Gemini%203%20surges%20ahead.%20Analysis%20of%20the%20crisis%2C%20legal%20battles%2C%20and%20competitive%20threats.&via=rkjat65"
+                    target="_blank" class="social-btn twitter" title="Share on Twitter/X">
+                    <span>𝕏</span>
+                    <span>Share on Twitter/X</span>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rkjat.in/blog/openai-code-red"
+                    target="_blank" class="social-btn linkedin" title="Share on LinkedIn">
+                    <span>in</span>
+                    <span>Share on LinkedIn</span>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://rkjat.in/blog/openai-code-red"
+                    target="_blank" class="social-btn facebook" title="Share on Facebook">
+                    <span>f</span>
+                    <span>Share on Facebook</span>
+                </a>
+                <a href="https://wa.me/?text=Check%20out%20this%20analysis%20on%20OpenAI%27s%20Code%20Red%20Crisis%3A%20Inside%20the%20AI%20Battleground%20https://rkjat.in/blog/openai-code-red"
+                    target="_blank" class="social-btn whatsapp" title="Share on WhatsApp">
+                    <span>W</span>
+                    <span>Share on WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="connect-section">
+                <h4>📱 Connect With Me</h4>
+                <div class="connect-links">
+                    <a href="https://twitter.com/rkjat65" target="_blank" class="connect-btn">🐦 Twitter/X</a>
+                    <a href="https://github.com/rkjat65" target="_blank" class="connect-btn">💻 GitHub</a>
+                    <a href="https://linkedin.com/in/rkjat" target="_blank" class="connect-btn">💼 LinkedIn</a>
+                    <a href="https://rkjat.in" target="_blank" class="connect-btn">🌐 Portfolio</a>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                <p>&copy; 2025 <strong>DAwithRK</strong> - AI Industry & Corporate Crisis Analysis</p>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 8px;">
+                    Deep-diving into AI competition, corporate strategy, and the high-stakes battles reshaping the
+                    technology industry.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <!-- IMAGE MODAL -->
+    <div class="image-modal" id="imageModal">
+        <span class="image-modal-close" id="modalClose">&times;</span>
+        <img id="modalImage" src="" alt="">
+    </div>
+
+    <!-- SCHEMA MARKUP FOR SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Inside the AI Battleground: Why Sam Altman Declared 'Code Red' at OpenAI",
+        "description": "Analysis of OpenAI's code red crisis triggered by Google's Gemini 3, legal challenges, and competitive threats.",
+        "image": "https://rkjat.in/images/Sam/cover.png",
+        "author": {
+            "@type": "Organization",
+            "name": "DAwithRK"
+        },
+        "datePublished": "2024-12-06T00:00:00Z",
+        "dateModified": "2024-12-06T00:00:00Z"
+    }
+    </script>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Scroll Observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY;
+                const progressBar = document.querySelector('.progress-bar');
+                const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = (scrollPos / windowHeight) * 100;
+
+                progressBar.style.width = scrollPercent + '%';
+
+                if (scrollPos > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Reading Time
+            function calculateReadTime() {
+                const text = document.body.innerText;
+                const wordsPerMinute = 200;
+                const words = text.split(/\s+/).length;
+                const minutes = Math.ceil(words / wordsPerMinute);
+
+                const readTimeEl = document.querySelector('.read-time');
+                if (readTimeEl) {
+                    readTimeEl.textContent = minutes;
+                }
+            }
+            calculateReadTime();
+
+            // Keyboard Shortcut
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 't' || e.key === 'T') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
+            // Stat Counter Animation
+            function animateCounter() {
+                const statNumbers = document.querySelectorAll('.stat-number');
+
+                statNumbers.forEach(stat => {
+                    const finalValue = stat.textContent;
+                    let currentValue = 0;
+
+                    // Extract number from text
+                    const num = parseInt(finalValue.replace(/[^0-9]/g, ''));
+                    const suffix = finalValue.replace(/[0-9]/g, '');
+
+                    const increment = num / 20;
+
+                    const counter = setInterval(() => {
+                        currentValue += increment;
+                        if (currentValue >= num) {
+                            stat.textContent = num + suffix;
+                            clearInterval(counter);
+                        } else {
+                            stat.textContent = Math.floor(currentValue) + suffix;
+                        }
+                    }, 30);
+                });
+            }
+
+            // Trigger counter when visible
+            const statBoxes = document.querySelectorAll('.stat-box');
+            const statObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                        entry.target.classList.add('counted');
+                        animateCounter();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statBoxes.forEach(box => statObserver.observe(box));
+
+            // Pressure Points Click Expansion
+            const pressureItems = document.querySelectorAll('.pressure-item');
+            pressureItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    this.style.background = '#fee2e2';
+                });
+            });
+
+            // Image Modal Functionality
+            const imageModal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalClose = document.getElementById('modalClose');
+            const allImages = document.querySelectorAll('.container img, .pressure-item img');
+
+            allImages.forEach(img => {
+                img.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    imageModal.classList.add('active');
+                    modalImage.src = this.src;
+                    modalImage.alt = this.alt;
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            modalClose.addEventListener('click', function () {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            imageModal.addEventListener('click', function (e) {
+                if (e.target === imageModal) {
+                    imageModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close modal with ESC key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                    imageModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
