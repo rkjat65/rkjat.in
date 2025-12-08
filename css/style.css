@@ -871,17 +871,25 @@ h3 {
   margin: 0 auto;
 }
 
+/* Default Card Image Placeholder */
 .card-image-placeholder {
   width: 100%;
-  height: 100%;
-  min-height: 200px;
+  aspect-ratio: 16/9;
+  /* Standard video/blog cover ratio */
   background: linear-gradient(135deg, var(--bg-secondary), var(--border));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   overflow: hidden;
-  /* Ensure image doesn't overflow rounded corners */
+}
+
+/* Ensure image fills the 16:9 container properly */
+.card-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* cover is standard, but 16/9 should match most sources */
 }
 
 /* Specific fix for Bento Image height */
