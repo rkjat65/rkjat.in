@@ -16,9 +16,8 @@
     <meta property="og:description"
         content="Why Gemini 3 is disrupting the AI market, how TPUs threaten GPU dominance, and the future of AI hardware competition.">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://rkjat.in/images/Gemini/cover.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://rkjat.in/images/Gemini/cover.jpg?v=2">
+
     <meta property="og:url" content="https://rkjat.in/blog/gemini3win.html">
     <meta property="og:site_name" content="DAwithRK">
     <meta property="og:locale" content="en_US">
@@ -30,7 +29,7 @@
     <meta name="twitter:title" content="Gemini 3: Google's AI Breakthrough Shakes Nvidia's Dominance">
     <meta name="twitter:description"
         content="How Google's Gemini 3 model and custom TPU chips are challenging Nvidia's $40K GPU empire in the AI arms race.">
-    <meta name="twitter:image" content="https://rkjat.in/images/Gemini/cover.jpg">
+    <meta name="twitter:image" content="https://rkjat.in/images/Gemini/cover.jpg?v=2">
     <meta name="twitter:image:alt" content="Gemini 3 vs Nvidia AI Hardware Competition">
 
     <!-- Article Meta Tags -->
@@ -45,6 +44,13 @@
     <meta property="article:tag" content="Hardware-Competition">
 
     <title>Gemini 3: Google's AI King | DAwithRK</title>
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230071e3'/><text x='50' y='68' font-family='sans-serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'>DA</text></svg>">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <style>
         * {
@@ -878,6 +884,7 @@
             0% {
                 background-position: 200% 0;
             }
+
             100% {
                 background-position: -200% 0;
             }
@@ -945,6 +952,27 @@
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="logo"><span>DA</span>withRK</a>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/portfolio/">My Work</a></li>
+                <li><a href="/blog/">Blogs</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
     <!-- PROGRESS BAR -->
     <div class="progress-bar"></div>
 
@@ -1333,6 +1361,7 @@
             });
         });
     </script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

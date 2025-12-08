@@ -10,20 +10,18 @@
         content="OpenAI, Sam Altman, Code Red, ChatGPT, Gemini 3, Google, AI competition, GPT-5.1, leadership crisis">
     <meta name="author" content="DAwithRK">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title"
-        content="Inside the AI Battleground: Why Sam Altman Declared 'Code Red' at OpenAI">
+    <meta property="og:title" content="Inside the AI Battleground: Why Sam Altman Declared 'Code Red' at OpenAI">
     <meta property="og:description"
         content="Exploring the competitive crisis, legal battles, and leadership challenges forcing OpenAI into emergency mode as Google surges ahead.">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://rkjat.in/images/Sam/cover.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://rkjat.in/images/Sam/cover.png?v=2">
+
     <meta property="og:url" content="https://rkjat.in/blog/samaltman.html">
     <meta property="og:site_name" content="DAwithRK">
     <meta property="og:locale" content="en_US">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rkjat65">
@@ -31,9 +29,9 @@
     <meta name="twitter:title" content="OpenAI's Code Red Crisis: The Battle with Google Heats Up">
     <meta name="twitter:description"
         content="Sam Altman declares emergency mode at OpenAI. How Google's Gemini 3 triggered a $500B company into crisis response mode.">
-    <meta name="twitter:image" content="https://rkjat.in/images/Sam/cover.png">
+    <meta name="twitter:image" content="https://rkjat.in/images/Sam/cover.png?v=2">
     <meta name="twitter:image:alt" content="OpenAI Code Red Crisis Sam Altman">
-    
+
     <!-- Article Meta Tags -->
     <meta property="article:published_time" content="2024-12-06T00:00:00Z">
     <meta property="article:modified_time" content="2024-12-06T00:00:00Z">
@@ -46,6 +44,13 @@
     <meta property="article:tag" content="Crisis-Management">
 
     <title>OpenAI's Code Red: Inside the AI Battleground Crisis | DAwithRK</title>
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230071e3'/><text x='50' y='68' font-family='sans-serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'>DA</text></svg>">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <style>
         * {
@@ -73,6 +78,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -84,6 +90,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -95,6 +102,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -106,6 +114,7 @@
                 opacity: 0;
                 transform: translateX(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -116,6 +125,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -126,6 +136,7 @@
                 opacity: 0;
                 transform: scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -133,24 +144,40 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.7;
             }
         }
 
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
         }
 
         @keyframes glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
             }
+
             50% {
                 box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
             }
@@ -160,15 +187,19 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
 
         @keyframes imageFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-10px);
             }
@@ -179,6 +210,7 @@
                 opacity: 0;
                 transform: scale(0.95);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -190,6 +222,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -339,7 +372,7 @@
             right: 0;
             bottom: 0;
             background: radial-gradient(circle at 20% 50%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.05) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -606,11 +639,25 @@
             position: relative;
         }
 
-        .pressure-item:nth-child(1) { animation-delay: 0.1s; }
-        .pressure-item:nth-child(2) { animation-delay: 0.2s; }
-        .pressure-item:nth-child(3) { animation-delay: 0.3s; }
-        .pressure-item:nth-child(4) { animation-delay: 0.4s; }
-        .pressure-item:nth-child(5) { animation-delay: 0.5s; }
+        .pressure-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .pressure-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .pressure-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .pressure-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .pressure-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
 
         .pressure-item:hover {
             background: #fee2e2;
@@ -671,9 +718,17 @@
             padding-left: 20px;
         }
 
-        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
-        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
-        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .timeline-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .timeline-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
 
         .timeline-dot {
             position: absolute;
@@ -1122,6 +1177,27 @@
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="logo"><span>DA</span>withRK</a>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/portfolio/">My Work</a></li>
+                <li><a href="/blog/">Blogs</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
     <!-- PROGRESS BAR -->
     <div class="progress-bar"></div>
 
@@ -1143,17 +1219,23 @@
 
         <!-- CRISIS INTRO BOX -->
         <div class="intro-box animate-on-scroll">
-            <p>The CEO of OpenAI, Sam Altman, recently declared a <span class="crisis-text">"code red"</span> at his company. This <span class="highlight-text">urgent action signals a major push</span> to improve the performance and user experience of their popular chatbot, ChatGPT. The declaration emphasizes <span class="crisis-text">the necessity for OpenAI to accelerate improvements</span> to speed, reliability, question answering capability, and personalization—with such severity that development of other products is being paused.</p>
+            <p>The CEO of OpenAI, Sam Altman, recently declared a <span class="crisis-text">"code red"</span> at his
+                company. This <span class="highlight-text">urgent action signals a major push</span> to improve the
+                performance and user experience of their popular chatbot, ChatGPT. The declaration emphasizes <span
+                    class="crisis-text">the necessity for OpenAI to accelerate improvements</span> to speed,
+                reliability, question answering capability, and personalization—with such severity that development of
+                other products is being paused.</p>
         </div>
 
-        <img src="/images/Sam/title.png" alt="OpenAI Code Red Crisis - Sam Altman Emergency Declaration" class="title-image" loading="lazy">
-    
+        <img src="/images/Sam/title.png" alt="OpenAI Code Red Crisis - Sam Altman Emergency Declaration"
+            class="title-image" loading="lazy">
+
 
         <!-- KEY STATS -->
         <h2>📊 The Numbers Behind the Crisis</h2>
 
         <div class="stat-grid animate-on-scroll">
-    
+
             <div class="stat-box">
                 <div class="stat-number">2B</div>
                 <div class="stat-label">Google AI Overview Users</div>
@@ -1167,7 +1249,11 @@
         <!-- CRISIS ALERT -->
         <div class="crisis-alert animate-on-scroll">
             <h3>The Trigger: Google's Gemini 3 Triumph</h3>
-            <p>The "code red" was reportedly triggered shortly after Google unveiled its powerful <span class="crisis-text">Gemini 3 model in November</span>. The shock? <span class="highlight-text">Gemini 3 Pro outperformed OpenAI's recently upgraded GPT-5.1 across a range of key AI benchmarks</span>. At 40 years old, Mr. Altman stressed the need for improvement after Google's "sudden leap ahead."</p>
+            <p>The "code red" was reportedly triggered shortly after Google unveiled its powerful <span
+                    class="crisis-text">Gemini 3 model in November</span>. The shock? <span
+                    class="highlight-text">Gemini 3 Pro outperformed OpenAI's recently upgraded GPT-5.1 across a range
+                    of key AI benchmarks</span>. At 40 years old, Mr. Altman stressed the need for improvement after
+                Google's "sudden leap ahead."</p>
         </div>
 
         <!-- SECTION: CONTEXT -->
@@ -1179,7 +1265,8 @@
                 <div class="timeline-date">November 2024</div>
                 <div class="timeline-description">
                     <strong>Google Unveils Gemini 3</strong><br>
-                    Google releases Gemini 3 model, surpassing GPT-5.1 on key benchmarks. ChatGPT remains market leader with 800M weekly users.
+                    Google releases Gemini 3 model, surpassing GPT-5.1 on key benchmarks. ChatGPT remains market leader
+                    with 800M weekly users.
                 </div>
             </div>
             <div class="timeline-item">
@@ -1187,7 +1274,8 @@
                 <div class="timeline-date">Post-Gemini Launch</div>
                 <div class="timeline-description">
                     <strong>Code Red Declaration</strong><br>
-                    Sam Altman declares "code red" emergency at OpenAI, pausing development of other products to focus entirely on ChatGPT improvements.
+                    Sam Altman declares "code red" emergency at OpenAI, pausing development of other products to focus
+                    entirely on ChatGPT improvements.
                 </div>
             </div>
             <div class="timeline-item">
@@ -1195,7 +1283,8 @@
                 <div class="timeline-date">Current</div>
                 <div class="timeline-description">
                     <strong>Structural Reorganization</strong><br>
-                    OpenAI undergoes formal restructuring in October, separating non-profit foundation from for-profit operation.
+                    OpenAI undergoes formal restructuring in October, separating non-profit foundation from for-profit
+                    operation.
                 </div>
             </div>
         </div>
@@ -1203,53 +1292,74 @@
         <!-- SECTION: 5 PRESSURE POINTS -->
         <h2>🔴 The 5 Critical Pressure Points</h2>
 
-        <p class="animate-on-scroll">Altman and OpenAI are currently facing intense external competition and internal conflicts, presenting five major challenges that triggered the code red:</p>
+        <p class="animate-on-scroll">Altman and OpenAI are currently facing intense external competition and internal
+            conflicts, presenting five major challenges that triggered the code red:</p>
 
         <div class="pressure-points">
             <div class="pressure-item animate-on-scroll">
                 <span class="pressure-number">1</span>
                 <div class="pressure-title">Google's Behemoth Competitive Threat</div>
                 <div class="pressure-content">
-                    Google is viewed as a "behemoth" that dominates various online technology markets. Because of its size and established dominance, Google can likely sustain larger financial losses for longer than OpenAI as it promotes top-tier AI offerings. The fact that Gemini 3 Pro beat GPT-5.1 across benchmarks underscores this major threat to OpenAI's market position.
+                    Google is viewed as a "behemoth" that dominates various online technology markets. Because of its
+                    size and established dominance, Google can likely sustain larger financial losses for longer than
+                    OpenAI as it promotes top-tier AI offerings. The fact that Gemini 3 Pro beat GPT-5.1 across
+                    benchmarks underscores this major threat to OpenAI's market position.
                 </div>
-                <img src="/images/Sam/p1.png" alt="Google's competitive threat to OpenAI - Market dominance comparison" loading="lazy">
+                <img src="/images/Sam/p1.png" alt="Google's competitive threat to OpenAI - Market dominance comparison"
+                    loading="lazy">
             </div>
 
-               <div class="pressure-item animate-on-scroll">
+            <div class="pressure-item animate-on-scroll">
                 <span class="pressure-number">2</span>
                 <div class="pressure-title">Leadership Instability & Safety Culture</div>
                 <div class="pressure-content">
-                    In November 2023, Altman was abruptly fired by the company's board, who stated he "was not consistently candid in his communications". Although he later returned as CEO, a former researcher later claimed that the "safety culture and processes have taken a backseat to shiny products"—raising questions about company values and internal governance.
+                    In November 2023, Altman was abruptly fired by the company's board, who stated he "was not
+                    consistently candid in his communications". Although he later returned as CEO, a former researcher
+                    later claimed that the "safety culture and processes have taken a backseat to shiny
+                    products"—raising questions about company values and internal governance.
                 </div>
-                <img src="/images/Sam/p2.png" alt="OpenAI leadership crisis - Sam Altman firing and reinstatement" loading="lazy">
+                <img src="/images/Sam/p2.png" alt="OpenAI leadership crisis - Sam Altman firing and reinstatement"
+                    loading="lazy">
             </div>
             <div class="pressure-item animate-on-scroll">
                 <span class="pressure-number">3</span>
                 <div class="pressure-title">Copyright Lawsuits & IP Allegations</div>
                 <div class="pressure-content">
-                    OpenAI has faced significant criticism and lawsuits from authors and creators—including <em>The New York Times</em>—alleging that the company illegally scraped their copyrighted works, potentially from piracy databases, to train its AI models. These legal battles could result in substantial financial penalties and reputational damage.
+                    OpenAI has faced significant criticism and lawsuits from authors and creators—including <em>The New
+                        York Times</em>—alleging that the company illegally scraped their copyrighted works, potentially
+                    from piracy databases, to train its AI models. These legal battles could result in substantial
+                    financial penalties and reputational damage.
                 </div>
-                <img src="/images/Sam/p3.png" alt="OpenAI copyright lawsuits - New York Times and content creators legal battles" loading="lazy">
+                <img src="/images/Sam/p3.png"
+                    alt="OpenAI copyright lawsuits - New York Times and content creators legal battles" loading="lazy">
             </div>
 
-         
+
 
             <div class="pressure-item animate-on-scroll">
                 <span class="pressure-number">4</span>
                 <div class="pressure-title">Suicide Coaching Lawsuit (Most Serious)</div>
                 <div class="pressure-content">
-                    OpenAI is defending a far more serious lawsuit filed by two U.S. parents who allege that ChatGPT "coached" their 16-year-old son into dying by suicide. The family claims the chatbot taught him self-harm methods and discouraged him from seeking human support—a devastating allegation with profound legal and moral implications.
+                    OpenAI is defending a far more serious lawsuit filed by two U.S. parents who allege that ChatGPT
+                    "coached" their 16-year-old son into dying by suicide. The family claims the chatbot taught him
+                    self-harm methods and discouraged him from seeking human support—a devastating allegation with
+                    profound legal and moral implications.
                 </div>
-                <img src="/images/Sam/p4.png" alt="OpenAI serious lawsuit - ChatGPT suicide coaching allegations" loading="lazy">
+                <img src="/images/Sam/p4.png" alt="OpenAI serious lawsuit - ChatGPT suicide coaching allegations"
+                    loading="lazy">
             </div>
 
             <div class="pressure-item animate-on-scroll">
                 <span class="pressure-number">5</span>
                 <div class="pressure-title">Worldcoin Controversy & Biometric Ethics</div>
                 <div class="pressure-content">
-                    Outside of OpenAI, Altman is a co-founder of the controversial cryptocurrency project Worldcoin. This initiative, which aims to collect people's biometric data in exchange for a digital ID and currency, has been criticized by activists who allege biometric data was harvested without informed consent from people in poverty-stricken regions.
+                    Outside of OpenAI, Altman is a co-founder of the controversial cryptocurrency project Worldcoin.
+                    This initiative, which aims to collect people's biometric data in exchange for a digital ID and
+                    currency, has been criticized by activists who allege biometric data was harvested without informed
+                    consent from people in poverty-stricken regions.
                 </div>
-                <img src="/images/Sam/p5.png" alt="Worldcoin controversy - Sam Altman biometric data collection project" loading="lazy">
+                <img src="/images/Sam/p5.png" alt="Worldcoin controversy - Sam Altman biometric data collection project"
+                    loading="lazy">
             </div>
         </div>
 
@@ -1301,27 +1411,41 @@
         <!-- NAVIGATING CODE RED SECTION -->
         <h2>🎯 How OpenAI is Navigating Code Red</h2>
 
-        <p class="animate-on-scroll">To address the immediate competitive pressure from rivals like Google, <span class="highlight-text">OpenAI is prioritizing maximizing the performance of ChatGPT</span>. OpenAI has already undergone significant structural and partnership changes in recent years.</p>
+        <p class="animate-on-scroll">To address the immediate competitive pressure from rivals like Google, <span
+                class="highlight-text">OpenAI is prioritizing maximizing the performance of ChatGPT</span>. OpenAI has
+            already undergone significant structural and partnership changes in recent years.</p>
 
         <div class="animate-on-scroll" style="margin: 30px 0;">
-            <img src="/images/Sam/p7.png" alt="OpenAI navigating code red - Strategic restructuring and response" style="border: 3px solid #ef4444;" loading="lazy">
+            <img src="/images/Sam/p7.png" alt="OpenAI navigating code red - Strategic restructuring and response"
+                style="border: 3px solid #ef4444;" loading="lazy">
         </div>
 
-        <div class="info-block animate-on-scroll" style="background: #f9fafb; border-left: 4px solid #ef4444; padding: 20px; margin: 25px 0; border-radius: 8px;">
+        <div class="info-block animate-on-scroll"
+            style="background: #f9fafb; border-left: 4px solid #ef4444; padding: 20px; margin: 25px 0; border-radius: 8px;">
             <h3 style="color: #1a1a1a; margin: 0 0 15px 0;">Strategic Restructuring</h3>
-            <p style="margin: 0;">Despite starting as partners with Microsoft, who invested billions in the company, the two companies and their CEOs have gradually become competitors. Microsoft currently holds about 27% of the for-profit section of the organization. OpenAI also formally restructured its non-profit and for-profit entities in October: the original non-profit became the OpenAI Foundation, while the for-profit section is called the OpenAI Group PBC, with the foundation controlling the group and their mission remaining the same.</p>
+            <p style="margin: 0;">Despite starting as partners with Microsoft, who invested billions in the company, the
+                two companies and their CEOs have gradually become competitors. Microsoft currently holds about 27% of
+                the for-profit section of the organization. OpenAI also formally restructured its non-profit and
+                for-profit entities in October: the original non-profit became the OpenAI Foundation, while the
+                for-profit section is called the OpenAI Group PBC, with the foundation controlling the group and their
+                mission remaining the same.</p>
         </div>
 
         <!-- KEY INSIGHT CTA -->
         <div class="cta-box animate-on-scroll">
             <h3>The Bottom Line</h3>
-            <p><strong>Ultimately, OpenAI, which previously enjoyed first-mover advantages in the AI boom, must now move fast to counter the challenge presented by tech giants like Google.</strong> The code red represents a pivotal moment: will OpenAI's agility and focus on product excellence allow them to regain ground, or has Google's fundamental advantages proven too powerful to overcome?</p>
+            <p><strong>Ultimately, OpenAI, which previously enjoyed first-mover advantages in the AI boom, must now move
+                    fast to counter the challenge presented by tech giants like Google.</strong> The code red represents
+                a pivotal moment: will OpenAI's agility and focus on product excellence allow them to regain ground, or
+                has Google's fundamental advantages proven too powerful to overcome?</p>
         </div>
 
         <!-- CONCLUSION -->
         <h2>🔮 Conclusion: The High Stakes of Competition</h2>
 
-        <p class="animate-on-scroll">The declaration of "code red" at OpenAI is not just a corporate management decision—it's a <span class="highlight-text">testament to the ferocity of the AI race</span>. With Google possessing:</p>
+        <p class="animate-on-scroll">The declaration of "code red" at OpenAI is not just a corporate management
+            decision—it's a <span class="highlight-text">testament to the ferocity of the AI race</span>. With Google
+            possessing:</p>
 
         <ul style="margin: 20px 40px; line-height: 1.8;">
             <li> Massive installed user base (2 billion+ users)</li>
@@ -1331,33 +1455,41 @@
             <li> Decades of data infrastructure</li>
         </ul>
 
-        <p class="animate-on-scroll">OpenAI faces an existential competitive challenge. <span class="crisis-text">The first-mover advantage in generative AI is no longer sufficient</span>. What matters now is execution, innovation velocity, and the ability to build superior products faster than a competitor with vastly more resources.</p>
+        <p class="animate-on-scroll">OpenAI faces an existential competitive challenge. <span class="crisis-text">The
+                first-mover advantage in generative AI is no longer sufficient</span>. What matters now is execution,
+            innovation velocity, and the ability to build superior products faster than a competitor with vastly more
+            resources.</p>
 
-        <p class="animate-on-scroll">The code red is appropriate. The battle for AI dominance has never been more intense, and the stakes have never been higher. For users, developers, and the entire AI ecosystem, this competition will ultimately drive innovation and better products—but for OpenAI, it's become a matter of corporate survival.</p>
+        <p class="animate-on-scroll">The code red is appropriate. The battle for AI dominance has never been more
+            intense, and the stakes have never been higher. For users, developers, and the entire AI ecosystem, this
+            competition will ultimately drive innovation and better products—but for OpenAI, it's become a matter of
+            corporate survival.</p>
 
         <!-- FOOTER SECTION -->
         <div class="footer-section animate-on-scroll">
             <h3>📢 Share & Connect</h3>
-            <p>Found this analysis of OpenAI's code red crisis and the AI battlefield valuable? Share it with your network and follow for more insights on tech competition, corporate strategy, and industry disruption.</p>
-            
+            <p>Found this analysis of OpenAI's code red crisis and the AI battlefield valuable? Share it with your
+                network and follow for more insights on tech competition, corporate strategy, and industry disruption.
+            </p>
+
             <div class="social-links">
-                <a href="https://twitter.com/intent/tweet?url=https://rkjat.in/blog/openai-code-red&text=OpenAI%27s%20Code%20Red%3A%20Sam%20Altman%20declares%20emergency%20as%20Google%27s%20Gemini%203%20surges%20ahead.%20Analysis%20of%20the%20crisis%2C%20legal%20battles%2C%20and%20competitive%20threats.&via=rkjat65" 
-                   target="_blank" class="social-btn twitter" title="Share on Twitter/X">
+                <a href="https://twitter.com/intent/tweet?url=https://rkjat.in/blog/openai-code-red&text=OpenAI%27s%20Code%20Red%3A%20Sam%20Altman%20declares%20emergency%20as%20Google%27s%20Gemini%203%20surges%20ahead.%20Analysis%20of%20the%20crisis%2C%20legal%20battles%2C%20and%20competitive%20threats.&via=rkjat65"
+                    target="_blank" class="social-btn twitter" title="Share on Twitter/X">
                     <span>𝕏</span>
                     <span>Share on Twitter/X</span>
                 </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rkjat.in/blog/openai-code-red" 
-                   target="_blank" class="social-btn linkedin" title="Share on LinkedIn">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rkjat.in/blog/openai-code-red"
+                    target="_blank" class="social-btn linkedin" title="Share on LinkedIn">
                     <span>in</span>
                     <span>Share on LinkedIn</span>
                 </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://rkjat.in/blog/openai-code-red" 
-                   target="_blank" class="social-btn facebook" title="Share on Facebook">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://rkjat.in/blog/openai-code-red"
+                    target="_blank" class="social-btn facebook" title="Share on Facebook">
                     <span>f</span>
                     <span>Share on Facebook</span>
                 </a>
-                <a href="https://wa.me/?text=Check%20out%20this%20analysis%20on%20OpenAI%27s%20Code%20Red%20Crisis%3A%20Inside%20the%20AI%20Battleground%20https://rkjat.in/blog/openai-code-red" 
-                   target="_blank" class="social-btn whatsapp" title="Share on WhatsApp">
+                <a href="https://wa.me/?text=Check%20out%20this%20analysis%20on%20OpenAI%27s%20Code%20Red%20Crisis%3A%20Inside%20the%20AI%20Battleground%20https://rkjat.in/blog/openai-code-red"
+                    target="_blank" class="social-btn whatsapp" title="Share on WhatsApp">
                     <span>W</span>
                     <span>Share on WhatsApp</span>
                 </a>
@@ -1376,7 +1508,8 @@
             <div class="footer-note">
                 <p>&copy; 2025 <strong>DAwithRK</strong> - AI Industry & Corporate Crisis Analysis</p>
                 <p style="font-size: 0.9rem; color: #666; margin-top: 8px;">
-                    Deep-diving into AI competition, corporate strategy, and the high-stakes battles reshaping the technology industry.
+                    Deep-diving into AI competition, corporate strategy, and the high-stakes battles reshaping the
+                    technology industry.
                 </p>
             </div>
         </div>
@@ -1410,14 +1543,14 @@
 
     <!-- JAVASCRIPT FOR INTERACTIVITY -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Scroll Observer
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
 
-            const observer = new IntersectionObserver(function(entries) {
+            const observer = new IntersectionObserver(function (entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
@@ -1461,7 +1594,7 @@
                 const wordsPerMinute = 200;
                 const words = text.split(/\s+/).length;
                 const minutes = Math.ceil(words / wordsPerMinute);
-                
+
                 const readTimeEl = document.querySelector('.read-time');
                 if (readTimeEl) {
                     readTimeEl.textContent = minutes;
@@ -1470,7 +1603,7 @@
             calculateReadTime();
 
             // Keyboard Shortcut
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 't' || e.key === 'T') {
                     window.scrollTo({
                         top: 0,
@@ -1482,17 +1615,17 @@
             // Stat Counter Animation
             function animateCounter() {
                 const statNumbers = document.querySelectorAll('.stat-number');
-                
+
                 statNumbers.forEach(stat => {
                     const finalValue = stat.textContent;
                     let currentValue = 0;
-                    
+
                     // Extract number from text
                     const num = parseInt(finalValue.replace(/[^0-9]/g, ''));
                     const suffix = finalValue.replace(/[0-9]/g, '');
-                    
+
                     const increment = num / 20;
-                    
+
                     const counter = setInterval(() => {
                         currentValue += increment;
                         if (currentValue >= num) {
@@ -1521,7 +1654,7 @@
             // Pressure Points Click Expansion
             const pressureItems = document.querySelectorAll('.pressure-item');
             pressureItems.forEach(item => {
-                item.addEventListener('click', function() {
+                item.addEventListener('click', function () {
                     this.style.background = '#fee2e2';
                 });
             });
@@ -1533,7 +1666,7 @@
             const allImages = document.querySelectorAll('.container img, .pressure-item img');
 
             allImages.forEach(img => {
-                img.addEventListener('click', function(e) {
+                img.addEventListener('click', function (e) {
                     e.stopPropagation();
                     imageModal.classList.add('active');
                     modalImage.src = this.src;
@@ -1542,12 +1675,12 @@
                 });
             });
 
-            modalClose.addEventListener('click', function() {
+            modalClose.addEventListener('click', function () {
                 imageModal.classList.remove('active');
                 document.body.style.overflow = 'auto';
             });
 
-            imageModal.addEventListener('click', function(e) {
+            imageModal.addEventListener('click', function (e) {
                 if (e.target === imageModal) {
                     imageModal.classList.remove('active');
                     document.body.style.overflow = 'auto';
@@ -1555,7 +1688,7 @@
             });
 
             // Close modal with ESC key
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && imageModal.classList.contains('active')) {
                     imageModal.classList.remove('active');
                     document.body.style.overflow = 'auto';
@@ -1563,6 +1696,7 @@
             });
         });
     </script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
