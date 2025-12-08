@@ -895,6 +895,27 @@ h3 {
   padding: 24px;
 }
 
+/* Bento Grid Specific Overlay */
+#featured-projects .card-body {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) 70%, transparent);
+  backdrop-filter: blur(10px);
+  border-top: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#featured-projects .card-body h3 a,
+#featured-projects .card-body p {
+  color: white;
+  /* Force white text on overlay */
+}
+
+#featured-projects .card-body .tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 /* Skills: Glass Pills */
 .skills-grid {
   display: flex;
