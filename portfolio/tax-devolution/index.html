@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Interactive analysis of India's fiscal federalism - State tax contributions vs devolutions (FY 2020-21 to 2024-25)">
+    <meta name="description"
+        content="Interactive analysis of India's fiscal federalism - State tax contributions vs devolutions (FY 2020-21 to 2024-25)">
     <meta name="author" content="RK Jat">
     <meta name="keywords" content="India, Fiscal Federalism, Tax Devolution, Data Analysis, Finance Commission">
-    
+
     <title>India's Fiscal Federalism | Interactive Analysis by RK Jat</title>
-    
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rkjat.in/portfolio/tax-devolution/">
+    <meta property="og:title" content="India's Fiscal Federalism | Interactive Analysis by RK Jat">
+    <meta property="og:description"
+        content="Interactive analysis of India's fiscal federalism - State tax contributions vs devolutions (FY 2020-21 to 2024-25). See how ₹111 lakh crore flows between states.">
+    <meta property="og:image" content="https://rkjat.in/portfolio/tax-devolution/images/contributor-states.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="rkjat.in">
+    <meta property="twitter:url" content="https://rkjat.in/portfolio/tax-devolution/">
+    <meta name="twitter:title" content="India's Fiscal Federalism | Interactive Analysis by RK Jat">
+    <meta name="twitter:description"
+        content="Interactive analysis of India's fiscal federalism - State tax contributions vs devolutions. See how ₹111 lakh crore flows between states.">
+    <meta name="twitter:image" content="https://rkjat.in/portfolio/tax-devolution/images/contributor-states.png">
+    <meta name="twitter:creator" content="@rkjat65">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
-    
+
     <!-- CountUp.js for animated numbers -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
-    
+
     <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
-    
+
     <!-- Smooth Scroll Container -->
     <div id="smooth-wrapper">
-        
+
         <!-- Animated Background -->
         <div class="animated-bg">
             <div class="gradient-orb orb-1"></div>
             <div class="gradient-orb orb-2"></div>
             <div class="gradient-orb orb-3"></div>
         </div>
-        
+
         <!-- Navigation -->
         <nav class="navbar" id="navbar">
             <div class="container nav-container">
                 <div class="nav-brand">
                     <span class="brand-text">Fiscal Federalism</span>
                 </div>
-                
+
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="../../" class="nav-link">Portfolio</a></li>
                     <li><a href="#hero" class="nav-link active">Home</a></li>
@@ -62,12 +83,13 @@
                 <div class="nav-cta">
                     <a href="https://github.com/rkjat" target="_blank" class="btn btn-secondary">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                         </svg>
                         GitHub
                     </a>
                 </div>
-                
+
                 <button class="nav-toggle" id="navToggle">
                     <span></span>
                     <span></span>
@@ -75,53 +97,53 @@
                 </button>
             </div>
         </nav>
-        
+
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="container">
                 <div class="hero-content" data-aos="fade-up">
-                    
+
                     <h1 class="hero-title">
                         India's <span class="gradient-text">Fiscal Federalism</span><br>Visualized
                     </h1>
-                    
+
                     <p class="hero-subtitle">
-                        An interactive analysis revealing how ₹111 lakh crore in taxes flows between 
-                        <span class="highlight">7 contributor states</span> and 
+                        An interactive analysis revealing how ₹111 lakh crore in taxes flows between
+                        <span class="highlight">7 contributor states</span> and
                         <span class="highlight">21 beneficiary states</span> from FY 2020-21 to 2024-25
                     </p>
-                    
+
                     <div class="hero-stats">
                         <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="stat-value" data-count="111.75">0</div>
                             <div class="stat-label">Lakh Crore ₹</div>
                             <div class="stat-desc">Total Tax Collected</div>
                         </div>
-                        
+
                         <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
                             <div class="stat-value" data-count="75.10">0</div>
                             <div class="stat-label">Lakh Crore ₹</div>
                             <div class="stat-desc">Devolved to States</div>
                         </div>
-                        
+
                         <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
                             <div class="stat-value" data-count="67.2">0</div>
                             <div class="stat-label">Percent</div>
                             <div class="stat-desc">Devolution Rate</div>
                         </div>
                     </div>
-                    
+
                 </div>
-            
-            
-            <div class="scroll-indicator">
-                <div class="scroll-mouse">
-                    <div class="scroll-wheel"></div>
+
+
+                <div class="scroll-indicator">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span>Scroll to Eplore</span>
                 </div>
-                <span>Scroll to Eplore</span>
-            </div>
         </section>
-        
+
         <!-- Overview Section -->
         <section class="section overview-section" id="overview">
             <div class="container">
@@ -129,11 +151,11 @@
                     <span class="section-label">Understanding the Data</span>
                     <h2 class="section-title">The Big Picture</h2>
                     <p class="section-subtitle">
-                        India's fiscal federalism redistributes ₹75 lakh crore across 28 states. 
+                        India's fiscal federalism redistributes ₹75 lakh crore across 28 states.
                         Here's how the system works and who gains or contributes.
                     </p>
                 </div>
-                
+
                 <div class="overview-grid">
                     <!-- Key Finding Card -->
                     <div class="overview-card glass-card" data-aos="fade-up" data-aos-delay="100">
@@ -144,7 +166,7 @@
                         <div class="card-body">
                             <p class="finding-text">
                                 <span class="finding-number">7 states</span> contribute more than they receive,
-                                while <span class="finding-number">21 states</span> are net beneficiaries 
+                                while <span class="finding-number">21 states</span> are net beneficiaries
                                 of this constitutional redistribution mechanism.
                             </p>
                             <div class="finding-visual">
@@ -163,7 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Interactive Filter Card -->
                     <div class="overview-card glass-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-header">
@@ -186,7 +208,7 @@
                                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 </select>
                             </div>
-                            
+
                             <div id="stateInfo" class="state-info hidden">
                                 <div class="info-row">
                                     <span class="info-label">Tax Contribution:</span>
@@ -210,7 +232,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Custom Infographics Section -->
         <section class="section infographics-section" id="custom-viz">
             <div class="container">
@@ -221,7 +243,7 @@
                         Explore India's fiscal landscape through beautifully designed visualizations
                     </p>
                 </div>
-                
+
                 <div class="infographic-tabs" data-aos="fade-up" data-aos-delay="100">
                     <button class="tab-btn active" data-tab="beneficiaries">
                         <span class="tab-icon">📉</span>
@@ -236,23 +258,26 @@
                         Devolution Formula
                     </button>
                 </div>
-                
+
                 <div class="infographic-content">
                     <!-- Beneficiaries Tab -->
                     <div class="tab-content active" id="beneficiaries" data-aos="zoom-in">
                         <div class="infographic-card">
-                            <img src="images/beneficiary-states.png" alt="India's Top 5 Net Beneficiary States" class="infographic-image">
+                            <img src="images/beneficiary-states.png" alt="India's Top 5 Net Beneficiary States"
+                                class="infographic-image">
                             <div class="infographic-overlay">
                                 <button class="btn-expand" onclick="expandImage('images/beneficiary-states.png')">
-                                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                                     </svg>
                                 </button>
                             </div>
                         </div>
                         <div class="infographic-description">
                             <h3>Top 5 Net Beneficiary States</h3>
-                            <p>States that receive more tax devolution than they contribute. Uttar Pradesh leads with a -11.22pp gap, receiving 3.4x its contribution.</p>
+                            <p>States that receive more tax devolution than they contribute. Uttar Pradesh leads with a
+                                -11.22pp gap, receiving 3.4x its contribution.</p>
                             <ul class="insight-list">
                                 <li>🔴 Uttar Pradesh: -11.22pp (Receives 3.4x)</li>
                                 <li>🔴 Bihar: -7.98pp (Receives 12.7x)</li>
@@ -262,22 +287,25 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Contributors Tab -->
                     <div class="tab-content" id="contributors" data-aos="zoom-in">
                         <div class="infographic-card">
-                            <img src="images/contributor-states.png" alt="India's Net Contributor States" class="infographic-image">
+                            <img src="images/contributor-states.png" alt="India's Net Contributor States"
+                                class="infographic-image">
                             <div class="infographic-overlay">
                                 <button class="btn-expand" onclick="expandImage('images/contributor-states.png')">
-                                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                                     </svg>
                                 </button>
                             </div>
                         </div>
                         <div class="infographic-description">
                             <h3>The 7 Net Contributor States</h3>
-                            <p>States contributing more to the national tax pool than they receive. Maharashtra dominates with +29.42pp gap, receiving only 18% of its contribution.</p>
+                            <p>States contributing more to the national tax pool than they receive. Maharashtra
+                                dominates with +29.42pp gap, receiving only 18% of its contribution.</p>
                             <ul class="insight-list">
                                 <li>🟢 Maharashtra: +29.42pp (Receives 0.18x)</li>
                                 <li>🟢 Karnataka: +8.76pp (Receives 0.31x)</li>
@@ -289,22 +317,26 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Formula Tab -->
                     <div class="tab-content" id="formula" data-aos="zoom-in">
                         <div class="infographic-card">
-                            <img src="images/finance-commission-formula.png" alt="15th Finance Commission Devolution Formula" class="infographic-image">
+                            <img src="images/finance-commission-formula.png"
+                                alt="15th Finance Commission Devolution Formula" class="infographic-image">
                             <div class="infographic-overlay">
-                                <button class="btn-expand" onclick="expandImage('images/finance-commission-formula.png')">
-                                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                                <button class="btn-expand"
+                                    onclick="expandImage('images/finance-commission-formula.png')">
+                                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                                     </svg>
                                 </button>
                             </div>
                         </div>
                         <div class="infographic-description">
                             <h3>15th Finance Commission Formula</h3>
-                            <p>The constitutional criteria that determines how ₹75 lakh crore is distributed across states. Each criterion has a specific weightage.</p>
+                            <p>The constitutional criteria that determines how ₹75 lakh crore is distributed across
+                                states. Each criterion has a specific weightage.</p>
                             <ul class="insight-list">
                                 <li>📊 Income Distance: 45% (Gap from richest state)</li>
                                 <li>👥 Population: 15% (2011 Census data)</li>
@@ -318,7 +350,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Contributors Section -->
         <section class="section contributors-section" id="contributors">
             <div class="container">
@@ -329,7 +361,7 @@
                         7 states that contribute more to India's tax pool than they receive back
                     </p>
                 </div>
-                
+
                 <div class="contributors-grid">
                     <div class="contributor-card card-large" data-aos="flip-left" data-aos-delay="100">
                         <div class="rank-badge rank-1">1</div>
@@ -351,10 +383,11 @@
                             </div>
                         </div>
                         <p class="state-desc">
-                            India's economic powerhouse contributes ₹1 of every ₹3 in taxes but receives back only ₹1 of every ₹15
+                            India's economic powerhouse contributes ₹1 of every ₹3 in taxes but receives back only ₹1 of
+                            every ₹15
                         </p>
                     </div>
-                    
+
                     <div class="contributor-card" data-aos="flip-left" data-aos-delay="200">
                         <div class="rank-badge rank-2">2</div>
                         <div class="state-flag">💻</div>
@@ -375,13 +408,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="contributor-card" data-aos="flip-left" data-aos-delay="300">
                         <div class="rank-badge rank-3">3</div>
                         <div class="state-flag">🏭</div>
                         <h3 class="state-name">Haryana</h3>
                         <div class="contribution-meter">
-                            <div class="meter-bar" style="width: 15%;">
+                            <div class="meter-bar" style="width: 35%;">
                                 <span class="meter-value">+4.28pp</span>
                             </div>
                         </div>
@@ -397,7 +430,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="more-contributors" data-aos="fade-up">
                     <h4>Other Net Contributors</h4>
                     <div class="contributor-list">
@@ -425,7 +458,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Beneficiaries Section -->
         <section class="section beneficiaries-section" id="beneficiaries">
             <div class="container">
@@ -436,7 +469,7 @@
                         21 states that receive more from tax devolution than they contribute
                     </p>
                 </div>
-                
+
                 <div class="beneficiaries-grid">
                     <div class="beneficiary-card card-large" data-aos="flip-right" data-aos-delay="100">
                         <div class="rank-badge rank-1">1</div>
@@ -462,10 +495,11 @@
                             <span class="multiplier-label">Multiplier</span>
                         </div>
                         <p class="state-desc">
-                            India's most populous state receives 3.4 times what it contributes to support development of 240+ million people
+                            India's most populous state receives 3.4 times what it contributes to support development of
+                            240+ million people
                         </p>
                     </div>
-                    
+
                     <div class="beneficiary-card" data-aos="flip-right" data-aos-delay="200">
                         <div class="rank-badge rank-2">2</div>
                         <div class="state-flag">🏛️</div>
@@ -490,7 +524,7 @@
                             <span class="multiplier-label">Highest Multiplier</span>
                         </div>
                     </div>
-                    
+
                     <div class="beneficiary-card" data-aos="flip-right" data-aos-delay="300">
                         <div class="rank-badge rank-3">3</div>
                         <div class="state-flag">🦁</div>
@@ -516,14 +550,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="chart-container" data-aos="fade-up">
                     <h4>All 21 Beneficiary States</h4>
                     <canvas id="beneficiariesChart"></canvas>
                 </div>
             </div>
         </section>
-        
+
         <!-- Interactive Chart Section -->
         <section class="section chart-section" id="insights">
             <div class="container">
@@ -534,7 +568,7 @@
                         Explore the complete dataset across all 28 states with interactive charts
                     </p>
                 </div>
-                
+
                 <div class="chart-tabs" data-aos="fade-up">
                     <button class="chart-tab-btn active" data-chart="diverging">
                         Contribution Gap
@@ -546,23 +580,23 @@
                         Top 10 Comparison
                     </button>
                 </div>
-                
+
                 <div class="chart-wrapper">
                     <div class="chart-panel active" id="divergingChart" data-aos="zoom-in">
                         <canvas id="mainDivergingChart"></canvas>
                     </div>
-                    
+
                     <div class="chart-panel" id="scatterChart" data-aos="zoom-in">
                         <canvas id="mainScatterChart"></canvas>
                     </div>
-                    
+
                     <div class="chart-panel" id="comparisonChart" data-aos="zoom-in">
                         <canvas id="mainComparisonChart"></canvas>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Methodology Section -->
         <section class="section methodology-section" id="methodology">
             <div class="container">
@@ -570,12 +604,13 @@
                     <span class="section-label">Behind the Analysis</span>
                     <h2 class="section-title">Methodology & Context</h2>
                 </div>
-                
+
                 <div class="methodology-grid">
                     <div class="method-card" data-aos="fade-right">
                         <div class="method-icon">📄</div>
                         <h3>Data Source</h3>
-                        <p>Official government data from Ministry of Finance presented in Rajya Sabha (Unstarred Question No. 236, December 2, 2025)</p>
+                        <p>Official government data from Ministry of Finance presented in Rajya Sabha (Unstarred
+                            Question No. 236, December 2, 2025)</p>
                         <ul class="method-list">
                             <li>Direct tax collection by state</li>
                             <li>GST collection data</li>
@@ -583,7 +618,7 @@
                             <li>Finance Commission grants</li>
                         </ul>
                     </div>
-                    
+
                     <div class="method-card" data-aos="fade-up">
                         <div class="method-icon">🔢</div>
                         <h3>Calculations</h3>
@@ -595,7 +630,7 @@
                             <li><strong>Devolution Ratio:</strong> Receipt ÷ Contribution</li>
                         </ul>
                     </div>
-                    
+
                     <div class="method-card" data-aos="fade-left">
                         <div class="method-icon">⚖️</div>
                         <h3>15th FC Formula</h3>
@@ -610,38 +645,44 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="context-box" data-aos="fade-up">
                     <div class="context-header">
                         <span class="context-icon">💡</span>
                         <h3>Important Context</h3>
                     </div>
                     <div class="context-content">
-                        <p><strong>This is redistributive federalism by design, not a flaw.</strong> Article 280 of the Indian Constitution mandates the Finance Commission to balance vertical and horizontal equity across states.</p>
-                        
+                        <p><strong>This is redistributive federalism by design, not a flaw.</strong> Article 280 of the
+                            Indian Constitution mandates the Finance Commission to balance vertical and horizontal
+                            equity across states.</p>
+
                         <div class="context-points">
                             <div class="point">
                                 <span class="point-icon">✓</span>
-                                <p><strong>Why redistribution exists:</strong> To reduce regional disparities and ensure equitable development across India</p>
+                                <p><strong>Why redistribution exists:</strong> To reduce regional disparities and ensure
+                                    equitable development across India</p>
                             </div>
                             <div class="point">
                                 <span class="point-icon">✓</span>
-                                <p><strong>Benefits to all:</strong> Creates integrated national market, prevents regional conflicts, enables mutual growth</p>
+                                <p><strong>Benefits to all:</strong> Creates integrated national market, prevents
+                                    regional conflicts, enables mutual growth</p>
                             </div>
                             <div class="point">
                                 <span class="point-icon">✓</span>
-                                <p><strong>The debate:</strong> Not whether redistribution should exist, but what the optimal balance between equity and efficiency should be</p>
+                                <p><strong>The debate:</strong> Not whether redistribution should exist, but what the
+                                    optimal balance between equity and efficiency should be</p>
                             </div>
                             <div class="point">
                                 <span class="point-icon">✓</span>
-                                <p><strong>16th Finance Commission (2026-2031):</strong> Will review and potentially revise the formula based on updated census data and economic conditions</p>
+                                <p><strong>16th Finance Commission (2026-2031):</strong> Will review and potentially
+                                    revise the formula based on updated census data and economic conditions</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Data Download Section -->
         <section class="section download-section" id="data">
             <div class="container">
@@ -652,7 +693,7 @@
                         All data, code, and visualizations are freely available
                     </p>
                 </div>
-                
+
                 <div class="download-grid">
                     <div class="download-card" data-aos="zoom-in" data-aos-delay="100">
                         <div class="download-icon">📊</div>
@@ -664,12 +705,13 @@
                         </div>
                         <a href="data/fiscal_federalism_data.csv" download class="btn btn-download">
                             Download CSV
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                             </svg>
                         </a>
                     </div>
-                    
+
                     <div class="download-card" data-aos="zoom-in" data-aos-delay="200">
                         <div class="download-icon">🐍</div>
                         <h3>Python Analysis</h3>
@@ -680,12 +722,13 @@
                         </div>
                         <a href="code/fiscal_federalism_analysis.py" download class="btn btn-download">
                             Download Code
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                             </svg>
                         </a>
                     </div>
-                    
+
                     <div class="download-card" data-aos="zoom-in" data-aos-delay="300">
                         <div class="download-icon">📈</div>
                         <h3>Visualizations</h3>
@@ -696,12 +739,13 @@
                         </div>
                         <a href="images/charts.zip" download class="btn btn-download">
                             Download Charts
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                             </svg>
                         </a>
                     </div>
-                    
+
                     <div class="download-card featured" data-aos="zoom-in" data-aos-delay="400">
                         <div class="download-icon">📦</div>
                         <h3>Complete Package</h3>
@@ -712,27 +756,32 @@
                         </div>
                         <a href="complete-package.zip" download class="btn btn-primary btn-large">
                             Download All
-                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                             </svg>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="github-card" data-aos="fade-up">
                     <div class="github-content">
                         <div class="github-icon">
                             <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                             </svg>
                         </div>
                         <div class="github-info">
                             <h3>View on GitHub</h3>
                             <p>Complete source code, documentation, and version history</p>
-                            <a href="https://github.com/rkjat/fiscal-federalism-analysis" target="_blank" class="btn btn-outline">
+                            <a href="https://github.com/rkjat/fiscal-federalism-analysis" target="_blank"
+                                class="btn btn-outline">
                                 Open Repository
-                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                                 </svg>
                             </a>
                         </div>
@@ -740,7 +789,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Footer -->
         <footer class="footer">
             <div class="container">
@@ -748,8 +797,8 @@
                     <div class="footer-section">
                         <h3 class="footer-title">About This Project</h3>
                         <p class="footer-text">
-                            An independent data analysis project examining India's fiscal federalism 
-                            based on official government data. Created to promote data-driven discourse 
+                            An independent data analysis project examining India's fiscal federalism
+                            based on official government data. Created to promote data-driven discourse
                             on state finances and devolution mechanisms.
                         </p>
                         <div class="footer-badges">
@@ -758,31 +807,35 @@
                             <span class="badge">Educational</span>
                         </div>
                     </div>
-                    
+
                     <div class="footer-section">
                         <h3 class="footer-title">Connect</h3>
                         <div class="social-links">
                             <a href="https://twitter.com/rkjat65" target="_blank" class="social-link">
                                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                                 </svg>
                                 Twitter
                             </a>
                             <a href="https://github.com/rkjat" target="_blank" class="social-link">
                                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                                 GitHub
                             </a>
                             <a href="https://rkjat.in" target="_blank" class="social-link">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                                 </svg>
                                 Website
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="footer-section">
                         <h3 class="footer-title">Data Source</h3>
                         <p class="footer-text">
@@ -795,10 +848,10 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="footer-bottom">
                     <p class="copyright">
-                        © 2025 RK Jat. Data: Public Domain (Government of India). 
+                        © 2025 RK Jat. Data: Public Domain (Government of India).
                         Analysis & Code: MIT License.
                     </p>
                     <p class="disclaimer">
@@ -807,30 +860,31 @@
                 </div>
             </div>
         </footer>
-        
+
         <!-- Image Lightbox -->
         <div class="lightbox" id="lightbox">
             <button class="lightbox-close" onclick="closeLightbox()">
                 <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M6 18L18 6M6 6l12 12"/>
+                    <path d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
             <img src="" alt="" class="lightbox-image" id="lightboxImage">
         </div>
-        
+
         <!-- Back to Top Button -->
         <button class="back-to-top" id="backToTop">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M18 15l-6-6-6 6"/>
+                <path d="M18 15l-6-6-6 6" />
             </svg>
         </button>
-        
+
     </div>
-    
+
     <!-- JavaScript -->
     <script src="data.js"></script>
     <script src="charts.js"></script>
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
