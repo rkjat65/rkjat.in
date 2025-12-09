@@ -1,6 +1,21 @@
 {
   "projects": [
     {
+      "id": "tax-devolution-analysis",
+      "title": "India's Fiscal Federalism Analysis",
+      "description": "Interactive visualization of India's tax devolution system, analyzing ₹111 lakh crore in taxes across 28 states from FY 2020-21 to 2024-25.",
+      "date": "2024-12-09",
+      "tags": [
+        "JavaScript",
+        "Chart.js",
+        "Data Visualization",
+        "Economics"
+      ],
+      "image": "portfolio/tax-devolution/images/beneficiary-states.png",
+      "link": "portfolio/tax-devolution/",
+      "featured": true
+    },
+    {
       "id": "indian-healthcare-analysis",
       "title": "Indian Healthcare System Analysis",
       "description": "Comprehensive analysis of 707 districts across India using NFHS-5 data, examining healthcare improvements and challenges.",
