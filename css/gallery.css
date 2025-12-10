@@ -7,16 +7,17 @@
   padding: 32px 0;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 84px;
+  position:sticky;
+  top: 70px;
   z-index: 100;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  
 }
 
 .controls-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;

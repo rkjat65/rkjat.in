@@ -98,8 +98,27 @@
     </div>
   </section>
 
-  <!-- Latest Blog Posts -->
+  <!-- Gallery Preview -->
   <section class="section">
+    <div class="container container-wide">
+      <div class="section-header">
+        <h2>Visual Gallery</h2>
+        <p>Data visualizations crafted with precision and insight</p>
+      </div>
+
+      <div class="grid grid-3" id="gallery-preview">
+        <!-- Gallery items will be loaded dynamically from gallery-data.json -->
+        <div class="loading-placeholder">Loading gallery...</div>
+      </div>
+
+      <div class="text-center mt-40">
+        <a href="/gallery.html" class="btn btn-secondary">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Posts -->
+  <section class="section section-alt">
     <div class="container container-wide">
       <div class="section-header">
         <h2>Latest Insights</h2>
@@ -111,13 +130,10 @@
         <div class="loading-placeholder">Loading blog posts...</div>
       </div>
 
-
+      <div class="text-center mt-40">
+        <a href="/blog/" class="btn btn-secondary">Read All Posts</a>
+      </div>
     </div>
-
-    <div class="text-center mt-40">
-      <a href="/blog/" class="btn btn-secondary">Read All Posts</a>
-    </div>
-
   </section>
 
   <!-- Skills -->

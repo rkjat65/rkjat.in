@@ -225,6 +225,22 @@ function initScrollAnimations() {
   });
 }
 
+// Navbar Scroll Effect
+function initNavScroll() {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -234,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initShareButtons();
   initCanvas();
   initScrollAnimations();
+  initNavScroll();
 });
 
 // Social Share Functions (Keep existing)
@@ -315,7 +332,7 @@ async function loadDynamicContent() {
     const response = await fetch('/content-index.json');
     const data = await response.json();
 
-    // Load featured projects (latest 2)
+    // Load featured projects (latest 3)
     loadFeaturedProjects(data.projects);
 
     // Load latest blog posts (latest 3)
@@ -327,6 +344,37 @@ async function loadDynamicContent() {
     const blogsContainer = document.getElementById('latest-blogs');
     if (projectsContainer) projectsContainer.innerHTML = '<p>Unable to load projects at this time.</p>';
     if (blogsContainer) blogsContainer.innerHTML = '<p>Unable to load blog posts at this time.</p>';
+  }
+}
+
+async function loadGalleryPreview() {
+  try {
+    const response = await fetch('/gallery-data.json');
+    const data = await response.json();
+
+    const container = document.getElementById('gallery-preview');
+    if (!container) return;
+
+    // Get first 3 gallery items
+    const previewItems = data.slice(0, 3);
+
+    container.innerHTML = previewItems.map(item => `
+      <article class="card" onclick="window.location.href='/gallery.html'" style="cursor: pointer;">
+        <div class="card-image-placeholder">
+          <img src="${item.image}" class="card-image" alt="${item.category}" loading="lazy" onerror="this.src='images/placeholder.png'">
+        </div>
+        <div class="card-body">
+          <div class="tags">
+            <span class="tag">${item.category}</span>
+          </div>
+          <p>${item.caption}</p>
+        </div>
+      </article>
+    `).join('');
+  } catch (error) {
+    console.error('Error loading gallery preview:', error);
+    const container = document.getElementById('gallery-preview');
+    if (container) container.innerHTML = '<p>Unable to load gallery at this time.</p>';
   }
 }
 
@@ -389,4 +437,9 @@ function loadLatestBlogs(blogs) {
 // Initialize dynamic content loading when DOM is ready
 if (document.getElementById('featured-projects') || document.getElementById('latest-blogs')) {
   loadDynamicContent();
+}
+
+// Initialize gallery preview loading when DOM is ready
+if (document.getElementById('gallery-preview')) {
+  loadGalleryPreview();
 }

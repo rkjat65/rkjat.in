@@ -8,10 +8,10 @@
       "tags": [
         "JavaScript",
         "Chart.js",
-        "Data Visualization",
+        "Data Viz",
         "Economics"
       ],
-      "image": "portfolio/tax-devolution/images/beneficiary-states.png",
+      "image": "portfolio/tax-devolution/cover.png",
       "link": "portfolio/tax-devolution/",
       "featured": true
     },
@@ -23,10 +23,9 @@
       "tags": [
         "Python",
         "SQL",
-        "Power BI",
-        "Healthcare"
+        "Power BI"
       ],
-      "image": "portfolio/indian-healthcare-analysis/images/page1-national-overview.png",
+      "image": "portfolio/indian-healthcare-analysis/cover.png",
       "link": "portfolio/indian-healthcare-analysis/",
       "featured": true
     },
@@ -41,7 +40,7 @@
         "Data Analysis",
         "Politics"
       ],
-      "image": "images/dash2.png",
+      "image": "portfolio/indian-legislature-analysis/cover.png",
       "link": "portfolio/indian-legislature-analysis/",
       "featured": true
     },
@@ -75,7 +74,7 @@
       ],
       "category": "Geopolitics",
       "readTime": "10 min",
-      "image": "images/RussiaR/R0.png",
+      "image": "images/RussiaR/R.png",
       "link": "blog/Russia.html",
       "featured": true
     },
@@ -126,7 +125,7 @@
       ],
       "category": "Tech",
       "readTime": "7 min",
-      "image": "images/Gemini/cover.jpg",
+      "image": "images/Gemini/gem7.png",
       "link": "blog/gemini3win.html",
       "featured": true
     },
@@ -143,7 +142,7 @@
       ],
       "category": "Tech",
       "readTime": "6 min",
-      "image": "images/Sam/cover.png",
+      "image": "images/Sam/cover1.png",
       "link": "blog/samaltman.html",
       "featured": true
     }

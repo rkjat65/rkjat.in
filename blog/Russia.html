@@ -83,7 +83,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.8;
             color: var(--text);
             background: var(--bg);
@@ -313,7 +313,7 @@
 
         /* ============ HEADER STYLES ============ */
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
@@ -374,11 +374,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #1e3c72;
+            border-bottom: 3px solid var(--primary);
             padding-bottom: 20px;
             margin-bottom: 35px;
             font-size: 0.95rem;
-            color: #666;
+            color: var(--text-secondary);
             flex-wrap: wrap;
             gap: 15px;
             animation: slideInDown 0.8s ease-out;
@@ -392,14 +392,14 @@
         }
 
         .meta-info span:hover {
-            color: #1e3c72;
+            color: var(--primary);
             transform: translateY(-2px);
         }
 
         /* ============ INTRO BOX ============ */
         .intro-box {
-            background: linear-gradient(135deg, #e8f4f8 0%, #f0f9ff 100%);
-            border-left: 5px solid #2a5298;
+            background: var(--bg-secondary);
+            border-left: 5px solid var(--primary);
             padding: 25px;
             margin: 30px 0;
             border-radius: 8px;
@@ -418,26 +418,26 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background: linear-gradient(180deg, #2a5298, #1e3c72);
+            background: linear-gradient(180deg, var(--primary), var(--primary-hover));
             animation: slideInDown 1s ease-out;
         }
 
         .intro-box:hover {
-            box-shadow: 0 8px 24px rgba(42, 82, 152, 0.15);
+            box-shadow: 0 8px 24px rgba(0, 113, 227, 0.15);
             transform: translateY(-4px);
         }
 
         .intro-box strong {
-            color: #1e3c72;
+            color: var(--primary);
         }
 
         /* ============ HEADINGS ============ */
         h2 {
             font-size: 2rem;
-            color: #1e3c72;
+            color: var(--primary);
             margin-top: 45px;
             margin-bottom: 20px;
-            border-bottom: 3px solid #2a5298;
+            border-bottom: 3px solid var(--primary);
             padding-bottom: 12px;
             font-weight: 700;
             animation: slideInLeft 0.8s ease-out;
@@ -452,13 +452,13 @@
             left: 0;
             width: 0;
             height: 3px;
-            background: linear-gradient(90deg, #2a5298, #1e3c72);
+            background: linear-gradient(90deg, var(--primary), var(--primary-hover));
             animation: slideInRight 0.8s ease-out 0.2s forwards;
         }
 
         h3 {
             font-size: 1.4rem;
-            color: #2a5298;
+            color: var(--primary);
             margin-top: 28px;
             margin-bottom: 15px;
             font-weight: 600;
@@ -492,13 +492,13 @@
         }
 
         .blue-text {
-            color: #1e3c72;
+            color: var(--primary);
             font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .blue-text:hover {
-            color: #2a5298;
+            color: var(--primary-hover);
             text-decoration: underline;
         }
 
@@ -524,8 +524,8 @@
 
         /* ============ INFO BLOCKS ============ */
         .info-block {
-            background: #f3f4f6;
-            border-left: 4px solid #2a5298;
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--primary);
             padding: 20px;
             margin: 25px 0;
             border-radius: 8px;
@@ -541,7 +541,7 @@
             top: 0;
             height: 100%;
             width: 4px;
-            background: linear-gradient(180deg, #2a5298, #1e3c72);
+            background: linear-gradient(180deg, var(--primary), var(--primary-hover));
             border-radius: 8px 0 0 8px;
             animation: slideInDown 0.8s ease-out;
         }
@@ -552,7 +552,7 @@
         }
 
         .info-block h4 {
-            color: #1e3c72;
+            color: var(--primary);
             margin-bottom: 12px;
             font-size: 1.1rem;
         }

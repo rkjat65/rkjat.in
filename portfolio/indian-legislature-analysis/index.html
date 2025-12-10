@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Legislature Analysis | RK</title>
+    <title>Legislature Analysis | DAwithRK</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,6 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230071e3'/><text x='50' y='68' font-family='sans-serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'>DA</text></svg>">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -29,48 +28,51 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            color: var(--text);
+            background: var(--bg);
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
             color: white;
             padding: 140px 20px 60px;
-            /* Increased top padding for Nav */
             text-align: center;
-            border-radius: 10px;
+            border-radius: 24px;
             margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 113, 227, 0.2);
         }
 
         h1 {
+            font-family: var(--font-heading);
             font-size: 2.5em;
             margin-bottom: 10px;
         }
 
         .subtitle {
             font-size: 1.2em;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .section {
-            background: white;
+            background: var(--card-bg);
             padding: 30px;
             margin-bottom: 30px;
-            border-radius: 10px;
+            border-radius: 24px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #667eea;
+            font-family: var(--font-heading);
+            color: var(--primary);
             font-size: 1.8em;
             margin-bottom: 20px;
         }
@@ -83,11 +85,17 @@
         }
 
         .stat-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
             color: white;
             padding: 25px;
-            border-radius: 10px;
+            border-radius: 24px;
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 113, 227, 0.3);
         }
 
         .stat-number {
@@ -111,25 +119,31 @@
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background: #667eea;
+            background: var(--primary);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 12px;
             font-weight: 600;
             transition: all 0.3s;
         }
 
         .btn:hover {
-            background: #764ba2;
+            background: var(--primary-hover);
             transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 113, 227, 0.3);
         }
 
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
-            color: #667eea;
+            color: var(--primary);
             text-decoration: none;
             font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
         }
 
         ul {
@@ -144,11 +158,120 @@
         }
 
         ul li:before {
-            content: "→";
-            color: #667eea;
+            content: "";
+            color: var(--primary);
             font-weight: bold;
             position: absolute;
             left: 0;
+        }
+
+        /* Dashboard Charts Section */
+        .dashboard-section {
+            margin-top: 60px;
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5em;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .dashboard-header p {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+        }
+
+        .chart-section {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .chart-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0, 113, 227, 0.15);
+        }
+
+        .chart-title {
+            color: var(--primary);
+            font-size: 1.3em;
+            font-weight: 600;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .chart-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 900px) {
+            .two-column {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .chart-container {
+                height: 600px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .chart-container {
+                height: 700px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-header h2 {
+                font-size: 1.8em;
+            }
+
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin: 60px 0;
         }
     </style>
 </head>
@@ -194,7 +317,7 @@
                 <div class="stat-label">Constituencies</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">43%</div>
+                <div class="stat-number">19.7%</div>
                 <div class="stat-label">With Criminal Cases</div>
             </div>
             <div class="stat-box">
@@ -212,7 +335,7 @@
         <div class="section">
             <h2>Key Findings</h2>
             <ul>
-                <li>43% of candidates have declared criminal cases</li>
+                <li>19.7% of candidates have declared criminal cases</li>
                 <li>Candidates with criminal cases have 35% higher average assets</li>
                 <li>4,500+ independent candidates contested</li>
                 <li>65% candidates are graduates or above</li>
@@ -232,9 +355,51 @@
         <div class="section">
             <h2>Project Resources</h2>
             <div class="button-group">
-                <a href="dashboard/" class="btn">📊 Live Dashboard</a>
                 <a href="https://github.com/yourusername/indian-legislature-analysis" class="btn">💻 GitHub</a>
                 <a href="data/lok_sabha_2024_cleaned.csv" class="btn" download>📥 Download Data</a>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Dashboard Section -->
+        <div class="dashboard-section">
+            <div class="dashboard-header">
+                <h2>📊 Interactive Dashboard</h2>
+                <p>Explore the data through interactive visualizations</p>
+            </div>
+
+            <!-- Criminal Cases Distribution -->
+            <div class="chart-section">
+                <div class="chart-title">⚖️ Criminal Cases Distribution</div>
+                <div class="chart-container">
+                    <iframe src="dashboard/charts/premium/criminal_gauge.html"></iframe>
+                </div>
+            </div>
+
+            <!-- Two Column Charts -->
+            <div class="two-column">
+                <div class="chart-section">
+                    <div class="chart-title">🏛️ Top 10 Parties by Candidates</div>
+                    <div class="chart-container">
+                        <iframe src="dashboard/charts/premium/top_parties_horizontal.html"></iframe>
+                    </div>
+                </div>
+                <div class="chart-section">
+                    <div class="chart-title">🎓 Education Level Distribution</div>
+                    <div class="chart-container">
+                        <iframe src="dashboard/charts/premium/education_treemap.html"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Wealthiest Candidates -->
+            <div class="chart-section">
+                <div class="chart-title">🏆 Top 10 Wealthiest Candidates</div>
+                <div class="chart-container">
+                    <iframe src="dashboard/charts/premium/top_richest_premium.html"></iframe>
+                </div>
             </div>
         </div>
     </div>
