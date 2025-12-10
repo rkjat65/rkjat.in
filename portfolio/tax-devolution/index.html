@@ -44,15 +44,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Main Site CSS for Navigation -->
+    <link rel="stylesheet" href="../../css/style.css">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Project Specific CSS (Loaded LAST to override) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
     <!-- Smooth Scroll Container -->
     <div id="smooth-wrapper">
 
@@ -63,23 +62,28 @@
             <div class="gradient-orb orb-3"></div>
         </div>
 
-        <!-- Navigation -->
+        <!-- Combined Navigation -->
         <nav class="navbar" id="navbar">
             <div class="container nav-container">
                 <div class="nav-brand">
-                    <span class="brand-text">Fiscal Federalism</span>
+                    <a href="/" style="color: white; text-decoration: none;"><span
+                            class="brand-text">DAwithRK</span></a>
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="../../" class="nav-link">Portfolio</a></li>
-                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <!-- <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
+                    <li><a href="/gallery.html" class="nav-link">Gallery</a></li> -->
+                    <li style="border-left: 1px solid rgba(255,255,255,0.2); margin: 0 8px; height: 20px;"></li>
+                    <li><a href="#hero" class="nav-link active">Project Home</a></li>
                     <li><a href="#overview" class="nav-link">Overview</a></li>
                     <li><a href="#contributors" class="nav-link">Contributors</a></li>
                     <li><a href="#beneficiaries" class="nav-link">Beneficiaries</a></li>
                     <li><a href="#insights" class="nav-link">Insights</a></li>
                     <li><a href="#data" class="nav-link">Data</a></li>
                 </ul>
-
+<!-- 
                 <div class="nav-cta">
                     <a href="https://github.com/rkjat" target="_blank" class="btn btn-secondary">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -88,7 +92,7 @@
                         </svg>
                         GitHub
                     </a>
-                </div>
+                </div> -->
 
                 <button class="nav-toggle" id="navToggle">
                     <span></span>
@@ -884,6 +888,7 @@
     <script src="data.js"></script>
     <script src="charts.js"></script>
     <script src="script.js"></script>
+    <script src="../../js/main.js"></script>
 
 </body>
 

@@ -334,18 +334,18 @@ function loadFeaturedProjects(projects) {
   const container = document.getElementById('featured-projects');
   if (!container) return;
 
-  // Sort by date (newest first) and get top 2
+  // Sort by date (newest first) and get top 3
   const sortedProjects = projects
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 3);
 
   container.innerHTML = sortedProjects.map(project => `
-    <article class="card">
+    <article class="card" onclick="window.location.href='${project.link}'" style="cursor: pointer;">
       <div class="card-image-placeholder">
-        <img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
+        <img src="${project.image}" class="card-image" alt="${project.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
       </div>
       <div class="card-body">
-        <h3><a href="/${project.link}">${project.title}</a></h3>
+        <h3><a href="${project.link}" style="pointer-events: none;">${project.title}</a></h3>
         <p>${project.description}</p>
         <div class="tags">
           ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
@@ -369,7 +369,7 @@ function loadLatestBlogs(blogs) {
     const formattedDate = blogDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
     return `
-      <article class="card">
+      <article class="card" onclick="window.location.href='/${blog.link}'">
         <div class="card-image-placeholder">
           <img src="${blog.image}" alt="${blog.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
         </div>

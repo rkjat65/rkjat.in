@@ -4,13 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | DAwithRK</title>
+  <meta name="description" content="RK - Data Visualization Gallery showcasing professional charts and insights">
+  <title>Gallery | DAwithRK</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
 
   <!-- Favicon -->
   <link rel="icon"
@@ -31,14 +37,18 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="/" class="logo"><span>DA</span>withRK</a>
+
       <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/portfolio/" class="active">My Work</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/portfolio/">My Work</a></li>
+        <li><a href="/blog/">Blogs</a></li>
+        <li><a href="/gallery.html" class="active">Gallery</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html">Contact</a></li>
         <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
@@ -49,89 +59,96 @@
   <!-- Page Header -->
   <header class="page-header">
     <div class="container">
-      <h1>Portfolio</h1>
-      <p>Data analysis projects showcasing my skills and expertise</p>
+      <h1>Visual Gallery</h1>
+      <p>Data visualizations crafted with precision and insight</p>
     </div>
   </header>
 
-  <!-- Projects Grid -->
-  <section class="section">
-    <div class="container container-wide">
-      <div class="grid grid-2">
-
-        <!-- Project 0: India's Fiscal Federalism -->
-        <article class="card" onclick="window.location.href='/portfolio/tax-devolution/'" style="cursor: pointer;">
-          <div class="card-image-placeholder"> <img src="/portfolio/tax-devolution/images/beneficiary-states.png" alt="Tax Devolution Analysis"
-              loading="lazy"></div>
-          <div class="card-body">
-            <h3><a href="/portfolio/tax-devolution/" style="pointer-events: none;">India's Fiscal Federalism</a></h3>
-            <p>Interactive visualization of India's tax devolution system analyzing ₹111 lakh crore across 28 states (FY 2020-21 to 2024-25)</p>
-            <div class="tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Chart.js</span>
-              <span class="tag">Data Visualization</span>
-              <span class="tag">Economics</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 1: India Economic Pulse -->
-        <article class="card" onclick="window.location.href='india-economic-pulse.html'" style="cursor: pointer;">
-          <div class="card-image-placeholder"> <img src="/images/dash1.png" alt="dashboard1"
-              loading="lazy"></div>
-          <div class="card-body">
-            <h3><a href="india-economic-pulse.html" style="pointer-events: none;">India Economic Pulse</a></h3>
-            <p>Interactive dashboard tracking India's key economic indicators (2012-2025) with real-time visualizations
-            </p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">Plotly</span>
-              <span class="tag">Pandas</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2: Indian Legislature Analysis  -->
-        <article class="card" onclick="window.location.href='/portfolio/indian-legislature-analysis/dashboard/'" style="cursor: pointer;">
-          <div class="card-image-placeholder"> <img src="/images/dash2.png" alt="dashboard2"
-              loading="lazy"></div>
-          <div class="card-body">
-            <h3><a href="/portfolio/indian-legislature-analysis/dashboard/" style="pointer-events: none;">Indian Legislature Analysis</a></h3>
-            <p>Analysis of 2024 Lok Sabha Election
-            </p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Selenium</span>
-              <span class="tag">Plotly</span>
-              <span class="tag">Pandas</span>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Project 3: Indian Healthcare Analysis  -->
-        <article class="card" onclick="window.location.href='/portfolio/indian-healthcare-analysis/'" style="cursor: pointer;">
-          <div class="card-image-placeholder"> <img src="/images/dash3.png" alt="dashboard3"
-              loading="lazy"></div>
-          <div class="card-body">
-            <h3><a href="/portfolio/indian-healthcare-analysis/" style="pointer-events: none;">Indian Healthcare Analysis</a></h3>
-            <p>Healthcare analysis based on the NFHS data
-            </p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">PowerBI</span>
-              <span class="tag">DAX</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Add more projects here by copying the card structure -->
-
+  <!-- Gallery Controls -->
+  <section class="gallery-controls">
+    <div class="container">
+      <div class="controls-inner">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Cricket">Cricket</button>
+          <button class="filter-btn" data-filter="economics">Economics</button>
+          <button class="filter-btn" data-filter="politics">Politics</button>
+          <button class="filter-btn" data-filter="social">Social</button>
+          <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+        </div>
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid" title="Grid View">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+            </svg>
+          </button>
+          <button class="view-btn" data-view="masonry" title="Masonry View">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="9"></rect>
+              <rect x="14" y="3" width="7" height="5"></rect>
+              <rect x="3" y="16" width="7" height="5"></rect>
+              <rect x="14" y="12" width="7" height="9"></rect>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Gallery Grid -->
+  <section class="section">
+    <div class="container container-wide">
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Gallery items will be loaded dynamically -->
+        <div class="loading-placeholder">Loading gallery...</div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" id="pagination">
+        <!-- Pagination buttons will be loaded dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-image">
+      <div class="lightbox-info">
+        <div class="lightbox-caption" id="lightbox-caption">
+          <!-- Caption from JSON will be displayed here -->
+        </div>
+        <div class="social-share">
+          <h4>Share this visualization</h4>
+          <div class="share-buttons" id="share-buttons">
+            <!-- Share buttons will be generated dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -163,7 +180,8 @@
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 
 </html>
