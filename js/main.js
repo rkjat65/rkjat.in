@@ -117,6 +117,11 @@ function initCanvas() {
   const canvas = document.getElementById('hero-canvas');
   if (!canvas) return;
 
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  return;
+}
+
+
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
