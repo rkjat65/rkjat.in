@@ -1,0 +1,20 @@
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span>DA</span>withRK</a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/"{{#if isHome}} class="active" aria-current="page"{{/if}}>Home</a></li>
+      <li><a href="/portfolio/"{{#if isPortfolio}} class="active" aria-current="page"{{/if}}>My Work</a></li>
+      <li><a href="/blog/"{{#if isBlog}} class="active" aria-current="page"{{/if}}>Blogs</a></li>
+      <li><a href="/gallery.html"{{#if isGallery}} class="active" aria-current="page"{{/if}}>DataViz</a></li>
+      <li><a href="/contact.html"{{#if isContact}} class="active" aria-current="page"{{/if}}>Contact</a></li>
+      <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button></li>
+    </ul>
+  </div>
+</nav>

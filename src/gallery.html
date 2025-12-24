@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> head title="DataViz Gallery" description="Explore my collection of data visualizations covering economics, politics, sports, and social trends." extraCss="/css/gallery.css"}}
+</head>
+
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  {{> nav isGallery=true}}
+
+  <!-- Gallery Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>DataViz Gallery</h1>
+      <p>Explore my collection of data visualizations</p>
+    </div>
+  </header>
+
+  <!-- Gallery Controls -->
+  <section class="gallery-controls" id="main-content">
+    <div class="container">
+      <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Cricket">Cricket</button>
+        <button class="filter-btn" data-filter="economics">Economics</button>
+        <button class="filter-btn" data-filter="politics">Politics</button>
+        <button class="filter-btn" data-filter="social">Social</button>
+        <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+      </div>
+
+      <div class="view-toggle" role="group" aria-label="Change gallery view">
+        <button class="view-btn active" data-view="grid" aria-label="Grid view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+        <button class="view-btn" data-view="masonry" aria-label="Masonry view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid" id="gallery-grid" role="list">
+        <div class="loading-placeholder">Loading gallery...</div>
+      </div>
+
+      <div id="pagination" class="pagination" role="navigation" aria-label="Gallery pagination"></div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-image" src="" alt="" class="lightbox-image">
+      <div class="lightbox-info">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <div class="lightbox-share" id="share-buttons"></div>
+      </div>
+    </div>
+
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  {{> footer}}
+
+  <script type="module" src="/ts/gallery-page.ts"></script>
+</body>
+</html>

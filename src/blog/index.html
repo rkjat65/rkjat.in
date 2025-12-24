@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> head title="Blog" description="Insights and analysis on data science, technology, and current affairs by RK Jat"}}
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  {{> nav isBlog=true}}
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>Thoughts on data analysis, technology, and current affairs</p>
+    </div>
+  </header>
+
+  <!-- Blog Posts Grid -->
+  <section class="section" id="main-content">
+    <div class="container container-wide">
+      <div class="grid grid-3" id="blog-posts">
+        <div class="loading-placeholder">Loading blog posts...</div>
+      </div>
+    </div>
+  </section>
+
+  {{> footer}}
+
+  <script type="module" src="/ts/main.ts"></script>
+  <script type="module">
+    import { fetchJSON, formatDate, stripHtml } from '/ts/modules/utils.ts';
+
+    async function loadAllBlogs() {
+      const container = document.getElementById('blog-posts');
+      if (!container) return;
+
+      try {
+        const data = await fetchJSON('/content-index.json');
+        const blogs = data.blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        container.innerHTML = blogs.map(blog => {
+          const formattedDate = formatDate(blog.date);
+          const tagsHtml = blog.tags.slice(0, 3).map(tag => `<span class="tag">${tag}</span>`).join('');
+
+          return `
+            <article class="card" data-href="/${blog.link}" tabindex="0" role="link">
+              <div class="card-image-placeholder">
+                <img src="${blog.image}" alt="${stripHtml(blog.title)}" loading="lazy" onerror="this.src='/images/placeholder.png'">
+              </div>
+              <div class="card-body">
+                <p class="blog-meta">${formattedDate} · ${blog.readTime}</p>
+                <h3><a href="/${blog.link}">${blog.title}</a></h3>
+                <p>${blog.description}</p>
+                <div class="tags">${tagsHtml}</div>
+              </div>
+            </article>
+          `;
+        }).join('');
+      } catch (error) {
+        console.error('Error loading blogs:', error);
+        container.innerHTML = '<p class="error-message">Unable to load blog posts at this time.</p>';
+      }
+    }
+
+    loadAllBlogs();
+  </script>
+</body>
+</html>
