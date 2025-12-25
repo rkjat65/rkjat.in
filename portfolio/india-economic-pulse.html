@@ -3,14 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="India Economic Pulse - Interactive dashboard tracking India's key economic indicators including GDP, inflation, trade dynamics, and forex reserves (2012-2025)">
+  <meta name="keywords" content="India Economy, GDP, Inflation, Economic Dashboard, Streamlit, Data Analytics, Python, Economic Indicators">
+  <meta name="author" content="RK Jat">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="India Economic Pulse | Interactive Economic Dashboard">
+  <meta property="og:description" content="Comprehensive real-time economic analytics dashboard tracking 10+ key Indian economic indicators from 2012-2025">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rkjat.in/portfolio/india-economic-pulse.html">
+  <meta property="og:image" content="https://rkjat.in/portfolio/covereconomy.png">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rkjat65">
+  <meta name="twitter:title" content="India Economic Pulse | Interactive Economic Dashboard">
+  <meta name="twitter:description" content="Track India's GDP, inflation, trade, and forex with interactive visualizations">
+  <meta name="twitter:image" content="https://rkjat.in/portfolio/covereconomy.png">
+
   <title>India Economic Pulse | DAwithRK</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../dist/assets/style.css">
+  <link rel="stylesheet" href="../dist/assets/portfolio.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230071e3'/><text x='50' y='68' font-family='sans-serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'>DA</text></svg>">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
 </head>
 <body>
   <!-- Navigation -->
@@ -32,48 +57,46 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <div class="container">
-      <p style="color: var(--primary); font-weight: 500; margin-bottom: 16px;">DASHBOARD</p>
-      <h1>India Economic Pulse</h1>
-      <p>Interactive dashboard tracking India's key economic indicators (2012-2025)</p>
-      
-      <div class="tags" style="justify-content: center; margin-top: 24px;">
-        <span class="tag">Python</span>
-        <span class="tag">Streamlit</span>
-        <span class="tag">Plotly</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">NumPy</span>
-      </div>
-      
-      <div class="btn-group" style="margin-top: 32px;">
-        <a href="https://github.com/rkjat65/India-Economic-Pulse" class="btn btn-secondary" target="_blank">
-          View Code on GitHub
-        </a>
-        <a href="https://india-economic-pulse.streamlit.app/" class="btn btn-primary" target="_blank">
+  <!-- Project Header -->
+  <header class="project-header">
+    <p class="subtitle">DASHBOARD</p>
+    <h1>India Economic Pulse</h1>
+    <p>Interactive dashboard tracking India's key economic indicators (2012-2025)</p>
+
+    <div class="project-tags">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Streamlit</span>
+      <span class="tech-tag">Plotly</span>
+      <span class="tech-tag">Pandas</span>
+      <span class="tech-tag">NumPy</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="https://github.com/rkjat65/India-Economic-Pulse" class="btn btn-secondary" target="_blank">
+        View Code on GitHub
+      </a>
+      <a href="https://india-economic-pulse.streamlit.app/" class="btn btn-primary" target="_blank">
           Open Full App ↗
-        </a>
-      </div>
+      </a>
     </div>
   </header>
 
   <!-- Embedded Dashboard -->
-  <section class="section">
-    <div class="container container-wide">
-      <h2 style="text-align: center; margin-bottom: 24px;">Live Dashboard</h2>
-      <p style="text-align: center; color: var(--text-secondary); margin-bottom: 32px;">
+  <section class="project-content">
+    <div class="project-section">
+      <h2 style="text-align: center;">Live Dashboard</h2>
+      <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-lg);">
         Interact with the dashboard directly below, or open in full screen for the best experience.
       </p>
-      
+
       <div class="embed-container">
-        <iframe 
-          src="https://india-economic-pulse.streamlit.app/?embedded=true" 
+        <iframe
+          src="https://india-economic-pulse.streamlit.app/?embedded=true"
           title="India Economic Pulse Dashboard"
           loading="lazy">
         </iframe>
       </div>
-      
+
       <p class="embed-fullscreen">
         <a href="https://india-economic-pulse.streamlit.app/" class="btn btn-primary" target="_blank">
           Open Full Screen ↗
@@ -83,98 +106,103 @@
   </section>
 
   <!-- Project Details -->
-  <section class="section section-alt">
-    <div class="content">
+  <section class="project-content">
+    <div class="project-section">
       <h2>About This Project</h2>
       <p>
-        India Economic Pulse is a comprehensive, real-time economic analytics dashboard that consolidates 
-        and analyzes 10+ key Indian economic indicators from 2012-2025. It transforms complex economic 
+        India Economic Pulse is a comprehensive, real-time economic analytics dashboard that consolidates
+        and analyzes 10+ key Indian economic indicators from 2012-2025. It transforms complex economic
         data into actionable insights through beautiful, interactive visualizations.
       </p>
-      
-      <h2>Key Features</h2>
-      <ul>
-        <li><strong>GDP Analysis:</strong> Track quarterly growth rates with moving averages and component breakdowns</li>
-        <li><strong>Inflation Tracking:</strong> Monitor CPI and WPI trends with RBI target comparisons</li>
-        <li><strong>Trade Dynamics:</strong> Analyze import-export balance and trade composition</li>
-        <li><strong>Forex & Policy Rates:</strong> Real-time forex reserves and RBI monetary policy rates</li>
-        <li><strong>Modern UI:</strong> Dark theme with glassmorphism effects and smooth animations</li>
-        <li><strong>Data Export:</strong> Download filtered data as CSV or complete datasets as Excel</li>
-      </ul>
-      
-      <h2>Data Sources</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Source</th>
-            <th>Frequency</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>GDP & National Accounts</td>
-            <td>MoSPI</td>
-            <td>Quarterly</td>
-          </tr>
-          <tr>
-            <td>Inflation Indices</td>
-            <td>RBI Database</td>
-            <td>Monthly</td>
-          </tr>
-          <tr>
-            <td>Trade Statistics</td>
-            <td>DGCI&S</td>
-            <td>Monthly</td>
-          </tr>
-          <tr>
-            <td>Forex Reserves</td>
-            <td>RBI Weekly Reports</td>
-            <td>Weekly</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <h2>Tech Stack</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Component</th>
-            <th>Technology</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Frontend</td>
-            <td>Streamlit</td>
-          </tr>
-          <tr>
-            <td>Data Processing</td>
-            <td>Pandas, NumPy</td>
-          </tr>
-          <tr>
-            <td>Visualizations</td>
-            <td>Plotly</td>
-          </tr>
-          <tr>
-            <td>Deployment</td>
-            <td>Streamlit Cloud</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <!-- Downloadable Assets -->
-      <h2>Project Resources</h2>
-      <div class="assets-list">
-        <a href="https://github.com/rkjat65/India-Economic-Pulse" class="asset-link" target="_blank">
-          <span class="icon">📁</span>
-          <div class="info">
-            <strong>Source Code</strong>
-            <span>View on GitHub</span>
-          </div>
-        </a>
+
+      <div class="key-findings">
+        <h3>Key Features</h3>
+        <ul class="findings-list">
+          <li><strong>GDP Analysis:</strong> Track quarterly growth rates with moving averages and component breakdowns</li>
+          <li><strong>Inflation Tracking:</strong> Monitor CPI and WPI trends with RBI target comparisons</li>
+          <li><strong>Trade Dynamics:</strong> Analyze import-export balance and trade composition</li>
+          <li><strong>Forex & Policy Rates:</strong> Real-time forex reserves and RBI monetary policy rates</li>
+          <li><strong>Modern UI:</strong> Dark theme with glassmorphism effects and smooth animations</li>
+          <li><strong>Data Export:</strong> Download filtered data as CSV or complete datasets as Excel</li>
+        </ul>
       </div>
       
+      <h3>Data Sources</h3>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Source</th>
+              <th>Frequency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GDP & National Accounts</td>
+              <td>MoSPI</td>
+              <td>Quarterly</td>
+            </tr>
+            <tr>
+              <td>Inflation Indices</td>
+              <td>RBI Database</td>
+              <td>Monthly</td>
+            </tr>
+            <tr>
+              <td>Trade Statistics</td>
+              <td>DGCI&S</td>
+              <td>Monthly</td>
+            </tr>
+            <tr>
+              <td>Forex Reserves</td>
+              <td>RBI Weekly Reports</td>
+              <td>Weekly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Tech Stack</h3>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Technology</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frontend</td>
+              <td>Streamlit</td>
+            </tr>
+            <tr>
+              <td>Data Processing</td>
+              <td>Pandas, NumPy</td>
+            </tr>
+            <tr>
+              <td>Visualizations</td>
+              <td>Plotly</td>
+            </tr>
+            <tr>
+              <td>Deployment</td>
+              <td>Streamlit Cloud</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Project Resources -->
+      <h3>Project Resources</h3>
+      <div class="btn-group" style="justify-content: flex-start; margin: var(--space-lg) 0;">
+        <a href="https://github.com/rkjat65/India-Economic-Pulse" class="btn btn-secondary" target="_blank">
+          📁 Source Code on GitHub
+        </a>
+        <a href="https://india-economic-pulse.streamlit.app/" class="btn btn-primary" target="_blank">
+          🚀 Live Dashboard
+        </a>
+      </div>
+
       <!-- SHARE BUTTONS (auto-generated) -->
       <div class="share-section">
         <h4>Share this project</h4>
@@ -206,6 +234,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script type="module" src="../dist/assets/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> portfolio-head
+    title="India Economic Pulse | Interactive Economic Dashboard"
+    description="Comprehensive real-time economic analytics dashboard tracking 10+ key Indian economic indicators from 2012-2025. Interactive visualizations for GDP, inflation, trade, and forex analysis."
+    keywords="India Economy, GDP, Inflation, Economic Dashboard, Streamlit, Data Analytics, Python, Economic Indicators, RBI, Trade Statistics"
+    author="RK Jat"
+    url="portfolio/india-economic-pulse.html"
+    image="portfolio/covereconomy.png"
+    projectType="Data Dashboard"
+    githubUrl="https://github.com/rkjat65/India-Economic-Pulse"
+    liveUrl="https://india-economic-pulse.streamlit.app/"
+  }}
+</head>
+<body>
+  {{> nav}}
+
+  <!-- Project Header -->
+  <header class="project-header">
+    <p class="subtitle">DASHBOARD</p>
+    <h1>India Economic Pulse</h1>
+    <p>Interactive dashboard tracking India's key economic indicators (2012-2025)</p>
+
+    <div class="project-tags">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Streamlit</span>
+      <span class="tech-tag">Plotly</span>
+      <span class="tech-tag">Pandas</span>
+      <span class="tech-tag">NumPy</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="https://github.com/rkjat65/India-Economic-Pulse" class="btn btn-secondary" target="_blank">
+        View Code on GitHub
+      </a>
+      <a href="https://india-economic-pulse.streamlit.app/" class="btn btn-primary" target="_blank">
+        Open Full App ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Embedded Dashboard -->
+  <section class="project-content">
+    <div class="project-section">
+      <h2 style="text-align: center;">Live Dashboard</h2>
+      <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--space-lg);">
+        Interact with the dashboard directly below, or open in full screen for the best experience.
+      </p>
+
+      <div class="embed-container">
+        <iframe
+          src="https://india-economic-pulse.streamlit.app/?embedded=true"
+          title="India Economic Pulse Dashboard"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <p class="embed-fullscreen">
+        <a href="https://india-economic-pulse.streamlit.app/" class="btn btn-primary" target="_blank">
+          Open Full Screen ↗
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Project Details -->
+  <section class="project-content">
+    <div class="project-section">
+      <h2>About This Project</h2>
+      <p>
+        India Economic Pulse is a comprehensive, real-time economic analytics dashboard that consolidates
+        and analyzes 10+ key Indian economic indicators from 2012-2025. It transforms complex economic
+        data into actionable insights through beautiful, interactive visualizations.
+      </p>
+
+      <div class="key-findings">
+        <h3>Key Features</h3>
+        <ul class="findings-list">
+          <li><strong>GDP Analysis:</strong> Track quarterly growth rates with moving averages and component breakdowns</li>
+          <li><strong>Inflation Tracking:</strong> Monitor CPI and WPI trends with RBI target comparisons</li>
+          <li><strong>Trade Dynamics:</strong> Analyze import-export balance and trade composition</li>
+          <li><strong>Forex & Policy Rates:</strong> Real-time forex reserves and RBI monetary policy rates</li>
+          <li><strong>Modern UI:</strong> Dark theme with glassmorphism effects and smooth animations</li>
+          <li><strong>Data Export:</strong> Download filtered data as CSV or complete datasets as Excel</li>
+        </ul>
+      </div>
+
+      <h3>Data Sources</h3>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Source</th>
+              <th>Frequency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GDP & National Accounts</td>
+              <td>MoSPI</td>
+              <td>Quarterly</td>
+            </tr>
+            <tr>
+              <td>Inflation Indices</td>
+              <td>RBI Database</td>
+              <td>Monthly</td>
+            </tr>
+            <tr>
+              <td>Trade Statistics</td>
+              <td>DGCI&S</td>
+              <td>Monthly</td>
+            </tr>
+            <tr>
+              <td>Forex Reserves</td>
+              <td>RBI Weekly Reports</td>
+              <td>Weekly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Tech Stack</h3>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Technology</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frontend</td>
+              <td>Streamlit</td>
+            </tr>
+            <tr>
+              <td>Data Processing</td>
+              <td>Pandas, NumPy</td>
+            </tr>
+            <tr>
+              <td>Visualizations</td>
+              <td>Plotly</td>
+            </tr>
+            <tr>
+              <td>Deployment</td>
+              <td>Streamlit Cloud</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SHARE BUTTONS (auto-generated) -->
+      <div class="share-section">
+        <h4>Share this project</h4>
+        <div class="share-buttons" id="share-buttons">
+          <!-- Buttons auto-generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{> footer}}
+
+  <script type="module" src="/ts/main.ts"></script>
+</body>
+</html>

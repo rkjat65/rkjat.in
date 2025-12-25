@@ -2,7 +2,7 @@
  * Theme Module Tests
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { vi } from 'vitest';
 import { getCurrentTheme, setTheme, toggleTheme, initTheme, isDarkTheme } from './theme';
 
 describe('Theme Module', () => {

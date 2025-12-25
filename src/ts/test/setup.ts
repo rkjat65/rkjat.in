@@ -65,10 +65,5 @@ Object.defineProperty(navigator, 'clipboard', {
   writable: true,
 });
 
-// Reset mocks before each test
-beforeEach(() => {
-  vi.clearAllMocks();
-  localStorageMock.getItem.mockReset();
-  localStorageMock.setItem.mockReset();
-  document.body.innerHTML = '';
-});
+// Export the mocks for use in tests
+export { localStorageMock };

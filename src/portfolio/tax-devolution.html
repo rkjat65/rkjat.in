@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> portfolio-head
+    title="India's Fiscal Federalism Analysis"
+    description="Interactive analysis of India's fiscal federalism - State tax contributions vs devolutions (FY 2020-21 to 2024-25). Explore how ₹111 lakh crore flows between 7 contributor states and 21 beneficiary states."
+    keywords="India, Fiscal Federalism, Tax Devolution, Data Analysis, Finance Commission, State Taxes, Data Visualization, Chart.js"
+    author="RK Jat"
+    url="portfolio/tax-devolution.html"
+    image="portfolio/tax-devolution/images/contributor-states.png"
+    projectType="Data Analysis & Visualization"
+    githubUrl="https://github.com/rkjat65"
+  }}
+</head>
+<body>
+  {{> nav}}
+
+  <!-- Project Header -->
+  <header class="project-header">
+    <p class="subtitle">DATA ANALYSIS</p>
+    <h1>India's Fiscal Federalism</h1>
+    <p>Interactive analysis revealing how ₹111 lakh crore in taxes flows between contributor and beneficiary states</p>
+
+    <div class="project-tags">
+      <span class="tech-tag">JavaScript</span>
+      <span class="tech-tag">Chart.js</span>
+      <span class="tech-tag">Data Visualization</span>
+      <span class="tech-tag">Interactive Charts</span>
+      <span class="tech-tag">Finance Analysis</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="/portfolio/tax-devolution/" class="btn btn-primary" target="_blank">
+        View Full Interactive Analysis ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Project Overview -->
+  <section class="project-content">
+    <div class="project-section">
+      <h2>Project Overview</h2>
+      <p>
+        This interactive visualization explores India's fiscal federalism system, analyzing how central tax revenue
+        is collected from states and redistributed through devolution. The analysis covers FY 2020-21 to 2024-25,
+        revealing fascinating patterns in tax contributions and distributions across Indian states.
+      </p>
+
+      <!-- Key Statistics -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">₹111.75</div>
+          <div class="stat-label">Lakh Crore</div>
+          <div class="stat-description">Total Tax Collected</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">₹75.10</div>
+          <div class="stat-label">Lakh Crore</div>
+          <div class="stat-description">Devolved to States</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">67.2%</div>
+          <div class="stat-label">Devolution Rate</div>
+          <div class="stat-description">Average Share to States</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Contributor States</div>
+          <div class="stat-description">Net Tax Contributors</div>
+        </div>
+      </div>
+
+      <div class="key-findings">
+        <h3>Key Insights</h3>
+        <ul class="findings-list">
+          <li><strong>Top Contributors:</strong> Maharashtra, Karnataka, Tamil Nadu, Gujarat, and Telangana contribute the most to the central tax pool</li>
+          <li><strong>Redistribution Pattern:</strong> 21 states receive more than they contribute, ensuring equitable development across India</li>
+          <li><strong>Regional Balance:</strong> The devolution system helps bridge the gap between economically advanced and developing states</li>
+          <li><strong>Fiscal Equity:</strong> States with lower per capita income receive proportionally higher devolutions</li>
+          <li><strong>Transparent Analysis:</strong> Interactive charts show year-over-year trends and state-wise breakdowns</li>
+        </ul>
+      </div>
+
+      <h3>Analysis Highlights</h3>
+      <p>
+        The full interactive analysis includes:
+      </p>
+      <ul>
+        <li><strong>Contributor States Analysis:</strong> Detailed breakdown of states that contribute more than they receive</li>
+        <li><strong>Beneficiary States Overview:</strong> Analysis of states receiving higher devolutions for development</li>
+        <li><strong>Year-over-Year Trends:</strong> How tax collection and devolution patterns evolved from 2020-21 to 2024-25</li>
+        <li><strong>Interactive Charts:</strong> Dynamic visualizations built with Chart.js for exploring the data</li>
+        <li><strong>State Comparisons:</strong> Compare multiple states side-by-side to understand fiscal dynamics</li>
+        <li><strong>Animated Statistics:</strong> Engaging CountUp.js animations for key metrics</li>
+      </ul>
+
+      <div class="insight-box">
+        <h4>Understanding Fiscal Federalism</h4>
+        <p>
+          India's fiscal federalism is a sophisticated system designed to balance regional disparities. States with
+          strong industrial bases and higher GDP contribute significantly to the central tax pool. These funds are
+          then redistributed to ensure that developing states have the resources needed for infrastructure, education,
+          and healthcare development. This analysis visualizes this complex system in an accessible, interactive format.
+        </p>
+      </div>
+
+      <h3>Data Sources</h3>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Source</th>
+              <th>Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>State Tax Collections</td>
+              <td>Ministry of Finance, RBI Reports</td>
+              <td>FY 2020-21 to 2024-25</td>
+            </tr>
+            <tr>
+              <td>Tax Devolution Data</td>
+              <td>Finance Commission Reports</td>
+              <td>15th Finance Commission Period</td>
+            </tr>
+            <tr>
+              <td>State-wise Breakdowns</td>
+              <td>Union Budget Documents</td>
+              <td>Annual Budget Estimates</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Technology Stack</h3>
+      <div class="methodology-steps">
+        <li>
+          <h4>Chart.js</h4>
+          <p>Interactive, responsive charts for visualizing complex fiscal data with smooth animations and hover interactions</p>
+        </li>
+        <li>
+          <h4>CountUp.js</h4>
+          <p>Animated number counting for engaging presentation of key statistics and metrics</p>
+        </li>
+        <li>
+          <h4>AOS (Animate On Scroll)</h4>
+          <p>Scroll-triggered animations for smooth, progressive content revelation</p>
+        </li>
+        <li>
+          <h4>Custom Data Processing</h4>
+          <p>JavaScript-based data aggregation and calculation for real-time insights</p>
+        </li>
+      </methodology-steps>
+
+      <div class="callout callout-info">
+        <h4>📊 Interactive Experience</h4>
+        <p>
+          This project features a fully interactive dashboard with smooth scrolling, animated backgrounds, and
+          responsive charts. Click below to explore the complete analysis with all interactive features.
+        </p>
+      </div>
+
+      <div class="project-actions" style="margin-top: var(--space-2xl);">
+        <a href="/portfolio/tax-devolution/" class="btn btn-primary" target="_blank">
+          Launch Full Interactive Analysis ↗
+        </a>
+      </div>
+
+      <!-- SHARE BUTTONS (auto-generated) -->
+      <div class="share-section">
+        <h4>Share this project</h4>
+        <div class="share-buttons" id="share-buttons">
+          <!-- Buttons auto-generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{> footer}}
+
+  <script type="module" src="/ts/main.ts"></script>
+</body>
+</html>
