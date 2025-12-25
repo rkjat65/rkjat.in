@@ -98,7 +98,7 @@ export function initCounterAnimations(): void {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !entry.target.getAttribute('data-animated')) {
           entry.target.setAttribute('data-animated', 'true');
-          const target = parseInt(entry.target.getAttribute('data-target') ?? '0', 10);
+          const target = parseInt(entry.target.getAttribute('data-target') || '0', 10);
           animateCounter(entry.target as HTMLElement, target);
         }
       });
@@ -134,21 +134,20 @@ export function calculateReadTime(): void {
  */
 export function initHashtagCopy(): void {
   document.querySelectorAll('.hashtags span').forEach((tag) => {
-    tag.addEventListener('click', function (this: HTMLElement) {
-      const text = this.textContent ?? '';
-      const originalText = this.textContent;
+    tag.addEventListener('click', async function (this: HTMLElement) {
+      const text = this.textContent || '';
 
-      navigator.clipboard
-        .writeText(text)
-        .then(() => {
-          this.textContent = 'Copied!';
-          setTimeout(() => {
-            this.textContent = originalText;
-          }, 1500);
-        })
-        .catch(() => {
-          // Fallback for browsers without clipboard API
-        });
+      try {
+        await navigator.clipboard.writeText(text);
+        const originalText = this.textContent;
+        this.textContent = 'Copied!';
+        setTimeout(() => {
+          this.textContent = originalText;
+        }, 1500);
+      } catch {
+        // Fallback for browsers without clipboard API
+        console.log('Clipboard API not available');
+      }
     });
   });
 }
@@ -182,10 +181,7 @@ export function initKeyboardShortcuts(): void {
     // Press 'T' to go to top
     if (e.key === 't' || e.key === 'T') {
       // Only if not in an input field
-      const isInput =
-        document.activeElement?.tagName === 'INPUT' ||
-        document.activeElement?.tagName === 'TEXTAREA';
-      if (!isInput) {
+      if (document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
         window.scrollTo({
           top: 0,
           behavior: 'smooth',

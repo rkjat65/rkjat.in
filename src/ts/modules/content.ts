@@ -193,10 +193,10 @@ export function initContent(): void {
   const hasGalleryPreview = !!getElement(SELECTORS.galleryPreview);
 
   if (hasProjects || hasBlogs) {
-    void loadDynamicContent();
+    loadDynamicContent();
   }
 
   if (hasGalleryPreview) {
-    void loadGalleryPreview();
+    loadGalleryPreview();
   }
 }

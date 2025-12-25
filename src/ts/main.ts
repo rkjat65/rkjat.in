@@ -8,7 +8,6 @@ import { initCanvas } from './modules/canvas';
 import { initContent } from './modules/content';
 import { initShareButtons } from './modules/share';
 import { initContactForm } from './modules/form';
-import { initBlogPage } from './modules/blog-page';
 
 /**
  * Initialize all modules when DOM is ready
@@ -23,7 +22,6 @@ function init(): void {
   initContent();
   initShareButtons();
   initContactForm();
-  initBlogPage();
 }
 
 // Initialize when DOM is ready
@@ -34,12 +32,4 @@ if (document.readyState === 'loading') {
 }
 
 // Export for potential external use
-export {
-  initTheme,
-  initNavigation,
-  initCanvas,
-  initContent,
-  initShareButtons,
-  initContactForm,
-  initBlogPage,
-};
+export { initTheme, initNavigation, initCanvas, initContent, initShareButtons, initContactForm };

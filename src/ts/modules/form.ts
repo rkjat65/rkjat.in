@@ -16,9 +16,7 @@ export function initContactForm(): void {
   const form = getElement<HTMLFormElement>('.contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    void handleFormSubmit(e);
-  });
+  form.addEventListener('submit', handleFormSubmit);
 }
 
 /**

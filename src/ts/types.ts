@@ -46,7 +46,7 @@ export interface ContentIndex {
 export type Theme = 'light' | 'dark';
 
 // Gallery types
-export type GalleryFilter = string;
+export type GalleryFilter = 'all' | string;
 export type GalleryView = 'grid' | 'masonry';
 
 export interface GalleryState {

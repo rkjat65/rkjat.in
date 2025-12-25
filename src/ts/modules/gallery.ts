@@ -3,7 +3,7 @@
  * Fixes memory leaks from the original implementation
  */
 
-import type { GalleryItem, GalleryState, GalleryView } from '../types';
+import type { GalleryItem, GalleryState, GalleryFilter, GalleryView } from '../types';
 import { API, SELECTORS, CLASSES, PAGINATION } from './constants';
 import { fetchJSON, getElement, stripHtml, copyToClipboard } from './utils';
 import { shareOnTwitter, shareOnLinkedIn, shareOnFacebook, shareOnWhatsApp } from './share';
@@ -204,7 +204,7 @@ export class Gallery {
     const btn = target.closest<HTMLButtonElement>('.filter-btn');
 
     if (btn) {
-      const filter = btn.dataset.filter ?? 'all';
+      const filter = (btn.dataset.filter ?? 'all') as GalleryFilter;
 
       // Update active state
       document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove(CLASSES.active));
@@ -277,7 +277,7 @@ export class Gallery {
         shareOnWhatsApp(options);
         break;
       case 'copy':
-        void this.handleCopyLink(btn);
+        this.handleCopyLink(btn);
         break;
     }
   }
@@ -405,7 +405,7 @@ export class Gallery {
     const maxVisible = PAGINATION.maxVisiblePages;
 
     let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
-    const endPage = Math.min(totalPages, startPage + maxVisible - 1);
+    let endPage = Math.min(totalPages, startPage + maxVisible - 1);
 
     if (endPage - startPage < maxVisible - 1) {
       startPage = Math.max(1, endPage - maxVisible + 1);
@@ -604,7 +604,7 @@ export function initGallery(): Gallery | null {
   if (!grid) return null;
 
   const gallery = new Gallery();
-  void gallery.init();
+  gallery.init();
 
   return gallery;
 }

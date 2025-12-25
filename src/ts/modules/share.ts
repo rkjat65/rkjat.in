@@ -166,7 +166,7 @@ export function initShareButtons(containerSelector = '#share-buttons'): void {
   }
 
   // Use event delegation for all share buttons
-  container.addEventListener('click', (e) => {
+  container.addEventListener('click', async (e) => {
     const button = (e.target as Element).closest<HTMLButtonElement>('[data-share]');
     if (!button) return;
 
@@ -187,7 +187,7 @@ export function initShareButtons(containerSelector = '#share-buttons'): void {
         shareOnWhatsApp();
         break;
       case 'copy':
-        void copyLink();
+        await copyLink();
         break;
     }
   });
