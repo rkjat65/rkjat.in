@@ -8,8 +8,8 @@
   --primary-hover: #0077ed;
   --text: #1d1d1f;
   --text-secondary: #86868b;
-  --bg: #FAFAFC;
-  --bg-secondary: #F0F0F2;
+  --bg: #fafafc;
+  --bg-secondary: #f0f0f2;
   --border: #d2d2d7;
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -19,15 +19,16 @@
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
   --shadow-glow: 0 0 100px rgba(0, 113, 227, 0.15);
-  
+
   --gradient-text: linear-gradient(135deg, #0071e3 0%, #a64dff 100%);
-  --gradient-bg: radial-gradient(circle at top right, rgba(0, 113, 227, 0.08), transparent 40%),
+  --gradient-bg:
+    radial-gradient(circle at top right, rgba(0, 113, 227, 0.08), transparent 40%),
     radial-gradient(circle at bottom left, rgba(166, 77, 255, 0.08), transparent 40%);
-  
+
   --glass: rgba(255, 255, 255, 0.65);
   --glass-border: rgba(255, 255, 255, 0.4);
   --glass-blur: 24px;
-  
+
   /* Consistent spacing scale */
   --space-xs: 8px;
   --space-sm: 16px;
@@ -38,7 +39,7 @@
   --space-3xl: 96px;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --text: #f5f5f7;
   --text-secondary: #a1a1a6;
   --bg: #000000;
@@ -104,7 +105,10 @@ img {
 }
 
 /* Typography - Enhanced Hierarchy */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.2;
@@ -139,8 +143,13 @@ h3 {
 }
 
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 100% center; }
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
 }
 
 /* ============================================
@@ -383,8 +392,13 @@ h3 {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .page-header h1 {
@@ -422,7 +436,8 @@ h3 {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 113, 227, 0.1), transparent 50%),
+  background:
+    radial-gradient(circle at 50% 50%, rgba(0, 113, 227, 0.1), transparent 50%),
     radial-gradient(circle at 80% 30%, rgba(166, 77, 255, 0.08), transparent 40%);
   animation: rotateAurora 20s linear infinite;
   z-index: -1;
@@ -430,8 +445,12 @@ h3 {
 }
 
 @keyframes rotateAurora {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #hero-canvas {
@@ -588,12 +607,24 @@ h3 {
   animation: fadeInUp 0.6s ease-out backwards;
 }
 
-.skill-bar-item:nth-child(1) { animation-delay: 0.1s; }
-.skill-bar-item:nth-child(2) { animation-delay: 0.2s; }
-.skill-bar-item:nth-child(3) { animation-delay: 0.3s; }
-.skill-bar-item:nth-child(4) { animation-delay: 0.4s; }
-.skill-bar-item:nth-child(5) { animation-delay: 0.5s; }
-.skill-bar-item:nth-child(6) { animation-delay: 0.6s; }
+.skill-bar-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skill-bar-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skill-bar-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.skill-bar-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.skill-bar-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.skill-bar-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
 
 .skill-info {
   display: flex;
@@ -682,7 +713,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -766,14 +797,20 @@ h3 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .fade-in-section {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .fade-in-section.visible {
@@ -805,8 +842,13 @@ h3 {
 }
 
 @keyframes loadingPulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* ============================================
@@ -836,7 +878,7 @@ h3 {
   .grid-2 {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-  
+
   .grid-3 {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -847,7 +889,7 @@ h3 {
     --space-3xl: 64px;
     --space-2xl: 48px;
   }
-  
+
   .nav-inner {
     padding: 0 var(--space-sm);
     height: 60px;
@@ -921,7 +963,7 @@ h3 {
     width: 180px;
     height: 180px;
   }
-  
+
   .card-body {
     padding: var(--space-md);
   }
@@ -1057,24 +1099,24 @@ h3 {
 }
 
 /* Dark theme specific fixes */
-[data-theme="dark"] .contact-form {
+[data-theme='dark'] .contact-form {
   background: var(--bg-secondary);
   border-color: var(--border);
 }
 
-[data-theme="dark"] .form-group input,
-[data-theme="dark"] .form-group textarea {
+[data-theme='dark'] .form-group input,
+[data-theme='dark'] .form-group textarea {
   background: var(--bg);
   border-color: var(--border);
   color: var(--text);
 }
 
-[data-theme="dark"] .contact-link {
+[data-theme='dark'] .contact-link {
   background: var(--bg-secondary);
   border-color: var(--border);
 }
 
-[data-theme="dark"] .contact-link:hover {
+[data-theme='dark'] .contact-link:hover {
   background: var(--bg);
   border-color: var(--primary);
 }
@@ -1268,19 +1310,19 @@ textarea:focus-visible {
 }
 
 /* Dark Theme Enhancements */
-[data-theme="dark"] .contact-form-container {
+[data-theme='dark'] .contact-form-container {
   background: var(--bg-secondary);
 }
 
-[data-theme="dark"] .contact-card {
+[data-theme='dark'] .contact-card {
   background: var(--bg-secondary);
 }
 
-[data-theme="dark"] .contact-card:hover {
+[data-theme='dark'] .contact-card:hover {
   background: var(--bg);
 }
 
-[data-theme="dark"] .contact-icon-wrapper {
+[data-theme='dark'] .contact-icon-wrapper {
   background: var(--bg);
 }
 

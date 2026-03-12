@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head title="Indian Legislature Analysis: Lok Sabha 2024" description="Data-driven analysis
+    of 8,338 candidates examining party dynamics, criminal cases, education, and wealth
+    declarations"}}
+    <style>
+      /* Project Hero */
+      .project-hero {
+        padding: 140px 0 var(--space-2xl);
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 113, 227, 0.06) 0%,
+          rgba(166, 77, 255, 0.06) 100%
+        );
+      }
+      .project-hero::before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: -20%;
+        width: 60%;
+        height: 120%;
+        background: radial-gradient(circle, rgba(0, 113, 227, 0.08), transparent 70%);
+        pointer-events: none;
+      }
+      .project-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      .project-hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: var(--space-sm);
+      }
+      .project-hero .project-description {
+        color: var(--text-secondary);
+        font-size: 1.125rem;
+        max-width: 700px;
+        line-height: 1.7;
+        margin-bottom: var(--space-lg);
+      }
+      .project-cover {
+        margin-top: var(--space-xl);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+      }
+      .project-cover img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Section Styles */
+      .project-section {
+        padding: var(--space-2xl) 0;
+      }
+      .project-section h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        margin-bottom: var(--space-md);
+        position: relative;
+        padding-bottom: var(--space-sm);
+      }
+      .project-section h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--gradient-text);
+        border-radius: 2px;
+      }
+      .project-section p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: var(--space-md);
+        max-width: 800px;
+      }
+
+      /* Methodology Grid */
+      .methodology-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-md);
+        margin-top: var(--space-lg);
+      }
+      .methodology-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: var(--space-lg);
+        transition: all 0.3s ease;
+      }
+      .methodology-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .methodology-card .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(0, 113, 227, 0.1);
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 0.875rem;
+        border-radius: 50%;
+        margin-bottom: var(--space-sm);
+        font-family: var(--font-heading);
+      }
+      .methodology-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--space-xs);
+      }
+      .methodology-card p {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+      }
+
+      /* Findings */
+      .findings-list {
+        list-style: none;
+        padding: 0;
+        margin: var(--space-lg) 0;
+      }
+      .findings-list li {
+        position: relative;
+        padding: var(--space-sm) 0 var(--space-sm) var(--space-lg);
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+      .findings-list li:last-child {
+        border-bottom: none;
+      }
+      .findings-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 22px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary);
+      }
+
+      /* Tools Section */
+      .tools-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        margin-top: var(--space-md);
+      }
+      .tool-badge {
+        padding: 10px 20px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 99px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text);
+        transition: all 0.2s;
+      }
+      .tool-badge:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: rgba(0, 113, 227, 0.05);
+      }
+
+      /* Placeholder Note */
+      .placeholder-note {
+        background: rgba(0, 113, 227, 0.05);
+        border: 1px dashed rgba(0, 113, 227, 0.3);
+        border-radius: var(--radius);
+        padding: var(--space-lg);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9375rem;
+        margin: var(--space-lg) 0;
+      }
+
+      /* Back Link */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        color: var(--primary);
+        font-weight: 500;
+        font-size: 0.9375rem;
+        margin-bottom: var(--space-lg);
+        transition: all 0.2s;
+      }
+      .back-link:hover {
+        gap: 12px;
+      }
+      .back-link svg {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.2s;
+      }
+      .back-link:hover svg {
+        transform: translateX(-4px);
+      }
+
+      /* Conclusion */
+      .conclusion-box {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: var(--space-xl);
+        border: 1px solid var(--border);
+        margin-top: var(--space-lg);
+      }
+      .conclusion-box p {
+        max-width: none;
+      }
+
+      /* Stats Row */
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: var(--space-md);
+        margin: var(--space-xl) 0;
+      }
+      .stat-item {
+        text-align: center;
+        padding: var(--space-lg);
+        background: var(--bg);
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+      }
+      .stat-value {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+        display: block;
+        line-height: 1.2;
+      }
+      .stat-label {
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: var(--space-xs);
+        display: block;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .project-hero {
+          padding: 120px 0 var(--space-xl);
+        }
+        .methodology-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats-row {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {{> nav isPortfolio=true}}
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+      <div class="container">
+        <a href="/portfolio/" class="back-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 12H5" />
+            <path d="M12 19l-7-7 7-7" />
+          </svg>
+          Back to Portfolio
+        </a>
+        <h1 class="gradient-text">Indian Legislature Analysis: Lok Sabha 2024</h1>
+        <p class="project-description">
+          Data-driven analysis of 8,338 candidates from the 2024 Lok Sabha elections, examining
+          party dynamics, criminal backgrounds, educational qualifications, wealth declarations, and
+          gender representation patterns across Indian democracy.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Plotly</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Politics</span>
+        </div>
+        <div class="project-cover">
+          <img
+            src="./cover.png"
+            alt="Indian Legislature Analysis showing candidate data visualizations and party comparisons"
+            loading="lazy"
+            width="1200"
+            height="675"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Stats Overview -->
+      <section class="project-section section">
+        <div class="container">
+          <div class="stats-row fade-in-section">
+            <div class="stat-item">
+              <span class="stat-value">8,338</span>
+              <span class="stat-label">Candidates Analyzed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">543</span>
+              <span class="stat-label">Constituencies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">744</span>
+              <span class="stat-label">Parties Contesting</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">2024</span>
+              <span class="stat-label">Election Year</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section class="project-section section section-alt">
+        <div class="container">
+          <h2>Overview & Problem Statement</h2>
+          <p>
+            Indian general elections are the largest democratic exercise in the world. The 2024 Lok
+            Sabha elections saw over 8,300 candidates contesting across 543 parliamentary
+            constituencies, representing the full spectrum of Indian political diversity. Yet,
+            public understanding of candidate profiles remains limited to headline narratives.
+          </p>
+          <p>
+            This project undertakes a comprehensive data analysis of every candidate who filed their
+            nomination for the 2024 general elections. Using affidavit data submitted to the
+            Election Commission of India, we examine criminal cases, educational backgrounds,
+            declared assets, liabilities, and demographic profiles to surface patterns that define
+            the character of Indian electoral politics.
+          </p>
+          <p>
+            The central questions driving this analysis: How prevalent are candidates with criminal
+            backgrounds? What is the relationship between wealth and electoral success? How do
+            national and regional parties differ in candidate selection? And where does India stand
+            on gender representation in its legislature?
+          </p>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="project-section section">
+        <div class="container">
+          <h2>Methodology</h2>
+          <p>
+            The analysis combines structured data extraction from Election Commission filings with
+            statistical analysis and interactive visualization to reveal patterns across thousands
+            of candidacies.
+          </p>
+          <div class="methodology-grid">
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">1</span>
+              <h3>Data Acquisition</h3>
+              <p>
+                Collected candidate affidavit data from the Election Commission of India and
+                Association for Democratic Reforms (ADR) covering all 8,338 candidates across 543
+                constituencies.
+              </p>
+            </div>
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">2</span>
+              <h3>Data Cleaning</h3>
+              <p>
+                Standardized party names, normalized asset declarations to common currency units,
+                categorized criminal cases by severity (IPC sections), and resolved inconsistencies
+                in education labels.
+              </p>
+            </div>
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">3</span>
+              <h3>Exploratory Analysis</h3>
+              <p>
+                Used Python (Pandas) for grouping, aggregation, and cross-tabulation. Computed
+                winning probability correlations with wealth, criminal records, education level, and
+                incumbency status.
+              </p>
+            </div>
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">4</span>
+              <h3>Visualization</h3>
+              <p>
+                Created interactive Plotly charts including sunburst diagrams for party hierarchies,
+                box plots for wealth distributions, stacked bars for criminal case analysis, and
+                geographic heat maps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Findings -->
+      <section class="project-section section section-alt">
+        <div class="container">
+          <h2>Key Findings</h2>
+          <ul class="findings-list">
+            <li>
+              Approximately 21% of all candidates (1,751 out of 8,338) declared criminal cases
+              against them, with 15.6% facing serious charges including attempted murder,
+              kidnapping, and crimes against women. Among winners, this proportion rises to 29%,
+              suggesting a counterintuitive electoral advantage for candidates with criminal
+              records.
+            </li>
+            <li>
+              The median declared assets of winning candidates stood at Rs.5.74 crore, compared to
+              Rs.18.5 lakh for losing candidates, a 31x difference. Candidates in the top wealth
+              decile won at a rate 6x higher than those in the bottom decile, highlighting the role
+              of money power in electoral outcomes.
+            </li>
+            <li>
+              Women comprised only 9.6% of total candidates (797 out of 8,338) but won at a slightly
+              higher success rate (8.3%) compared to male candidates (6.1%). However, major national
+              parties fielded women in only 12-15% of their seats, predominantly in constituencies
+              considered non-competitive.
+            </li>
+            <li>
+              Educational qualification analysis reveals that 56% of candidates hold a graduate
+              degree or higher, but significant variations exist across parties. Regional parties in
+              southern India field proportionally more postgraduates and professionally qualified
+              candidates compared to northern counterparts.
+            </li>
+            <li>
+              Independent candidates (4,562 in total) constitute 54.7% of all candidates but win
+              only 0.4% of seats (7 constituencies), demonstrating the near-impossibility of winning
+              without party machinery despite the large number who attempt to contest.
+            </li>
+            <li>
+              Age distribution analysis shows the average candidate age is 47 years, with fewer than
+              12% below 35. The BJP and INC both have median candidate ages above 50, while newer
+              parties like AAP trend significantly younger with a median of 42 years.
+            </li>
+          </ul>
+          <div class="placeholder-note">
+            <strong>Note:</strong> The full analysis includes interactive Plotly visualizations with
+            hover details, filtering by party and state, and downloadable data tables. Add your
+            actual charts and interactive visualizations here for the complete experience.
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools & Technologies -->
+      <section class="project-section section">
+        <div class="container">
+          <h2>Tools & Technologies</h2>
+          <p>
+            This project leverages Python's data science ecosystem for analysis and Plotly's
+            interactive capabilities for creating publication-quality visualizations.
+          </p>
+          <div class="tools-grid">
+            <span class="tool-badge">Python</span>
+            <span class="tool-badge">Pandas</span>
+            <span class="tool-badge">Plotly</span>
+            <span class="tool-badge">NumPy</span>
+            <span class="tool-badge">Matplotlib</span>
+            <span class="tool-badge">Seaborn</span>
+            <span class="tool-badge">Jupyter Notebooks</span>
+            <span class="tool-badge">ECI Open Data</span>
+            <span class="tool-badge">ADR Data</span>
+            <span class="tool-badge">Git / GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="project-section section section-alt">
+        <div class="container">
+          <h2>Conclusion</h2>
+          <div class="conclusion-box">
+            <p>
+              This data-driven analysis of the 2024 Lok Sabha elections paints a nuanced picture of
+              Indian democracy. While the sheer scale of participation (8,338 candidates across 744
+              parties) reflects democratic vitality, the data reveals troubling patterns: the
+              concentration of winning candidates among the wealthy, the persistent criminalization
+              of politics, and the severe underrepresentation of women.
+            </p>
+            <p>
+              The analysis challenges common assumptions. Criminal cases do not deter electoral
+              success; in fact, candidates with criminal records win at higher rates than clean
+              candidates. Wealth is arguably the strongest predictor of electoral success, more so
+              than education or incumbency. And despite decades of discourse around women's
+              empowerment, gender parity in candidate selection remains distant.
+            </p>
+            <p>
+              These findings underscore the need for electoral reforms including stricter
+              enforcement of campaign finance regulations, faster judicial disposition of cases
+              against candidates, and mandatory minimum quotas for women candidates. The interactive
+              visualizations produced in this project serve as an evidence base for these reform
+              conversations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back to Portfolio -->
+      <section class="section text-center">
+        <div class="container">
+          <a href="/portfolio/" class="btn btn-secondary">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5" />
+              <path d="M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Projects
+          </a>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/ts/main.ts"></script>
+  </body>
+</html>

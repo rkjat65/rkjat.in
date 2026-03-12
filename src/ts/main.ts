@@ -2,13 +2,8 @@
  * Main entry point for DAwithRK website
  */
 
-import { initTheme } from './modules/theme';
-import { initNavigation } from './modules/navigation';
-import { initCanvas } from './modules/canvas';
-import { initContent } from './modules/content';
-import { initShareButtons } from './modules/share';
+import { initTheme } from './modules/theme';\nimport { initNavigation } from './modules/navigation';\nimport { initCanvas } from './modules/canvas';\nimport { initContent } from './modules/content';\nimport { initShareButtons } from './modules/share';
 import { initContactForm } from './modules/form';
-import { initBlogPage } from './modules/blog-page';
 
 /**
  * Initialize all modules when DOM is ready
@@ -23,7 +18,6 @@ function init(): void {
   initContent();
   initShareButtons();
   initContactForm();
-  initBlogPage();
 }
 
 // Initialize when DOM is ready
@@ -41,5 +35,4 @@ export {
   initContent,
   initShareButtons,
   initContactForm,
-  initBlogPage,
 };

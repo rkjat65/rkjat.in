@@ -482,23 +482,23 @@
 }
 
 .share-btn.twitter:hover {
-  background: #1DA1F2;
-  border-color: #1DA1F2;
+  background: #1da1f2;
+  border-color: #1da1f2;
 }
 
 .share-btn.linkedin:hover {
-  background: #0077B5;
-  border-color: #0077B5;
+  background: #0077b5;
+  border-color: #0077b5;
 }
 
 .share-btn.facebook:hover {
-  background: #4267B2;
-  border-color: #4267B2;
+  background: #4267b2;
+  border-color: #4267b2;
 }
 
 .share-btn.whatsapp:hover {
-  background: #25D366;
-  border-color: #25D366;
+  background: #25d366;
+  border-color: #25d366;
 }
 
 .share-btn.copy:hover {
@@ -509,71 +509,71 @@
 /* ============================================
    Dark Mode Enhancements
    ============================================ */
-[data-theme="dark"] .gallery-controls {
+[data-theme='dark'] .gallery-controls {
   background: var(--bg);
 }
 
-[data-theme="dark"] .filter-btn {
+[data-theme='dark'] .filter-btn {
   background: var(--bg-secondary);
   border-color: var(--border);
   color: var(--text);
 }
 
-[data-theme="dark"] .filter-btn:hover,
-[data-theme="dark"] .filter-btn.active {
+[data-theme='dark'] .filter-btn:hover,
+[data-theme='dark'] .filter-btn.active {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
 }
 
-[data-theme="dark"] .view-toggle {
+[data-theme='dark'] .view-toggle {
   background: var(--bg-secondary);
   border-color: var(--border);
 }
 
-[data-theme="dark"] .view-btn svg {
+[data-theme='dark'] .view-btn svg {
   color: var(--text-secondary);
 }
 
-[data-theme="dark"] .view-btn:hover svg {
+[data-theme='dark'] .view-btn:hover svg {
   color: var(--text);
 }
 
-[data-theme="dark"] .view-btn.active {
+[data-theme='dark'] .view-btn.active {
   background: var(--primary);
 }
 
-[data-theme="dark"] .view-btn.active svg {
+[data-theme='dark'] .view-btn.active svg {
   color: white;
 }
 
-[data-theme="dark"] .gallery-item {
+[data-theme='dark'] .gallery-item {
   background: var(--bg-secondary);
   border-color: var(--border);
 }
 
-[data-theme="dark"] .gallery-item:hover {
+[data-theme='dark'] .gallery-item:hover {
   border-color: var(--primary);
 }
 
-[data-theme="dark"] .gallery-item-info {
+[data-theme='dark'] .gallery-item-info {
   background: var(--bg-secondary);
   border-color: var(--border);
 }
 
-[data-theme="dark"] .pagination-btn {
+[data-theme='dark'] .pagination-btn {
   background: var(--bg-secondary);
   border-color: var(--border);
   color: var(--text);
 }
 
-[data-theme="dark"] .pagination-btn:hover:not(.disabled):not(.active) {
+[data-theme='dark'] .pagination-btn:hover:not(.disabled):not(.active) {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
 }
 
-[data-theme="dark"] .pagination-btn.active {
+[data-theme='dark'] .pagination-btn.active {
   background: var(--primary);
   color: white;
   border-color: var(--primary);

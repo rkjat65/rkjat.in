@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of data analysis projects by RK - Python, SQL, visualization, and dashboard development">
-  <title>Portfolio | DAwithRK</title>
+  <title>Fiscal Federalism Analysis by RKJat</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,13 +27,15 @@
     gtag('js', new Date());
     gtag('config', 'G-4V7XW1QPZ8');
   </script>
+
+  <script src="../js/gallery.js"></script>
 </head>
 
 <body>
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="logo"><span>DA</span>withRK</a>
+      <a href="/" class="logo"><span>RK</span>Jat</a>
 
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span>
@@ -44,9 +46,9 @@
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/portfolio/" class="active">My Work</a></li>
-        <li><a href="/blog/">Blogs</a></li>
+        <!-- <li><a href="/blog/">Blogs</a></li> -->
         <li><a href="/gallery.html">DataViz</a></li>
-        <!-- <li><a href="/about.html">About</a></li> -->
+        <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html">Contact</a></li>
         <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
       </ul>
@@ -66,7 +68,24 @@
     <div class="container container-wide">
       <div class="grid grid-2">
 
-        <!-- Project 1: India's Fiscal Federalism -->
+        <!-- Project 1: T20 Cricket World Cup 2026 -->
+        <article class="card fade-in-section" onclick="window.location.href='https://datacric.netlify.app/'" style="cursor: pointer;">
+          <div class="card-image-placeholder">
+            <img src="/portfolio/t20.png" alt="T20 Cricket World Cup 2026 Analytics" loading="lazy" width="800" height="450">
+          </div>
+          <div class="card-body">
+            <h3><a href="https://datacric.netlify.app/" target="_blank" rel="noopener noreferrer">T20 Cricket World Cup 2026</a></h3>
+            <p>India Performance Analytics Dashboard analyzing 9 matches with 1,739 runs scored, 68 wickets taken, and comprehensive match-by-match insights</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Cricket Analytics</span>
+              <span class="tag">Cricsheet</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: India's Fiscal Federalism -->
         <article class="card fade-in-section" onclick="window.location.href='/portfolio/tax-devolution/'" style="cursor: pointer;">
           <div class="card-image-placeholder">
             <img src="/portfolio/tax-devolution/cover.png" alt="India's Fiscal Federalism Analysis" loading="lazy" width="800" height="450">
@@ -83,7 +102,7 @@
           </div>
         </article>
 
-        <!-- Project 2: India Economic Pulse -->
+        <!-- Project 3: India Economic Pulse -->
         <article class="card fade-in-section" onclick="window.location.href='india-economic-pulse.html'" style="cursor: pointer;">
           <div class="card-image-placeholder">
             <img src="/portfolio/covereconomy.png" alt="India Economic Pulse Dashboard" loading="lazy" width="800" height="450">
@@ -100,7 +119,7 @@
           </div>
         </article>
 
-        <!-- Project 3: Indian Legislature Analysis -->
+        <!-- Project 4: Indian Legislature Analysis -->
         <article class="card fade-in-section" onclick="window.location.href='/portfolio/indian-legislature-analysis/dashboard/'" style="cursor: pointer;">
           <div class="card-image-placeholder">
             <img src="/portfolio/indian-legislature-analysis/cover.png" alt="Indian Legislature Analysis Dashboard" loading="lazy" width="800" height="450">
@@ -117,7 +136,7 @@
           </div>
         </article>
 
-        <!-- Project 4: Indian Healthcare Analysis -->
+        <!-- Project 5: Indian Healthcare Analysis -->
         <article class="card fade-in-section" onclick="window.location.href='/portfolio/indian-healthcare-analysis/'" style="cursor: pointer;">
           <div class="card-image-placeholder">
             <img src="/images/dash3.png" alt="Indian Healthcare Analysis Dashboard" loading="lazy" width="800" height="450">

@@ -339,16 +339,11 @@ async function loadDynamicContent() {
 
     // Load featured projects (latest 3)
     loadFeaturedProjects(data.projects);
-
-    // Load latest blog posts (latest 3)
-    loadLatestBlogs(data.blogs);
   } catch (error) {
     console.error('Error loading content:', error);
     // If loading fails, hide the loading placeholders
     const projectsContainer = document.getElementById('featured-projects');
-    const blogsContainer = document.getElementById('latest-blogs');
     if (projectsContainer) projectsContainer.innerHTML = '<p>Unable to load projects at this time.</p>';
-    if (blogsContainer) blogsContainer.innerHTML = '<p>Unable to load blog posts at this time.</p>';
   }
 }
 
@@ -387,51 +382,26 @@ function loadFeaturedProjects(projects) {
   const container = document.getElementById('featured-projects');
   if (!container) return;
 
-  // Sort by date (newest first) and get top 3
-  const sortedProjects = projects
+  // Sort by date (newest first) and get featured projects
+  const featuredProjects = projects
+    .filter(p => p.featured)
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 3);
 
-  container.innerHTML = sortedProjects.map(project => `
-    <article class="card" onclick="window.location.href='${project.link}'" style="cursor: pointer;">
-      <div class="card-image-placeholder">
-        <img src="${project.image}" class="card-image" alt="${project.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
-      </div>
-      <div class="card-body">
-        <h3><a href="${project.link}" style="pointer-events: none;">${project.title}</a></h3>
-        <p>${project.description}</p>
-        <div class="tags">
-          ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-        </div>
-      </div>
-    </article>
-  `).join('');
-}
-
-function loadLatestBlogs(blogs) {
-  const container = document.getElementById('latest-blogs');
-  if (!container) return;
-
-  // Sort by date (newest first) and get top 3
-  const sortedBlogs = blogs
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 3);
-
-  container.innerHTML = sortedBlogs.map(blog => {
-    const blogDate = new Date(blog.date);
-    const formattedDate = blogDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-
+  container.innerHTML = featuredProjects.map(project => {
+    // Detect if link is external
+    const isExternal = project.link.startsWith('http');
+    
     return `
-      <article class="card" onclick="window.location.href='/${blog.link}'">
+      <article class="card" onclick="handleProjectClick(event, '${project.link}', ${isExternal})" style="cursor: pointer;">
         <div class="card-image-placeholder">
-          <img src="${blog.image}" alt="${blog.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
+          <img src="${project.image}" class="card-image" alt="${project.title}" loading="lazy" onerror="this.src='images/placeholder.png'">
         </div>
         <div class="card-body">
-          <p class="blog-meta">${formattedDate} · ${blog.readTime}</p>
-          <h3><a href="/${blog.link}">${blog.title}</a></h3>
-          <p>${blog.description}</p>
+          <h3><a href="javascript:void(0)" style="pointer-events: none; cursor: pointer;">${project.title}</a></h3>
+          <p>${project.description}</p>
           <div class="tags">
-            ${blog.tags.slice(0, 3).map(tag => `<span class="tag">${tag}</span>`).join('')}
+            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
           </div>
         </div>
       </article>
@@ -439,8 +409,18 @@ function loadLatestBlogs(blogs) {
   }).join('');
 }
 
+// Handle project card clicks with proper target handling
+function handleProjectClick(event, link, isExternal) {
+  event.stopPropagation();
+  if (isExternal) {
+    window.open(link, '_blank', 'noopener');
+  } else {
+    window.location.href = link;
+  }
+}
+
 // Initialize dynamic content loading when DOM is ready
-if (document.getElementById('featured-projects') || document.getElementById('latest-blogs')) {
+if (document.getElementById('featured-projects')) {
   loadDynamicContent();
 }
 

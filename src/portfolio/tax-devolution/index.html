@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head title="India's Fiscal Federalism: Tax Devolution Analysis" description="Interactive
+    visualization of India's tax devolution system analyzing Rs.111 lakh crore across 28 states (FY
+    2020-21 to 2024-25)"}}
+    <style>
+      /* Project Hero */
+      .project-hero {
+        padding: 140px 0 var(--space-2xl);
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 113, 227, 0.06) 0%,
+          rgba(166, 77, 255, 0.06) 100%
+        );
+      }
+      .project-hero::before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: -20%;
+        width: 60%;
+        height: 120%;
+        background: radial-gradient(circle, rgba(0, 113, 227, 0.08), transparent 70%);
+        pointer-events: none;
+      }
+      .project-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      .project-hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: var(--space-sm);
+      }
+      .project-hero .project-description {
+        color: var(--text-secondary);
+        font-size: 1.125rem;
+        max-width: 700px;
+        line-height: 1.7;
+        margin-bottom: var(--space-lg);
+      }
+      .project-cover {
+        margin-top: var(--space-xl);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+      }
+      .project-cover img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Section Styles */
+      .project-section {
+        padding: var(--space-2xl) 0;
+      }
+      .project-section h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        margin-bottom: var(--space-md);
+        position: relative;
+        padding-bottom: var(--space-sm);
+      }
+      .project-section h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--gradient-text);
+        border-radius: 2px;
+      }
+      .project-section p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: var(--space-md);
+        max-width: 800px;
+      }
+
+      /* Methodology Grid */
+      .methodology-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-md);
+        margin-top: var(--space-lg);
+      }
+      .methodology-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: var(--space-lg);
+        transition: all 0.3s ease;
+      }
+      .methodology-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .methodology-card .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(0, 113, 227, 0.1);
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 0.875rem;
+        border-radius: 50%;
+        margin-bottom: var(--space-sm);
+        font-family: var(--font-heading);
+      }
+      .methodology-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--space-xs);
+      }
+      .methodology-card p {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+      }
+
+      /* Findings */
+      .findings-list {
+        list-style: none;
+        padding: 0;
+        margin: var(--space-lg) 0;
+      }
+      .findings-list li {
+        position: relative;
+        padding: var(--space-sm) 0 var(--space-sm) var(--space-lg);
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+      .findings-list li:last-child {
+        border-bottom: none;
+      }
+      .findings-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 22px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary);
+      }
+
+      /* Tools Section */
+      .tools-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        margin-top: var(--space-md);
+      }
+      .tool-badge {
+        padding: 10px 20px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 99px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text);
+        transition: all 0.2s;
+      }
+      .tool-badge:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: rgba(0, 113, 227, 0.05);
+      }
+
+      /* Placeholder Note */
+      .placeholder-note {
+        background: rgba(0, 113, 227, 0.05);
+        border: 1px dashed rgba(0, 113, 227, 0.3);
+        border-radius: var(--radius);
+        padding: var(--space-lg);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9375rem;
+        margin: var(--space-lg) 0;
+      }
+
+      /* Back Link */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        color: var(--primary);
+        font-weight: 500;
+        font-size: 0.9375rem;
+        margin-bottom: var(--space-lg);
+        transition: all 0.2s;
+      }
+      .back-link:hover {
+        gap: 12px;
+      }
+      .back-link svg {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.2s;
+      }
+      .back-link:hover svg {
+        transform: translateX(-4px);
+      }
+
+      /* Conclusion */
+      .conclusion-box {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: var(--space-xl);
+        border: 1px solid var(--border);
+        margin-top: var(--space-lg);
+      }
+      .conclusion-box p {
+        max-width: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .project-hero {
+          padding: 120px 0 var(--space-xl);
+        }
+        .methodology-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {{> nav isPortfolio=true}}
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+      <div class="container">
+        <a href="/portfolio/" class="back-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 12H5" />
+            <path d="M12 19l-7-7 7-7" />
+          </svg>
+          Back to Portfolio
+        </a>
+        <h1 class="gradient-text">India's Fiscal Federalism: Tax Devolution Analysis</h1>
+        <p class="project-description">
+          Interactive visualization of India's tax devolution system analyzing Rs.111 lakh crore
+          across 28 states from FY 2020-21 to 2024-25, exploring how central taxes are distributed
+          and their implications for cooperative federalism.
+        </p>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">Chart.js</span>
+          <span class="tag">Data Visualization</span>
+          <span class="tag">Economics</span>
+        </div>
+        <div class="project-cover">
+          <img
+            src="./cover.png"
+            alt="Tax Devolution Analysis Dashboard showing state-wise allocation charts"
+            loading="lazy"
+            width="1200"
+            height="675"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Overview -->
+      <section class="project-section section">
+        <div class="container">
+          <h2>Overview & Problem Statement</h2>
+          <p>
+            India's fiscal federalism relies on a complex system of tax devolution where the central
+            government shares a portion of its tax revenues with state governments. The Finance
+            Commission, constituted every five years, determines the share and criteria for this
+            distribution.
+          </p>
+          <p>
+            This project analyzes the devolution of Rs.111 lakh crore in central taxes across 28
+            states over five fiscal years (2020-21 to 2024-25). The analysis examines whether the
+            current formula adequately addresses regional disparities, promotes equitable
+            development, and aligns with the constitutional mandate of cooperative federalism.
+          </p>
+          <p>
+            Key questions explored include: How do Finance Commission recommendations translate into
+            actual allocations? What patterns emerge in state-wise distributions? How does revenue
+            capacity correlate with fiscal needs? And what are the implications for states with
+            varying levels of economic development?
+          </p>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="project-section section section-alt">
+        <div class="container">
+          <h2>Methodology</h2>
+          <p>
+            The analysis follows a structured approach combining data collection from government
+            sources with interactive visualization techniques to make fiscal data accessible.
+          </p>
+          <div class="methodology-grid">
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">1</span>
+              <h3>Data Collection</h3>
+              <p>
+                Gathered tax devolution data from Union Budget documents, Finance Commission reports
+                (14th and 15th), and RBI state finance publications for FY 2020-21 through 2024-25.
+              </p>
+            </div>
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">2</span>
+              <h3>Data Processing</h3>
+              <p>
+                Cleaned and structured raw fiscal data, normalized figures for inflation adjustment,
+                and computed per-capita devolution metrics using Census 2011 population estimates.
+              </p>
+            </div>
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">3</span>
+              <h3>Criteria Analysis</h3>
+              <p>
+                Decomposed the Finance Commission's multi-criteria formula including income
+                distance, population, area, forest cover, and demographic performance into weighted
+                components.
+              </p>
+            </div>
+            <div class="methodology-card fade-in-section">
+              <span class="step-number">4</span>
+              <h3>Visualization</h3>
+              <p>
+                Built interactive Chart.js visualizations including choropleth maps, bar
+                comparisons, trend lines, and Sankey diagrams to present allocation flows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Findings -->
+      <section class="project-section section">
+        <div class="container">
+          <h2>Key Findings</h2>
+          <ul class="findings-list">
+            <li>
+              Uttar Pradesh receives the largest absolute share of devolution (~17.9%), driven
+              primarily by its population weight, while smaller states like Goa and Sikkim receive
+              the least in absolute terms but rank highest in per-capita allocation.
+            </li>
+            <li>
+              The income distance criterion, which allocates more to states with lower per-capita
+              income, results in states like Bihar and Jharkhand receiving disproportionately higher
+              shares relative to their population, reflecting the redistributive intent of the
+              formula.
+            </li>
+            <li>
+              Southern states (Karnataka, Tamil Nadu, Kerala, Andhra Pradesh) collectively
+              contribute approximately 35% of central tax revenues but receive only about 18% of the
+              devolved amount, raising questions about horizontal equity.
+            </li>
+            <li>
+              The transition from the 14th to the 15th Finance Commission saw the vertical
+              devolution ratio maintained at 41% of the divisible pool, but horizontal distribution
+              weights shifted with the introduction of demographic performance and tax effort
+              criteria.
+            </li>
+            <li>
+              Year-on-year growth in devolution has been uneven, with FY 2020-21 showing a
+              significant dip due to COVID-19's impact on central tax collections, followed by a
+              strong recovery in subsequent years averaging 15% annual growth.
+            </li>
+            <li>
+              States with higher forest cover (such as Arunachal Pradesh and Mizoram) benefit from
+              the ecology criterion, receiving a share that compensates for opportunity costs of
+              maintaining forest areas instead of industrial development.
+            </li>
+          </ul>
+          <div class="placeholder-note">
+            <strong>Note:</strong> Interactive charts and detailed state-wise visualizations are
+            available in the live project. The visualizations include dynamic filtering by state,
+            year, and criteria weight for deeper exploration.
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools & Technologies -->
+      <section class="project-section section section-alt">
+        <div class="container">
+          <h2>Tools & Technologies</h2>
+          <p>
+            This project leverages modern web technologies to create a responsive, interactive data
+            visualization experience directly in the browser.
+          </p>
+          <div class="tools-grid">
+            <span class="tool-badge">JavaScript (ES6+)</span>
+            <span class="tool-badge">Chart.js</span>
+            <span class="tool-badge">HTML5 / CSS3</span>
+            <span class="tool-badge">D3.js (for maps)</span>
+            <span class="tool-badge">TopoJSON</span>
+            <span class="tool-badge">Responsive Design</span>
+            <span class="tool-badge">Government Open Data APIs</span>
+            <span class="tool-badge">Git / GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="project-section section">
+        <div class="container">
+          <h2>Conclusion</h2>
+          <div class="conclusion-box">
+            <p>
+              India's tax devolution system, while designed to promote equitable growth, reveals
+              significant tensions between efficiency and equity. The Finance Commission's formula
+              attempts to balance competing demands: rewarding states for fiscal discipline and
+              demographic management while compensating those with lower incomes and larger
+              populations.
+            </p>
+            <p>
+              This analysis demonstrates that while the current system broadly achieves its
+              redistributive goals, there are structural concerns about the growing gap between
+              contributing and receiving states. As India's economy evolves, the devolution formula
+              will need to adapt to changing demographics, urbanization patterns, and the emerging
+              needs of a $4-trillion economy aspiring to become a $10-trillion one.
+            </p>
+            <p>
+              The interactive visualizations created in this project make complex fiscal data
+              accessible to researchers, policymakers, and citizens, contributing to informed public
+              discourse on one of India's most important governance mechanisms.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back to Portfolio -->
+      <section class="section section-alt text-center">
+        <div class="container">
+          <a href="/portfolio/" class="btn btn-secondary">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5" />
+              <path d="M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Projects
+          </a>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/ts/main.ts"></script>
+  </body>
+</html>

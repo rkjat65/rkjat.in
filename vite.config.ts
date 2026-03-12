@@ -5,6 +5,7 @@ import handlebars from 'vite-plugin-handlebars';
 export default defineConfig({
   root: 'src',
   base: '/',
+  publicDir: '../public',
 
   build: {
     outDir: '../dist',
@@ -12,16 +13,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
+        notFound: resolve(__dirname, 'src/404.html'),
         gallery: resolve(__dirname, 'src/gallery.html'),
         contact: resolve(__dirname, 'src/contact.html'),
-        about: resolve(__dirname, 'src/about.html'),
         portfolio: resolve(__dirname, 'src/portfolio/index.html'),
-        blog: resolve(__dirname, 'src/blog/index.html'),
-        blogRussia: resolve(__dirname, 'src/blog/Russia.html'),
-        blogDeepfake: resolve(__dirname, 'src/blog/deepfake.html'),
-        blogUkraine: resolve(__dirname, 'src/blog/ukraine.html'),
-        blogGemini: resolve(__dirname, 'src/blog/gemini3win.html'),
-        blogSamAltman: resolve(__dirname, 'src/blog/samaltman.html'),
+        portfolioTax: resolve(__dirname, 'src/portfolio/tax-devolution/index.html'),
+        portfolioHealthcare: resolve(__dirname, 'src/portfolio/indian-healthcare-analysis/index.html'),
+        portfolioLegislature: resolve(__dirname, 'src/portfolio/indian-legislature-analysis/index.html'),
+        portfolioEconomic: resolve(__dirname, 'src/portfolio/india-economic-pulse/index.html'),
       },
     },
     cssCodeSplit: true,

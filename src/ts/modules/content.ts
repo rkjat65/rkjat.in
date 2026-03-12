@@ -43,7 +43,7 @@ function renderBlogCard(blog: BlogPost): string {
     .join('');
 
   return `
-    <article class="card" data-href="/${blog.link}" tabindex="0" role="link">
+    <article class="card" data-href="${blog.link}" tabindex="0" role="link">
       <div class="card-image-placeholder">
         <img
           src="${blog.image}"
@@ -54,7 +54,7 @@ function renderBlogCard(blog: BlogPost): string {
       </div>
       <div class="card-body">
         <p class="blog-meta">${formattedDate} · ${blog.readTime}</p>
-        <h3><a href="/${blog.link}">${blog.title}</a></h3>
+        <h3><a href="${blog.link}">${blog.title}</a></h3>
         <p>${blog.description}</p>
         <div class="tags">${tagsHtml}</div>
       </div>
@@ -193,10 +193,10 @@ export function initContent(): void {
   const hasGalleryPreview = !!getElement(SELECTORS.galleryPreview);
 
   if (hasProjects || hasBlogs) {
-    loadDynamicContent();
+    void loadDynamicContent();
   }
 
   if (hasGalleryPreview) {
-    loadGalleryPreview();
+    void loadGalleryPreview();
   }
 }
