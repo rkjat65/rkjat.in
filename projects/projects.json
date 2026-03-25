@@ -14,5 +14,13 @@
     "tags": ["Polity", "Elections", "India"],
     "description": "A deep-dive data analysis of the Assembly Elections, covering West Bengal, Tamil Nadu, Kerala, Assam & Puducherry. Based on 2021 results, voter trends, and 2026 schedule",
     "thumbnail": "/projects/cover/elec5.jpg"
+  },
+  {
+    "title": "Cost of Iran War",
+    "slug": "iran",
+    "date": "2025-03",
+    "tags": ["Geoplitics", "IR", "Iran"],
+    "description": "Why a prolonged war with Iran will constrain the U.S.A",
+    "thumbnail": "/projects/cover/iran.png"
   }
 ]
