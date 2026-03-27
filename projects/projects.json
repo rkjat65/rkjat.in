@@ -1,5 +1,13 @@
 [
   {
+    "title": "VAIBHAV SURYAVANSHI",
+    "slug": "vaibhav",
+    "date": "2025-03-16",
+    "tags": ["Cricket", "T20", "ICC"],
+    "description": "Full analysis of the team performances, key moments, and standout players from the T20 World Cup 2026, held in India",
+    "thumbnail": "/projects/cover/vs.png"
+  },
+  {
     "title": "ICC Men's T20 World Cup 2026",
     "slug": "t20worldcup",
     "date": "2025-03-16",
