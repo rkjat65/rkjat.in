@@ -1,9 +1,24 @@
 {
   "projects": [
+
+    {
+      "id": "IPL Analytics",
+      "title": "IPL Complete Analytics Dashboard",
+      "description": "Comprehensive analysis of IPL data including player performance, team statistics, and match insights",
+      "date": "2026-03-27",
+      "tags": [
+        "FastAPI",
+        "DuckDB",
+        "Tailwing"
+      ],
+      "image": "/portfolio/ipl.png",
+      "link": "https://crickrida.rkjat.in/",
+      "featured": true
+    },
     {
       "id": "t20-india-analysis",
-      "title": "India T20 World Cup 2026 — Performance Analytics",
-      "description": "Full-tournament cricket analytics dashboard covering India's championship campaign. Batting, bowling, fielding, phase-wise breakdowns, and deep individual profiles for all 11 squad members — built from Cricsheet JSON data.",
+      "title": "India T20 World Cup 2026 - Analytics",
+      "description": "Full-tournament cricket analytics dashboard covering India's championship campaign. Batting, bowling, fielding, phase-wise breakdowns",
       "date": "2026-03-12",
       "tags": [
         "React",
