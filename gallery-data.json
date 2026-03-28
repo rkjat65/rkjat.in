@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "image": "/images/gallery/most6.jpg",
+    "category": "Cricket",
+    "caption": "<b style='color:#0071e3'>Rohit Sharma</b> leads the <span style='color:#34c759'>Six-Hitting</span> charts with <i>unmatched power</i>"
+  },
+  {
+    "id": 2,
+    "image": "/images/gallery/MostMoM.jpg",
+    "category": "Cricket",
+    "caption": "The <b style='color:#ff9500'>Little Master</b> dominates <span style='color:#0071e3'>Man of the Match</span> awards"
+  },
+  {
+    "id": 3,
+    "image": "/images/gallery/T201K.jpg",
+    "category": "Cricket",
+    "caption": "<b style='color:#ff3b30'>King Kohli</b> crosses <span style='color:#34c759'>1000 runs</span> in T20 Internationals"
+  },
+  {
+    "id": 4,
+    "image": "/images/gallery/ODI2025.jpg",
+    "category": "Cricket",
+    "caption": "<b>India's ODI Champions 2025:</b> The <i style='color:#0071e3'>new generation</i> taking charge"
+  },
+  {
+    "id": 5,
+    "image": "/images/gallery/odichase.jpg",
+    "category": "Cricket",
+    "caption": "<b style='color:#ff9500'>Thala</b> & <b style='color:#0071e3'>King</b>: The ultimate <span style='color:#34c759'>chase masters</span> of ODI cricket"
+  },
+  {
+    "id": 6,
+    "image": "/images/gallery/teslacar.jpg",
+    "category": "economics",
+    "caption": "<b>Tesla in India:</b> Limited takers in world's <span style='color:#0071e3'>4th largest economy</span> amid <i>pricing challenges</i>"
+  },
+  {
+    "id": 7,
+    "image": "/images/gallery/currency.jpg",
+    "category": "economics",
+    "caption": "<b style='color:#34c759'>Chinese Yuan</b> maintains stability while <span style='color:#ff3b30'>others struggle</span> in currency markets"
+  },
+  {
+    "id": 8,
+    "image": "/images/gallery/taxG.jpg",
+    "category": "economics",
+    "caption": "The <b style='color:#0071e3'>Tax Contributors Club:</b> States powering India's <i>fiscal engine</i>"
+  },
+  {
+    "id": 9,
+    "image": "/images/gallery/taxR.jpg",
+    "category": "economics",
+    "caption": "<b style='color:#34c759'>Tax Beneficiaries:</b> Analyzing the <i>redistribution pattern</i> across Indian states"
+  },
+  {
+    "id": 10,
+    "image": "/images/gallery/inr.jpg",
+    "category": "economics",
+    "caption": "The <b style='color:#ff9500'>Rupee's Journey:</b> Approaching <span style='color:#ff3b30'>₹100/$1</span> milestone by 2026?"
+  },
+  {
+    "id": 11,
+    "image": "/images/gallery/AIindex.jpg",
+    "category": "social",
+    "caption": "<b style='color:#0071e3'>Japan</b> tops <span style='color:#34c759'>AI Readiness Index</span> - Global preparedness analysis"
+  },
+  {
+    "id": 12,
+    "image": "/images/gallery/15thFC.jpg",
+    "category": "economics",
+    "caption": "<b>15th Finance Commission:</b> The <i style='color:#0071e3'>formula & framework</i> behind tax devolution"
+  }
+]
