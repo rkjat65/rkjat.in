@@ -32,11 +32,4 @@ if (document.readyState === 'loading') {
 }
 
 // Export for potential external use
-export {
-  initTheme,
-  initNavigation,
-  initCanvas,
-  initContent,
-  initShareButtons,
-  initContactForm,
-};
+export { initTheme, initNavigation, initCanvas, initContent, initShareButtons, initContactForm };
