@@ -1,0 +1,42 @@
+[
+  {
+    "title": "IPL Records & Stats",
+    "slug": "IPL",
+    "date": "2025-03-28",
+    "tags": ["Cricket", "T20", "IPL"],
+    "description": "A comprehensive analysis of the Indian Premier League (IPL) records and statistics, covering team performances, player achievements, and historical trends since its inception in 2008",
+    "thumbnail": "/projects/cover/ipl.png"
+  },
+  {
+    "title": "VAIBHAV SURYAVANSHI",
+    "slug": "vaibhav",
+    "date": "2025-03-27",
+    "tags": ["Cricket", "T20", "ICC"],
+    "description": "Full analysis of the team performances, key moments, and standout players from the T20 World Cup 2026, held in India",
+    "thumbnail": "/projects/cover/vs.png"
+  },
+  {
+    "title": "ICC Men's T20 World Cup 2026",
+    "slug": "t20worldcup",
+    "date": "2025-03-16",
+    "tags": ["Cricket", "T20", "ICC"],
+    "description": "Full analysis of the team performances, key moments, and standout players from the T20 World Cup 2026, held in India",
+    "thumbnail": "/projects/cover/t20.jpg"
+  },
+  {
+    "title": "BATTLE FOR 5 STATES",
+    "slug": "election5",
+    "date": "2025-03",
+    "tags": ["Polity", "Elections", "India"],
+    "description": "A deep-dive data analysis of the Assembly Elections, covering West Bengal, Tamil Nadu, Kerala, Assam & Puducherry. Based on 2021 results, voter trends, and 2026 schedule",
+    "thumbnail": "/projects/cover/elec5.jpg"
+  },
+  {
+    "title": "Cost of Iran War",
+    "slug": "iran",
+    "date": "2025-03",
+    "tags": ["Geoplitics", "IR", "Iran"],
+    "description": "Why a prolonged war with Iran will constrain the U.S.A",
+    "thumbnail": "/projects/cover/iran.png"
+  }
+]
