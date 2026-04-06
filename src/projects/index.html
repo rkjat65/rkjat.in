@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head title="Data Stories | DAwithRK" description="Small data projects by RKJat — rapid data stories on sports, economy, and policy."}}
+    <style>
+      body { padding-top: 84px; }
+      .page-header { text-align: center; padding: 3rem 1rem 1rem; margin-bottom: 0.8rem; }
+      .page-header .label { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 999px; padding: 0.25rem 0.7rem; background: rgba(0, 113, 227, 0.1); color: #0a53b6; margin-bottom: 0.35rem; }
+      .page-header h1 { margin: 0.4rem 0; font-size: clamp(2rem, 5vw, 2.8rem); }
+      .page-header p { color: var(--text-secondary); max-width: 640px; margin: 0 auto; }
+      .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin: 0 auto 1.2rem; width: min(980px, 100%); padding: 0 0.5rem; }
+      .filter-btn { border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 999px; padding: 0.3rem 0.8rem; font-size: 0.78rem; cursor: pointer; transition: all .2s ease; }
+      .filter-btn.active, .filter-btn:hover { border-color: var(--primary); background: var(--primary); color: #fff; }
+      main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 3rem; }
+      .stats-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); margin-bottom: 1rem; padding-bottom: .8rem; }
+      #projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+      .project-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease; display: flex; flex-direction: column; }
+      .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+      .card-thumb { width: 100%; aspect-ratio: 16/8; object-fit: cover; background: var(--bg); }
+      .card-thumb-placeholder { width: 100%; aspect-ratio: 16/8; display: flex; align-items: center; justify-content: center; font-size: 2rem; border-bottom: 1px solid var(--border); background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(0,0,0,0.03)); }
+      .card-body { padding: 1rem; display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+      .card-date { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--text-secondary); letter-spacing: .04em; }
+      .card-title { font-size: 1rem; font-weight: 600; color: var(--text); }
+      .card-desc { font-size: .92rem; color: var(--text-secondary); line-height: 1.45; }
+      .card-tags { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .25rem; }
+      .tag { font-size: .72rem; color: var(--text-secondary); background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: .2rem .55rem; }
+      .card-footer { border-top: 1px solid var(--border); padding: .7rem 1rem; display: flex; justify-content: space-between; align-items: center; }
+      .open-link { font-size: .82rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+      .state-msg { grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--text-secondary); }
+      @media (max-width: 768px) { .page-header { padding: 2.4rem 1rem 0.8rem; } .filter-bar { padding: 0 0.5rem; } main { padding: 0 0.7rem 2.5rem; } #projects-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {{> nav isProjects=true}}
+
+    <!-- Page Header -->
+    <section class="page-header" id="main-content">
+      <div class="label">Quick Projects</div>
+      <h1>Small Data Stories</h1>
+      <p>Rapid explorations on current developments in various domains</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-tag="All">All</button>
+    </div>
+
+    <!-- Main Grid -->
+    <main>
+      <div class="stats-bar">
+        <span class="count" id="countLabel">Loading...</span>
+      </div>
+      <div id="projects-grid">
+        <div class="state-msg">
+          <div class="icon">⏳</div>
+          <p>Loading projects...</p>
+        </div>
+      </div>
+    </main>
+
+    {{> footer}}
+
+    <script>
+      const TAG_EMOJI = { cricket: '🏏', ipl: '🏆', economy: '📊', policy: '🏛️', politics: '🗳️', governance: '📋', default: '📁' };
+
+      function thumbEmoji(tags) {
+        for (const t of tags) { const key = t.toLowerCase(); if (TAG_EMOJI[key]) return TAG_EMOJI[key]; }
+        return TAG_EMOJI.default;
+      }
+
+      function fmtDate(d) {
+        if (!d) return '';
+        const [y, m] = d.split('-');
+        if (!y) return d;
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return m ? `${months[+m - 1]} ${y}` : y;
+      }
+
+      function buildCard(proj, delay) {
+        const card = document.createElement('a');
+        card.className = 'project-card';
+        card.href = `/projects/${proj.slug}/`;
+        card.target = '_blank';
+        card.rel = 'noopener';
+        card.style.animationDelay = `${delay * 60}ms`;
+        card.dataset.tags = (proj.tags || []).join(',').toLowerCase();
+
+        const thumb = proj.thumbnail
+          ? `<img class="card-thumb" src="${proj.thumbnail}" alt="${proj.title}" loading="lazy" />`
+          : `<div class="card-thumb-placeholder">${thumbEmoji(proj.tags || [])}</div>`;
+
+        const tagsHtml = (proj.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+
+        card.innerHTML = `
+          ${thumb}
+          <div class="card-body">
+            <div class="card-date">${fmtDate(proj.date)}</div>
+            <div class="card-title">${proj.title}</div>
+            <div class="card-desc">${proj.description || ''}</div>
+            <div class="card-tags">${tagsHtml}</div>
+          </div>
+          <div class="card-footer">
+            <a class="open-link" href="/projects/${proj.slug}/" target="_blank" rel="noopener">
+              Open project
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L11 2M11 2H5M11 2V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>`;
+        return card;
+      }
+
+      let allProjects = [];
+      let activeTag = 'All';
+
+      function render(tag) {
+        activeTag = tag;
+        const grid = document.getElementById('projects-grid');
+        const count = document.getElementById('countLabel');
+        grid.innerHTML = '';
+
+        const list = tag === 'All'
+          ? allProjects
+          : allProjects.filter(p => (p.tags || []).some(t => t.toLowerCase() === tag.toLowerCase()));
+
+        if (list.length === 0) {
+          grid.innerHTML = `<div class="state-msg"><div class="icon">🔍</div><p>No projects found for <strong>${tag}</strong>.</p></div>`;
+          count.innerHTML = '0 projects';
+          return;
+        }
+
+        count.innerHTML = `<strong>${list.length}</strong> project${list.length !== 1 ? 's' : ''}${tag !== 'All' ? ` in <strong>${tag}</strong>` : ''}`;
+        list.forEach((p, i) => grid.appendChild(buildCard(p, i)));
+      }
+
+      function buildFilters(projects) {
+        const tagSet = new Set();
+        projects.forEach(p => (p.tags || []).forEach(t => tagSet.add(t)));
+        const bar = document.getElementById('filterBar');
+        tagSet.forEach(tag => {
+          const btn = document.createElement('button');
+          btn.className = 'filter-btn';
+          btn.dataset.tag = tag;
+          btn.textContent = tag;
+          bar.appendChild(btn);
+        });
+        bar.addEventListener('click', e => {
+          const btn = e.target.closest('.filter-btn');
+          if (!btn) return;
+          bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          render(btn.dataset.tag);
+        });
+      }
+
+      async function init() {
+        const grid = document.getElementById('projects-grid');
+        try {
+          const res = await fetch('/projects/projects.json');
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          allProjects = await res.json();
+          allProjects.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+          buildFilters(allProjects);
+          render('All');
+        } catch (err) {
+          grid.innerHTML = `<div class="state-msg"><div class="icon">⚠️</div><p>Could not load projects.</p></div>`;
+          document.getElementById('countLabel').textContent = '';
+          console.error('Projects load error:', err);
+        }
+      }
+
+      init();
+    </script>
+
+    <script type="module" src="/ts/main.ts"></script>
+  </body>
+</html>

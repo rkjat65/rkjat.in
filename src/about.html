@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head title="About | DAwithRK" description="About RK Jat - Data analyst specializing in India's economy, governance, and policy. UPSC alumnus with expertise in data storytelling and analytical depth."}}
+    <style>
+      .about-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: var(--space-lg);
+        padding: 120px var(--space-md) 80px;
+        min-height: 80vh;
+      }
+      .about-hero-content h1 {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        margin-bottom: var(--space-md);
+        line-height: 1.2;
+      }
+      .about-hero-content p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: var(--space-md);
+        line-height: 1.8;
+        max-width: 600px;
+      }
+      .about-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+      }
+      .about-tags .tag {
+        display: inline-block;
+        padding: 8px 12px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+      }
+      .about-tags .tag.highlight {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+      .about-cta {
+        display: flex;
+        gap: var(--space-sm);
+        flex-wrap: wrap;
+      }
+      .about-hero-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about-hero-image img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+      .timeline-section {
+        padding: 80px var(--space-md);
+        background: var(--bg-secondary);
+      }
+      .timeline-grid {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: var(--space-xl);
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .timeline-intro h2 {
+        font-size: 2rem;
+        margin-bottom: var(--space-md);
+      }
+      .timeline-intro p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+      .timeline {
+        position: relative;
+        padding-left: 40px;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 12px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, var(--primary) 0%, var(--border));
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: var(--space-lg);
+        padding-bottom: var(--space-lg);
+      }
+      .timeline-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: -32px;
+        top: 4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 3px solid var(--primary);
+        z-index: 1;
+      }
+      .timeline-dot.current {
+        background: var(--primary);
+        box-shadow: 0 0 0 8px rgba(0, 113, 227, 0.1);
+      }
+      .timeline-year {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .timeline-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+      .timeline-desc {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 8px;
+      }
+      .timeline-insight {
+        display: inline-block;
+        font-size: 0.85rem;
+        color: var(--primary);
+        background: rgba(0, 113, 227, 0.08);
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: 500;
+      }
+      .philosophy-section {
+        padding: 80px var(--space-md);
+      }
+      .philosophy-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .philosophy-intro {
+        margin-bottom: var(--space-xl);
+      }
+      .philosophy-intro h2 {
+        font-size: 2rem;
+        margin-bottom: var(--space-md);
+      }
+      .philosophy-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--space-lg);
+      }
+      .philosophy-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        padding: var(--space-lg);
+        border-radius: var(--radius);
+        transition: all 0.3s ease;
+      }
+      .philosophy-card:hover {
+        border-color: var(--primary);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-4px);
+      }
+      .philosophy-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: var(--space-md);
+        opacity: 0.3;
+      }
+      .philosophy-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        color: var(--text);
+      }
+      .philosophy-desc {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+      .ai-section { padding: 0; margin: 0; }
+      .ai-callout {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--primary);
+        border-radius: var(--radius);
+        padding: var(--space-lg);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: var(--space-lg);
+        max-width: 1100px;
+        margin: var(--space-xl) auto;
+      }
+      .ai-icon { font-size: 2.5rem; line-height: 1; }
+      .ai-callout h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        color: var(--text);
+      }
+      .ai-callout p {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+      .ai-callout strong { color: var(--text); font-weight: 600; }
+      .skills-section { padding: 80px var(--space-md); }
+      .skills-inner { max-width: 1100px; margin: 0 auto; }
+      .skills-section h2 { font-size: 2rem; margin-bottom: var(--space-xl); }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-xl);
+      }
+      .skill-group h3 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-sm);
+        border-bottom: 1px solid var(--border);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .skill-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-sm);
+        font-size: 0.9rem;
+      }
+      .skill-name { color: var(--text); }
+      .skill-level {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-weight: 600;
+      }
+      .level-advanced { background: rgba(0, 113, 227, 0.15); color: var(--primary); }
+      .level-proficient { background: rgba(166, 77, 255, 0.15); color: #a64dff; }
+      .level-familiar { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); }
+      .about-cta-section {
+        padding: 80px var(--space-md);
+        text-align: center;
+        background: var(--bg-secondary);
+      }
+      .about-cta-inner { max-width: 700px; margin: 0 auto; }
+      .about-cta-inner h2 { font-size: 2rem; margin-bottom: var(--space-md); }
+      .about-cta-inner p {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: var(--space-lg);
+        line-height: 1.8;
+      }
+      .about-cta-buttons {
+        display: flex;
+        gap: var(--space-sm);
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 768px) {
+        .about-hero {
+          grid-template-columns: 1fr;
+          padding: 100px var(--space-md) 60px;
+          min-height: auto;
+        }
+        .about-hero-image { order: -1; }
+        .about-hero-image img { max-width: 280px; }
+        .timeline-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
+        .timeline-section { padding: 60px var(--space-md); }
+        .philosophy-grid { grid-template-columns: 1fr; }
+        .ai-callout { grid-template-columns: 1fr; padding: var(--space-md); }
+        .skills-grid { grid-template-columns: 1fr; }
+        .about-cta-buttons { flex-direction: column; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {{> nav isAbout=true}}
+
+    <!-- Hero Section -->
+    <section class="about-hero" id="main-content">
+      <div class="about-hero-content">
+        <h1>I turn India's data into <span style="color: var(--primary);">stories worth understanding.</span></h1>
+        <p>
+          I'm RK Jat — a data analyst who spent years studying India's systems before learning to measure them.
+          My background in civil services preparation and content writing gives me nuances data provides:
+          I understand <strong>why</strong> the numbers matter, not just how to compute them.
+        </p>
+        <div class="about-tags">
+          <span class="tag highlight">Data Analysis</span>
+          <span class="tag highlight">Visual Storytelling</span>
+          <span class="tag highlight">India-Focused</span>
+          <span class="tag">Python · SQL</span>
+          <span class="tag">Power BI · Tableau</span>
+          <span class="tag">AI-Augmented</span>
+        </div>
+        <div class="about-cta">
+          <a href="/portfolio/" class="btn btn-primary">View My Work</a>
+          <a href="/contact.html" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+      <div class="about-hero-image">
+        <img src="/images/profilepic.png" alt="RK Jat – Data Analyst" />
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <div class="timeline-grid">
+        <div class="timeline-intro">
+          <h2>An unusual path to data</h2>
+          <p>I didn't come to data through computer science. I came through years of studying India — its governance, its
+            economy, its society. That detour turned out to be the most valuable thing I could have done.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2018 – 2023</div>
+            <div class="timeline-title">UPSC Civil Services Preparation</div>
+            <div class="timeline-desc">Five years of deep study across Indian polity, economy, governance, geography, and
+              society. Built an unusually thorough mental model of how India's systems — fiscal, electoral, social —
+              actually work.</div>
+            <span class="timeline-insight">→ Domain expertise most data analysts don't have</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2023</div>
+            <div class="timeline-title">Content Writer — Bangalore Startup</div>
+            <div class="timeline-desc">Translated complex administrative and policy topics into clear, readable content.
+              Learned that communicating an idea well is just as important as understanding it.</div>
+            <span class="timeline-insight">→ Writing clarity + technical depth = data storytelling</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2023 – 2024</div>
+            <div class="timeline-title">Discovering Data Analysis</div>
+            <div class="timeline-desc">Self-learned Python, SQL, and data visualization. Realized that data analysis was
+              the perfect intersection of my strengths: domain knowledge about India and the ability to communicate
+              clearly.</div>
+            <span class="timeline-insight">→ Self-taught, fast-moving, outcome-focused</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2024</div>
+            <div class="timeline-title">First Major Projects</div>
+            <div class="timeline-desc">Built dashboards on India's healthcare system, the 2024 Lok Sabha elections, and
+              India's fiscal federalism. Each project combining deep India knowledge with data tools.</div>
+            <span class="timeline-insight">→ Projects with real analytical depth</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot current"></div>
+            <div class="timeline-year">Now</div>
+            <div class="timeline-title">Seeking Work</div>
+            <div class="timeline-desc">Actively taking on new data challenges. Looking for roles where I can bring both
+              analytical rigor and subject matter understanding to real problems.</div>
+            <span class="timeline-insight">→ Open to opportunities</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+      <div class="philosophy-inner">
+        <div class="philosophy-intro">
+          <h2>How I Work</h2>
+        </div>
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <div class="philosophy-number">01</div>
+            <div class="philosophy-title">Questions first, tools second</div>
+            <div class="philosophy-desc">The most important part of any analysis is knowing what you're actually trying to
+              find out. I spend more time defining the right question than running the code.</div>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-number">02</div>
+            <div class="philosophy-title">Data without context is noise</div>
+            <div class="philosophy-desc">Numbers only mean something when you understand what's behind them. My background
+              studying India's governance means I can explain why data looks that way.</div>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-number">03</div>
+            <div class="philosophy-title">Insight should be readable by anyone</div>
+            <div class="philosophy-desc">Every visualization and analysis I produce is designed for a non-technical
+              decision-maker. If someone has to decode your chart, you haven't finished the work.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Section -->
+    <section class="philosophy-section ai-section">
+      <div class="philosophy-inner">
+        <h2>My Approach to AI</h2>
+        <div class="ai-callout">
+          <div class="ai-icon">⚡</div>
+          <div>
+            <h3>I use AI to move faster, not to think less.</h3>
+            <p>
+              I'm transparent about this: I use AI tools to help write code, accelerate data processing, and prototype
+              visualizations faster. But <strong>AI doesn't know whether India's fiscal devolution formula is equitable.
+              It doesn't know which Lok Sabha trends matter. It doesn't know how to frame an insight for a
+              policymaker.</strong> That judgment comes from years of study, reading, and thinking — and that's mine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta-section">
+      <div class="about-cta-inner">
+        <h2>Let's Talk</h2>
+        <p>I'm actively looking for a full-time data analyst role where I can bring both technical skills and genuine
+          subject matter depth. If you're working on something interesting — especially India-related data — I'd love to
+          hear about it.</p>
+        <div class="about-cta-buttons">
+          <a href="/portfolio/" class="btn btn-primary">See My Projects</a>
+          <a href="/contact.html" class="btn btn-secondary">Send a Message</a>
+        </div>
+      </div>
+    </section>
+
+    {{> footer}}
+
+    <script type="module" src="/ts/main.ts"></script>
+  </body>
+</html>

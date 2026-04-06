@@ -13,14 +13,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
+        about: resolve(__dirname, 'src/about.html'),
+        projects: resolve(__dirname, 'src/projects/index.html'),
         notFound: resolve(__dirname, 'src/404.html'),
         gallery: resolve(__dirname, 'src/gallery.html'),
         contact: resolve(__dirname, 'src/contact.html'),
         portfolio: resolve(__dirname, 'src/portfolio/index.html'),
-        portfolioTax: resolve(__dirname, 'src/portfolio/tax-devolution/index.html'),
-        portfolioHealthcare: resolve(__dirname, 'src/portfolio/indian-healthcare-analysis/index.html'),
-        portfolioLegislature: resolve(__dirname, 'src/portfolio/indian-legislature-analysis/index.html'),
-        portfolioEconomic: resolve(__dirname, 'src/portfolio/india-economic-pulse/index.html'),
       },
     },
     cssCodeSplit: true,
