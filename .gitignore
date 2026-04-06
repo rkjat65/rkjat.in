@@ -1,6 +1,9 @@
 # Claude Code directory
 .claude/
 
+# Local workflow notes
+WORKFLOW.md
+
 # Node.js
 node_modules/
 dist/
