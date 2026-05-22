@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {{> head title="My Work | DAwithRK" description="Portfolio of data analysis projects by RK - Python, SQL, visualization, and dashboard development"}}
+    {{> head title="Selected Work" description="Research, data analysis, and product work by Radhakishan Jat, with case studies explaining the thinking behind each project."}}
   </head>
 
   <body>
@@ -9,116 +9,136 @@
 
     {{> nav isPortfolio=true}}
 
-    <!-- Page Header -->
     <header class="page-header" id="main-content">
       <div class="container">
-        <h1>Portfolio</h1>
-        <p>Data analysis projects showcasing my skills and expertise</p>
+        <h1>Selected Work</h1>
+        <p>Research, data analysis, and product work - each with a case study explaining the thinking behind it.</p>
       </div>
     </header>
 
-    <!-- Projects Grid -->
     <section class="section">
       <div class="container container-wide">
         <div class="grid grid-2">
+          <article class="card fade-in-section" onclick="window.location.href='/portfolio/gyangram.html'" style="cursor: pointer;">
+            <div class="card-image-placeholder">
+              <img src="/images/gyangram_poster.png" alt="GyanGram UPSC Prep App" loading="lazy" width="800" height="450">
+            </div>
+            <div class="card-body">
+              <h3><a href="/portfolio/gyangram.html">GyanGram - UPSC Prep App</a></h3>
+              <p>A Flutter-based UPSC prep product that turns scroll behaviour into structured, retained learning.</p>
+              <div class="tags">
+                <span class="tag">FLUTTER</span>
+                <span class="tag">AI-AUGMENTED</span>
+                <span class="tag">EDTECH</span>
+                <span class="tag">PRODUCT</span>
+              </div>
+              <p style="margin-top: 16px;"><a href="/portfolio/gyangram.html" onclick="event.stopPropagation()" class="btn btn-secondary">View Case Study</a></p>
+            </div>
+          </article>
 
-          <!-- IPL Analytics -->
-          <article class="card fade-in-section" onclick="window.location.href='/portfolio/crickrida-showcase.html'" style="cursor: pointer;">
+          <article class="card fade-in-section" onclick="window.location.href='/portfolio/ipl-analytics.html'" style="cursor: pointer;">
             <div class="card-image-placeholder">
               <img src="/portfolio/ipl.png" alt="IPL Analytics" loading="lazy" width="800" height="450">
             </div>
             <div class="card-body">
-              <h3><a href="https://crickrida.rkjat.in" target="_blank" rel="noopener noreferrer">IPL Analytics</a></h3>
-              <p>Comprehensive analysis of IPL data including player performance, team statistics, and match insights</p>
+              <h3><a href="/portfolio/ipl-analytics.html">IPL Analytics Dashboard</a></h3>
+              <p>End-to-end analysis of IPL ball-by-ball data from 2008 to 2025, covering teams, players, phases, and venues.</p>
               <div class="tags">
-                <span class="tag">React</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">DuckDB</span>
-                <span class="tag">Cricsheet</span>
+                <span class="tag">PYTHON</span>
+                <span class="tag">FASTAPI</span>
+                <span class="tag">DUCKDB</span>
+                <span class="tag">REACT</span>
+                <span class="tag">CRICSHEET</span>
               </div>
+              <p style="margin-top: 16px;">
+                <a href="/portfolio/ipl-analytics.html" onclick="event.stopPropagation()" class="btn btn-secondary">View Case Study</a>
+                <a href="https://crickrida.rkjat.in/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="btn btn-secondary">Live Dashboard</a>
+              </p>
             </div>
           </article>
 
-          <!-- T20 Cricket World Cup 2026 -->
           <article class="card fade-in-section" onclick="window.location.href='https://datacric.netlify.app/'" style="cursor: pointer;">
             <div class="card-image-placeholder">
               <img src="/portfolio/t20.png" alt="T20 Cricket World Cup 2026 Analytics" loading="lazy" width="800" height="450">
             </div>
             <div class="card-body">
               <h3><a href="https://datacric.netlify.app/" target="_blank" rel="noopener noreferrer">T20 Cricket World Cup 2026</a></h3>
-              <p>India Performance Analytics Dashboard analyzing 9 matches with 1,739 runs scored, 68 wickets taken, and comprehensive match-by-match insights</p>
+              <p>India Performance Analytics Dashboard analyzing 9 matches with 1,739 runs scored, 68 wickets taken, and match-by-match insights.</p>
               <div class="tags">
                 <span class="tag">React</span>
                 <span class="tag">Data Visualization</span>
                 <span class="tag">Cricket Analytics</span>
                 <span class="tag">Cricsheet</span>
               </div>
+              <p style="margin-top: 16px;"><a href="/portfolio/t20-cricket-india.html" onclick="event.stopPropagation()" class="btn btn-secondary">View Case Study</a></p>
             </div>
           </article>
 
-          <!-- India's Fiscal Federalism -->
-          <article class="card fade-in-section" onclick="window.location.href='/portfolio/tax-devolution/'" style="cursor: pointer;">
+          <article class="card fade-in-section" onclick="window.location.href='/portfolio/fiscal-federalism.html'" style="cursor: pointer;">
             <div class="card-image-placeholder">
               <img src="/portfolio/tax-devolution/cover.png" alt="India's Fiscal Federalism Analysis" loading="lazy" width="800" height="450">
             </div>
             <div class="card-body">
-              <h3><a href="/portfolio/tax-devolution/">India's Fiscal Federalism</a></h3>
-              <p>Interactive visualization of India's tax devolution system analyzing ₹111 lakh crore across 28 states (FY 2020-21 to 2024-25)</p>
+              <h3><a href="/portfolio/fiscal-federalism.html">India's Fiscal Federalism</a></h3>
+              <p>Interactive analysis of Rs. 111 lakh crore in centre-state transfers across 28 states.</p>
               <div class="tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">Chart.js</span>
-                <span class="tag">Data Visualization</span>
-                <span class="tag">Economics</span>
+                <span class="tag">JAVASCRIPT</span>
+                <span class="tag">CHART.JS</span>
+                <span class="tag">ECONOMICS</span>
+                <span class="tag">POLICY</span>
               </div>
+              <p style="margin-top: 16px;">
+                <a href="/portfolio/fiscal-federalism.html" onclick="event.stopPropagation()" class="btn btn-secondary">View Case Study</a>
+                <a href="/portfolio/tax-devolution/index.html" onclick="event.stopPropagation()" class="btn btn-secondary">Live Dashboard</a>
+              </p>
             </div>
           </article>
 
-          <!-- Indian Legislature Analysis -->
-          <article class="card fade-in-section" onclick="window.location.href='/portfolio/indian-legislature-analysis/dashboard/'" style="cursor: pointer;">
+          <article class="card fade-in-section" onclick="window.location.href='/portfolio/economic-pulse.html'" style="cursor: pointer;">
             <div class="card-image-placeholder">
-              <img src="/portfolio/indian-legislature-analysis/cover.png" alt="Indian Legislature Analysis Dashboard" loading="lazy" width="800" height="450">
+              <img src="/portfolio/covereconomy.png" alt="India's Economic Pulse dashboard" loading="lazy" width="800" height="450">
             </div>
             <div class="card-body">
-              <h3><a href="/portfolio/indian-legislature-analysis/dashboard/">Indian Legislature Analysis</a></h3>
-              <p>Analysis of 2024 Lok Sabha Election examining 8,338 candidates across party dynamics, criminal cases, education, and wealth</p>
+              <h3><a href="/portfolio/economic-pulse.html">India's Economic Pulse</a></h3>
+              <p>A macroeconomic indicator dashboard tracking GDP, inflation, fiscal deficit, trade, and sectoral composition.</p>
               <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Selenium</span>
-                <span class="tag">Plotly</span>
-                <span class="tag">Pandas</span>
+                <span class="tag">EXCEL</span>
+                <span class="tag">POWER BI</span>
+                <span class="tag">MACROECONOMICS</span>
               </div>
+              <p style="margin-top: 16px;"><a href="/portfolio/economic-pulse.html" onclick="event.stopPropagation()" class="btn btn-secondary">View Case Study</a></p>
             </div>
           </article>
 
-          <!-- Indian Healthcare Analysis -->
-          <article class="card fade-in-section" onclick="window.location.href='/portfolio/indian-healthcare-analysis/'" style="cursor: pointer;">
+          <article class="card fade-in-section" onclick="window.location.href='/portfolio/healthcare.html'" style="cursor: pointer;">
             <div class="card-image-placeholder">
               <img src="/images/dash3.png" alt="Indian Healthcare Analysis Dashboard" loading="lazy" width="800" height="450">
             </div>
             <div class="card-body">
-              <h3><a href="/portfolio/indian-healthcare-analysis/">Indian Healthcare Analysis</a></h3>
-              <p>Comprehensive analysis of 707 districts across India using NFHS-5 data examining healthcare improvements and challenges</p>
+              <h3><a href="/portfolio/healthcare.html">Indian Healthcare Analysis</a></h3>
+              <p>Regional disparity analysis across healthcare service delivery, infrastructure access, and health outcomes.</p>
               <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">SQLite</span>
-                <span class="tag">Power BI</span>
-                <span class="tag">DAX</span>
+                <span class="tag">PYTHON</span>
+                <span class="tag">PUBLIC DATASETS</span>
+                <span class="tag">HEALTH POLICY</span>
               </div>
+              <p style="margin-top: 16px;">
+                <a href="/portfolio/healthcare.html" onclick="event.stopPropagation()" class="btn btn-secondary">View Case Study</a>
+                <a href="/portfolio/indian-healthcare-analysis/index.html" onclick="event.stopPropagation()" class="btn btn-secondary">Live Dashboard</a>
+              </p>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="section section-alt">
       <div class="container text-center">
         <h2>Interested in My Work?</h2>
         <p style="color: var(--text-secondary); max-width: 500px; margin: 16px auto 32px;">
-          Let's discuss how I can help solve your data challenges
+          Let's discuss how I can help solve your research, product, or data challenges.
         </p>
-        <a href="/contact.html" class="btn btn-primary">Get In Touch</a>
+        <a href="/contact.html" onclick="event.stopPropagation()" class="btn btn-primary">Get In Touch</a>
       </div>
     </section>
 

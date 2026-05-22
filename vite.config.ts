@@ -14,9 +14,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'src/index.html'),
         about: resolve(__dirname, 'src/about.html'),
-        projects: resolve(__dirname, 'src/projects/index.html'),
         notFound: resolve(__dirname, 'src/404.html'),
-        gallery: resolve(__dirname, 'src/gallery.html'),
         contact: resolve(__dirname, 'src/contact.html'),
         portfolio: resolve(__dirname, 'src/portfolio/index.html'),
       },
@@ -31,7 +29,7 @@ export default defineConfig({
       partialDirectory: resolve(__dirname, 'src/components'),
       context: {
         year: new Date().getFullYear(),
-        siteName: 'DAwithRK',
+        siteName: 'RKJat',
         siteUrl: 'https://rkjat.in',
         analyticsId: 'G-4V7XW1QPZ8',
       },

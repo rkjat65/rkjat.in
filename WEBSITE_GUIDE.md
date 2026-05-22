@@ -1,4 +1,4 @@
-# DAwithRK Website Guide & Reference
+# RKJat Website Guide & Reference
 
 A comprehensive guide to understanding, maintaining, and extending the rkjat.in portfolio website.
 
@@ -677,7 +677,7 @@ Edit `vite.config.ts` → `context` object:
 ```typescript
 context: {
   year: new Date().getFullYear(),
-  siteName: 'DAwithRK',
+  siteName: 'RKJat',
   siteUrl: 'https://rkjat.in',
   analyticsId: 'G-4V7XW1QPZ8',
 },

@@ -1,5 +1,20 @@
 {
   "projects": [
+    {
+      "id": "gyangram",
+      "title": "GyanGram - UPSC Prep App",
+      "description": "A Flutter-based UPSC prep product that turns scroll behaviour into structured, retained learning.",
+      "date": "2026-05-22",
+      "tags": [
+        "Flutter",
+        "AI-Augmented",
+        "EdTech",
+        "Product"
+      ],
+      "image": "/images/gyangram_poster.png",
+      "link": "/portfolio/gyangram.html",
+      "featured": true
+    },
 
     {
       "id": "IPL Analytics",
@@ -12,7 +27,7 @@
         "Tailwing"
       ],
       "image": "/portfolio/ipl.png",
-      "link": "https://crickrida.rkjat.in/",
+      "link": "/portfolio/ipl-analytics.html",
       "featured": true
     },
     {

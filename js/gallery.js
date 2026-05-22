@@ -280,7 +280,7 @@ class Gallery {
     const pageUrl = window.location.origin + window.location.pathname;
     const imageUrl = window.location.origin + item.image;
     const text = item.caption || 'Check out this data visualization';
-    const hashtags = 'DataVisualization,Analytics,DAwithRK';
+    const hashtags = 'DataVisualization,Analytics,RKJat';
 
     shareButtons.innerHTML = `
       <button class="share-btn twitter" onclick="window.open('https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(text)}&hashtags=${hashtags}', '_blank', 'width=550,height=420')">

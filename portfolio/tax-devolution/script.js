@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const statValues = document.querySelectorAll('.stat-value[data-count]');
 
     // Check if CountUp is loaded
-    if (typeof CountUp === 'undefined') {
-        console.error('CountUp.js not loaded');
+    if (typeof countUp === 'undefined' || !countUp.CountUp) {
+        console.warn('CountUp.js not loaded');
         // Fallback: just display the numbers
         statValues.forEach(stat => {
             const countTo = parseFloat(stat.getAttribute('data-count'));
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const countTo = parseFloat(target.getAttribute('data-count'));
 
                 try {
-                    const countUp = new countUp.CountUp(target, countTo, {
+                    const counter = new countUp.CountUp(target, countTo, {
                         duration: 2.5,
                         separator: ',',
                         decimal: '.',
@@ -79,11 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         useGrouping: true
                     });
 
-                    if (!countUp.error) {
-                        countUp.start();
+                    if (!counter.error) {
+                        counter.start();
                         target.dataset.animated = 'true';
                     } else {
-                        console.error('CountUp error:', countUp.error);
+                        console.error('CountUp error:', counter.error);
                         target.textContent = countTo.toFixed(2);
                     }
                 } catch (error) {

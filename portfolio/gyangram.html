@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GyanGram — a Flutter-based UPSC prep app that turns scattered study into a guided mastery journey. Built solo by Radhakishan Jat, a 6-year UPSC aspirant who cleared Prelims 3 times.">
+  <title>GyanGram — Product Case Study | Radhakishan Jat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* ── Page layout ── */
+    .cs-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .cs-wide  { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Hero ── */
+    .cs-hero { padding: 118px 0 72px; text-align: left; }
+    .cs-hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr); align-items: center; gap: 56px; }
+    .cs-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,113,227,0.08); color: var(--primary);
+      border: 1px solid rgba(0,113,227,0.2); border-radius: 999px;
+      font-size: 13px; font-weight: 500; padding: 6px 18px; margin-bottom: 28px;
+    }
+    .cs-hero h1 {
+      font-family: var(--font-heading); font-size: clamp(2.6rem, 6vw, 4rem);
+      font-weight: 700; line-height: 1.1; margin-bottom: 16px;
+    }
+    .cs-hero h1 span { display: block; font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 400; color: var(--text-secondary); margin-top: 8px; }
+    .cs-tagline { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; max-width: 620px; margin: 0 0 32px; }
+    .cs-badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-start; margin-bottom: 36px; }
+    .badge { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; font-size: 12px; font-weight: 500; padding: 5px 12px; color: var(--text); }
+    .cs-ctas { display: flex; gap: 12px; justify-content: flex-start; flex-wrap: wrap; margin-bottom: 0; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: var(--radius); font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; font-family: var(--font-body); }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+    .btn-ghost { background: var(--bg-secondary); color: var(--text); border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+    .btn-disabled { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); opacity: 0.6; cursor: not-allowed; }
+
+    /* ── Meta row ── */
+    .cs-meta { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .cs-meta-cell { flex: 1; min-width: 120px; padding: 20px 24px; border-right: 1px solid var(--border); }
+    .cs-meta-cell:last-child { border-right: none; }
+    .cs-meta-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 6px; }
+    .cs-meta-value { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.4; }
+
+    /* ── Hero screenshot ── */
+    .cs-hero-img { margin: 0; max-width: none; }
+    .cs-hero-img img { display: block; width: min(100%, 360px); height: auto; object-fit: contain; margin: 0 auto; border-radius: 24px; box-shadow: 0 24px 64px rgba(0,0,0,0.12); border: 1px solid var(--border); }
+    .img-placeholder { background: var(--bg-secondary); border: 2px dashed var(--border); border-radius: 24px; height: 480px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 14px; font-family: var(--font-body); }
+
+    /* ── Sections ── */
+    .cs-section { padding: 72px 0; border-top: 1px solid var(--border); }
+    .cs-section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; font-family: var(--font-body); }
+    .cs-section h2 { font-family: var(--font-heading); font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 16px; }
+    .cs-section p { font-size: 1rem; color: var(--text-secondary); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+    .cs-section p:last-of-type { margin-bottom: 0; }
+
+    /* ── Card grids ── */
+    .card-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+    .card-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 32px; }
+    @media (max-width: 768px) {
+      .card-grid-2, .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
+      .cs-meta { flex-direction: column; }
+      .cs-meta-cell { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+    .cs-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+    .cs-card .icon { font-size: 22px; margin-bottom: 12px; }
+    .cs-card h3 { font-family: var(--font-heading); font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+    .cs-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+
+    /* ── Highlight block ── */
+    .cs-highlight {
+      background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(166,77,255,0.06));
+      border: 1px solid rgba(0,113,227,0.15); border-radius: var(--radius-lg);
+      padding: 40px; margin: 40px 0;
+    }
+    .cs-highlight blockquote { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 400; line-height: 1.55; margin-bottom: 12px; }
+    .cs-highlight cite { font-size: 13px; color: var(--text-secondary); font-style: normal; }
+
+    /* ── Tab cards ── */
+    .tab-card { border-radius: var(--radius); padding: 28px 24px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    .tab-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .tab-home::before  { background: #0071e3; }
+    .tab-scroll::before { background: #a64dff; }
+    .tab-learn::before  { background: #00c88c; }
+    .tab-review::before { background: #ff9500; }
+    .tab-num { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 8px; font-family: var(--font-body); }
+    .tab-card h3 { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+    .tab-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 14px; }
+    .tab-features { list-style: none; padding: 0; margin: 0; }
+    .tab-features li { font-size: 13px; color: var(--text-secondary); padding: 3px 0; display: flex; gap: 8px; }
+    .tab-features li::before { content: '→'; color: var(--primary); flex-shrink: 0; }
+
+    /* ── Decision table ── */
+    .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 768px) { .decision-grid { grid-template-columns: 1fr; } }
+    .decision-card { border-radius: var(--radius); padding: 22px; border: 1px solid var(--border); }
+    .decision-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
+    .tag-no  { color: #ff6b35; }
+    .tag-yes { color: #00c88c; }
+    .decision-card h3 { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; }
+    .decision-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+
+    /* ── Screenshots in sections ── */
+    .cs-figure { margin: 32px 0; }
+    .cs-figure img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+    .cs-figure figcaption { font-size: 13px; color: var(--text-secondary); margin-top: 10px; text-align: center; font-family: var(--font-body); }
+    .admin-figure { max-width: 420px; margin: 36px auto 0; }
+    .admin-figure img { display: block; height: auto; }
+    .screenshot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    .screenshot-row.three { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+    .screenshot-row.three .cs-figure { margin: 0; }
+    .screenshot-row.three .cs-figure img { height: 520px; object-fit: cover; object-position: top; }
+    @media (max-width: 900px) { .screenshot-row.three { grid-template-columns: 1fr; } .screenshot-row.three .cs-figure img { height: auto; } }
+    @media (max-width: 640px) { .screenshot-row { grid-template-columns: 1fr; } }
+
+    /* ── Timeline / roadmap ── */
+    .timeline { border-left: 2px solid var(--border); margin: 32px 0; padding-left: 0; list-style: none; }
+    .timeline-item { display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 20px 0 20px 24px; border-bottom: 1px solid var(--border); align-items: start; position: relative; }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-item::before { content: ''; position: absolute; left: -5px; top: 28px; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); }
+    .tl-phase { font-size: 13px; font-weight: 600; color: var(--primary); font-family: var(--font-body); padding-top: 2px; }
+    .tl-content h4 { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+    .tl-content p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+    .tl-status { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 999px; margin-bottom: 8px; }
+    .status-active  { background: rgba(0,200,140,0.12); color: #00a870; }
+    .status-next    { background: rgba(0,113,227,0.1); color: var(--primary); }
+    .status-planned { background: var(--bg-secondary); color: var(--text-secondary); }
+
+    /* ── Stack grid ── */
+    .stack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; margin-top: 28px; }
+    .stack-item { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+    .stack-role { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-body); font-weight: 500; margin-bottom: 4px; }
+    .stack-tool { font-size: 14px; font-weight: 600; color: var(--text); font-family: var(--font-heading); }
+
+    /* ── PM note ── */
+    .pm-note { background: var(--bg-secondary); border-left: 3px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 24px 28px; margin-top: 48px; }
+    .pm-note-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; font-family: var(--font-body); }
+    .pm-note p { font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin: 0; }
+
+    /* ── Next project ── */
+    .next-project { text-align: center; padding: 80px 0; border-top: 1px solid var(--border); }
+    .next-project p { font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+    .next-project h3 { font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 24px; }
+
+    .nav-links a.nav-active { opacity: 1; color: var(--primary); position: relative; }
+    .nav-links a.nav-active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: var(--primary); border-radius: 2px; }
+    .nav-toggle { display: none; }
+    .theme-toggle { border-radius: 999px; width: auto; min-width: 58px; padding: 0 12px; font-size: 12px; font-weight: 600; color: var(--text); background: var(--bg-secondary); border-color: var(--border); }
+    [data-theme="dark"] .theme-toggle { color: #ffffff !important; background: #0071e3 !important; border-color: #66b2ff !important; forced-color-adjust: none; }
+    @media (max-width: 768px) {
+      .nav-toggle { display: block; }
+      .nav-links a.nav-active::after { display: none; }
+      .cs-hero { padding-top: 96px; text-align: center; }
+      .cs-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .cs-tagline { margin-left: auto; margin-right: auto; }
+      .cs-badges, .cs-ctas { justify-content: center; }
+      .cs-ctas > *, .cs-section [style*="display: flex"] > * { width: 100%; justify-content: center; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .cs-highlight { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="gradient-text">RK</span>Jat</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/">Home</a>
+      <a href="/portfolio/">My Work</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/portfolio/gyangram.html" class="nav-active active" aria-current="page">GyanGram</a>
+      <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">Dark</button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="cs-hero">
+  <div class="cs-wide cs-hero-grid">
+    <div class="cs-hero-copy">
+      <div class="cs-kicker">Product Case Study &nbsp;|&nbsp; Founder & Solo PM</div>
+      <h1>
+        GyanGram
+        <span>Turning UPSC preparation from scattered study into a guided mastery journey.</span>
+      </h1>
+      <p class="cs-tagline">
+        A Flutter-based UPSC prep app where every card, article, and PYQ feeds a live
+        mastery map of your exam preparation. Built entirely solo: design, code, content,
+        and systems, using AI-augmented workflows.
+      </p>
+      <div class="cs-badges">
+        <span class="badge">Flutter</span>
+        <span class="badge">AI-Augmented</span>
+        <span class="badge">EdTech</span>
+        <span class="badge">Solo-built</span>
+        <span class="badge">Android, iOS, Web, Windows</span>
+        <span class="badge">108+ Cards</span>
+        <span class="badge">Launching 2026</span>
+      </div>
+      <div class="cs-ctas">
+        <span class="btn btn-disabled">Play Store - Launching soon</span>
+        <a href="/contact.html" class="btn btn-ghost">Talk to the founder -></a>
+      </div>
+    </div>
+
+    <div class="cs-hero-img">
+      <div class="img-placeholder">gyangram-hero.png</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Meta row ── -->
+<div class="cs-wide">
+  <div class="cs-meta">
+    <div class="cs-meta-cell">
+      <div class="cs-meta-label">Year</div>
+      <div class="cs-meta-value">2025 – 2026</div>
+    </div>
+    <div class="cs-meta-cell">
+      <div class="cs-meta-label">Role</div>
+      <div class="cs-meta-value">Founder · Solo PM · Designer · Content</div>
+    </div>
+    <div class="cs-meta-cell">
+      <div class="cs-meta-label">Stack</div>
+      <div class="cs-meta-value">Flutter · Cursor · Claude Code · Codex</div>
+    </div>
+    <div class="cs-meta-cell">
+      <div class="cs-meta-label">Content</div>
+      <div class="cs-meta-value">108+ cards · Interactive markdown articles</div>
+    </div>
+    <div class="cs-meta-cell">
+      <div class="cs-meta-label">Status</div>
+      <div class="cs-meta-value">Pre-launch · Content seeding in progress</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     THE ORIGIN
+══════════════════════════════════════════════ -->
+<section class="cs-section">
+  <div class="cs-wrap">
+    <div class="cs-section-label">The Origin</div>
+    <h2>One thought while scrolling a slide deck.</h2>
+    <p>
+      In early 2025, I was scrolling through a NotebookLM slide deck. A thought struck:
+      millions of UPSC aspirants scroll through Instagram and Reels every day —
+      what if that exact scroll behaviour led to learning instead of entertainment?
+    </p>
+    <p>
+      That question, shared with Claude in a conversation, became GyanGram. The idea was
+      deceptively simple: convert the behaviour, don't fight it.
+      But building the product revealed the real problem — and it wasn't what the original idea assumed.
+    </p>
+    <div class="cs-highlight">
+      <blockquote>"UPSC aspirants don't fail because they lack content. They fail because they don't know what they actually know."</blockquote>
+      <cite>— The insight that changed the product from a content feed into a learning system</cite>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     THE PROBLEM
+══════════════════════════════════════════════ -->
+<section class="cs-section">
+  <div class="cs-wrap">
+    <div class="cs-section-label">The Problem</div>
+    <h2>India has infinite UPSC content. That is not the problem.</h2>
+    <p>
+      YouTube channels, PDFs, printed notes, coaching videos — UPSC aspirants are
+      surrounded by content. They still fail. Because content access was never the gap.
+    </p>
+    <div class="card-grid-2">
+      <div class="cs-card">
+        <div class="icon">🗺️</div>
+        <h3>No live picture of mastery</h3>
+        <p>Aspirants read topics but have no way to know whether they've actually learned them or just seen them. Passive reading feels productive. It isn't.</p>
+      </div>
+      <div class="cs-card">
+        <div class="icon">📱</div>
+        <h3>Social media wins the same screen time</h3>
+        <p>A 30-minute free window ends up on Instagram, not study. The phone is the problem and the solution. GyanGram bets on using the behaviour, not fighting it.</p>
+      </div>
+      <div class="cs-card">
+        <div class="icon">🔁</div>
+        <h3>Revision is broken</h3>
+        <p>Most students never return to what they studied. Notes are written and forgotten. Wrong PYQs are accepted and repeated. There's no system driving them back to weak areas.</p>
+      </div>
+      <div class="cs-card">
+        <div class="icon">📄</div>
+        <h3>Heavy formats for a short-attention era</h3>
+        <p>3-hour video lectures and 200-page PDFs are designed for a different generation of learners. Most aspirants today study in fragments — apps and commutes and lunch breaks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     HOW IT EVOLVED
+══════════════════════════════════════════════ -->
+<section class="cs-section">
+  <div class="cs-wrap">
+    <div class="cs-section-label">Product Evolution</div>
+    <h2>The honest version — how Version 1 became what GyanGram is now.</h2>
+    <p>
+      The first version had three tabs: Home, Explore, Profile.
+      Explore was a scroll feed. The app existed. But it had no reason for users to return.
+    </p>
+
+    <div class="cs-highlight" style="margin-top: 32px;">
+      <blockquote>"Why would a user keep coming back to this app?"</blockquote>
+      <cite>— The question that turned a content feed into a learning system</cite>
+    </div>
+
+    <p style="margin-top: 24px;">
+      The answer: only if the app showed them their progress and told them what to do next.
+      That question led to the Learn tab as a syllabus mastery map and the Home tab as a
+      daily coach — not a generic dashboard.
+    </p>
+    <p>
+      Three more pivots followed, each driven by a real problem hit during building:
+    </p>
+
+    <div class="card-grid-3" style="margin-top: 32px;">
+      <div class="cs-card">
+        <h3>The image pivot</h3>
+        <p>
+          Early cards were AI-generated images. Beautiful — but fragile. One wrong fact required
+          a completely new image. No searchability as content scaled. I researched Flutter's
+          widget rendering and built ~50 reusable card templates. Now a JSON file creates
+          an entire card deck in seconds. AI images remain for creative visuals where
+          precision matters less than impact.
+        </p>
+      </div>
+      <div class="cs-card">
+        <h3>The depth discovery</h3>
+        <p>
+          Cards teach facts. Articles teach understanding. I built an interactive markdown reader
+          and linked articles to cards via long press — the aspirant can go deep on any concept,
+          then return to the card stream. Two-layer learning: quick recall plus deep comprehension.
+          That pairing is what UPSC Mains actually requires.
+        </p>
+      </div>
+      <div class="cs-card">
+        <h3>The mastery architecture</h3>
+        <p>
+          I analysed 15 years of UPSC Prelims PYQs and structured the syllabus from that signal.
+          Every topic became a node — linked to cards, articles, quizzes, and PYQs.
+          Progress is tracked at node level. The result: the syllabus becomes a live mastery map,
+          not a static reading list.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     4-TAB ARCHITECTURE
+══════════════════════════════════════════════ -->
+<section class="cs-section">
+  <div class="cs-wrap">
+    <div class="cs-section-label">Product Architecture</div>
+    <h2>Four tabs. One learning loop.</h2>
+    <p>
+      Each tab maps to a distinct phase of learning. Nothing overlaps.
+      Every interaction in any tab feeds back into the mastery system.
+    </p>
+
+    <div class="cs-highlight" style="margin-top: 28px;">
+      <blockquote>Study → Recall → Practice PYQs → Diagnose gaps → Revise → Earn mastery.</blockquote>
+      <cite>— The loop every tab is designed around</cite>
+    </div>
+
+    <div class="card-grid-4" style="margin-top: 36px;">
+      <div class="tab-card tab-home">
+        <div class="tab-num">Tab 01</div>
+        <h3>Home</h3>
+        <p>Your daily coach. Not a generic dashboard — a prioritised list of exactly what to do today.</p>
+        <ul class="tab-features">
+          <li>Goal-based daily study plan</li>
+          <li>Spaced repetition scheduling</li>
+          <li>Previous-day performance signals</li>
+          <li>Weak areas and due revisions surfaced</li>
+        </ul>
+      </div>
+      <div class="tab-card tab-scroll">
+        <div class="tab-num">Tab 02</div>
+        <h3>Scroll</h3>
+        <p>Discovery with purpose. 108+ cards — scroll to learn, not to waste time.</p>
+        <ul class="tab-features">
+          <li>MCQ, flashcard, true/false, fill-in, match templates</li>
+          <li>Horizontal decks for concept depth</li>
+          <li>Long press → linked article handoff</li>
+          <li>Like, bookmark, share per card</li>
+        </ul>
+      </div>
+      <div class="tab-card tab-learn">
+        <div class="tab-num">Tab 03</div>
+        <h3>Learn</h3>
+        <p>The syllabus as a mastery map. Structured study from subject down to micro-topic.</p>
+        <ul class="tab-features">
+          <li>PYQ-signal-based syllabus structure</li>
+          <li>Mastery node per topic</li>
+          <li>Linked articles, cards, quizzes, PYQs</li>
+          <li>Completion and progress tracking</li>
+        </ul>
+      </div>
+      <div class="tab-card tab-review">
+        <div class="tab-num">Tab 04</div>
+        <h3>Review</h3>
+        <p>Active repair, not a static resource shelf. Return to what needs attention.</p>
+        <ul class="tab-features">
+          <li>Due topics and weak areas</li>
+          <li>Wrong PYQs queue for retry</li>
+          <li>Bookmarked cards and articles</li>
+          <li>PYQ trend analysis and exam tools</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tab screenshots -->
+    <div class="screenshot-row three" style="margin-top: 40px;">
+      <figure class="cs-figure">
+        <div class="img-placeholder">gyangram-learn.png</div>
+        <figcaption>Learn tab — the UPSC syllabus as mastery nodes</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <div class="img-placeholder">gyangram-article.png</div>
+        <figcaption>Article view — deep reading linked from scroll cards via long press</figcaption>
+      </figure>
+    
+      <figure class="cs-figure">
+      <div class="img-placeholder">gyangram-scroll.png</div>
+      <figcaption>Scroll tab — card with like, bookmark, deck player, article, and share</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     KEY DECISIONS
+══════════════════════════════════════════════ -->
+<section class="cs-section">
+  <div class="cs-wrap">
+    <div class="cs-section-label">Key Decisions</div>
+    <h2>What I chose not to build — and why that matters more than what I did.</h2>
+    <p>
+      The easiest product mistake is adding features. Every item below was considered,
+      prototyped mentally, and deliberately rejected.
+    </p>
+
+    <div class="decision-grid">
+      <div class="decision-card">
+        <span class="decision-tag tag-no">✕ Rejected</span>
+        <h3>All AI-generated image cards</h3>
+        <p>Visually rich but fragile at scale. One factual error requires a completely new image. No searchability as the card count grows. Switched to Flutter widget templates — accuracy, speed, and searchability together.</p>
+      </div>
+      <div class="decision-card">
+        <span class="decision-tag tag-no">✕ Rejected</span>
+        <h3>Heavy gamification</h3>
+        <p>Streaks, leaderboards, and reward systems optimise for app-opens, not learning. UPSC Mains is a six-hour writing examination. Streaks kept for psychological value. Everything else removed.</p>
+      </div>
+      <div class="decision-card">
+        <span class="decision-tag tag-no">✕ Rejected</span>
+        <h3>Generic MCQ banks</h3>
+        <p>Generic MCQs give false confidence. PYQs are the actual exam signal — 15 years of them analysed to structure the syllabus. Interactive card formats (fill-in, match, true/false) do what MCQs do without abandoning depth.</p>
+      </div>
+      <div class="decision-card">
+        <span class="decision-tag tag-no">✕ Rejected</span>
+        <h3>Social comments on cards</h3>
+        <p>GyanGram is a study tool, not a social platform. Every aspirant's learning journey is different. Comments would fragment focus without adding learning value. Deliberately not built.</p>
+      </div>
+      <div class="decision-card">
+        <span class="decision-tag tag-yes">✓ Deliberate</span>
+        <h3>Text-based card templates over images</h3>
+        <p>Searchability at scale. As cards reach thousands, students need to find specific topics instantly. Image cards are unsearchable. Flutter widget templates give full text search from day one.</p>
+      </div>
+      <div class="decision-card">
+        <span class="decision-tag tag-yes">✓ Deliberate</span>
+        <h3>JSON import for card decks</h3>
+        <p>Speed of content creation without sacrificing structure. One structured JSON file generates an entire horizontal card deck in seconds. Reviewed and edited as needed. Content velocity without quality compromise.</p>
+      </div>
+      <div class="decision-card">
+        <span class="decision-tag tag-yes">✓ Deliberate</span>
+        <h3>Flutter for all platforms from day one</h3>
+        <p>Android, iOS, web, and Windows from a single codebase. UPSC aspirants span urban smartphone users to desktop-first coaching students. No user excluded by platform choice from the beginning.</p>
+      </div>
+      <div class="decision-card">
+        <span class="decision-tag tag-yes">✓ Deliberate</span>
+        <h3>Launch after content seeding, not before</h3>
+        <p>A content-first release means every early user gets a complete experience. Launching with skeleton content trains users to expect an incomplete product. Quality before reach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     HOW IT WAS BUILT
+══════════════════════════════════════════════ -->
+<section class="cs-section">
+  <div class="cs-wrap">
+    <div class="cs-section-label">How It Was Built</div>
+    <h2>One person. Design, tech, content, and systems — all of it.</h2>
+    <p>
+      GyanGram is not a side project. It is a complete product operation: a design system,
+      a content pipeline, an admin CMS, and a multi-platform application — built without
+      writing traditional code, using AI-augmented development throughout.
+    </p>
+    <p>
+      The key philosophical constraint: <strong>AI as infrastructure, not as author.</strong>
+      AI generates card visuals, assists with code, and speeds up structuring.
+      But every factual claim, every PYQ explanation, every article is authored with
+      six years of domain knowledge. Trust is the product.
+    </p>
+
+    <div class="stack-grid">
+      <div class="stack-item"><div class="stack-role">Product</div><div class="stack-tool">Ideation · IA · Roadmap</div></div>
+      <div class="stack-item"><div class="stack-role">Development</div><div class="stack-tool">Cursor · Claude Code · Codex</div></div>
+      <div class="stack-item"><div class="stack-role">Framework</div><div class="stack-tool">Flutter (Dart)</div></div>
+      <div class="stack-item"><div class="stack-role">Design system</div><div class="stack-tool">Visual Spine v1.0</div></div>
+      <div class="stack-item"><div class="stack-role">Card visuals</div><div class="stack-tool">Nano Banana · ChatGPT Image</div></div>
+      <div class="stack-item"><div class="stack-role">Card templates</div><div class="stack-tool">~50 Flutter widget templates</div></div>
+      <div class="stack-item"><div class="stack-role">Content</div><div class="stack-tool">Domain expertise + AI assist</div></div>
+      <div class="stack-item"><div class="stack-role">Admin CMS</div><div class="stack-tool">Custom panel — full CRUD</div></div>
+    </div>
+
+    <!-- Admin panel screenshot -->
+    <figure class="cs-figure admin-figure">
+      <div class="img-placeholder">gyangram-admin.png</div>
+      <figcaption>Admin panel — end-to-end content management: upload, edit, review, publish</figcaption>
+    </figure>
+
+    <div class="pm-note">
+      <div class="pm-note-label">For product and PM recruiters</div>
+      <p>
+        Building a product solo forces every decision to be explicit — there is no PM to escalate to,
+        no designer to delegate the hard trade-offs to. Everything in this case study was
+        decided, owned, and executed by one person. The founder's six years of UPSC preparation
+        (Prelims cleared 3 times across 5 attempts) is not a background detail — it is the user
+        research that shaped every feature decision, every scope exclusion, and every content
+        philosophy choice. That is a different kind of product experience than roadmap collaboration.
+        It is closer to founding PM work.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     ROADMAP
+══════════════════════════════════════════════ -->
+<section class="cs-section">
+  <div class="cs-wrap">
+    <div class="cs-section-label">Roadmap</div>
+    <h2>Sequenced by user value, not feature count.</h2>
+
+    <ul class="timeline">
+      <li class="timeline-item">
+        <div class="tl-phase">Now</div>
+        <div class="tl-content">
+          <span class="tl-status status-active">In progress</span>
+          <h4>Content seeding</h4>
+          <p>Building the initial content base across Geography, Polity, History, Economy, and Environment before public launch. Quality before velocity.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="tl-phase">Month 1</div>
+        <div class="tl-content">
+          <span class="tl-status status-next">Next</span>
+          <h4>Play Store launch (Android)</h4>
+          <p>Public release when content demonstrates the full scroll → learn → review loop across at least three subjects.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="tl-phase">Month 3–6</div>
+        <div class="tl-content">
+          <span class="tl-status status-planned">Planned</span>
+          <h4>Feedback-driven iteration</h4>
+          <p>Roadmap shaped by real user behaviour. Target: 10,000 active users before adding any major new feature.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="tl-phase">Year 1</div>
+        <div class="tl-content">
+          <span class="tl-status status-planned">Planned</span>
+          <h4>1 lakh users · iOS · Hindi vernacular</h4>
+          <p>Expansion to iOS and web. Hindi vernacular card support — content creators needed, Flutter feature is one build away.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="tl-phase">Later</div>
+        <div class="tl-content">
+          <span class="tl-status status-planned">Planned</span>
+          <h4>AI learning companion</h4>
+          <p>AI integrated into the study journey — helping users understand their gaps and what to do next. Complement to content, not a replacement for it.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div style="margin-top: 56px; text-align: center;">
+      <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 20px;">
+        Interested in GyanGram — as a user, collaborator, or as a PM case study?
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="/contact.html" class="btn btn-primary">Get in touch</a>
+        <a href="/portfolio/" class="btn btn-ghost">See all projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     NEXT PROJECT
+══════════════════════════════════════════════ -->
+<div class="next-project">
+  <div class="cs-wrap">
+    <p>Next project</p>
+    <h3>IPL Analytics — 17 Seasons of Cricket Intelligence</h3>
+    <a href="/portfolio/ipl-analytics.html" class="btn btn-ghost">View case study →</a>
+  </div>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Radhakishan Jat &middot; Built with domain expertise and AI tools</p>
+    <div class="footer-links">
+      <a href="https://github.com/rkjat65">GitHub</a>
+      <a href="https://linkedin.com/in/rkjat65">LinkedIn</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+<script>function toggleTheme() {
+  const html = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    html.removeAttribute('data-theme');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+  }
+  if (toggle) toggle.textContent = isDark ? 'Dark' : 'Light';
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+}
+const saved = localStorage.getItem('theme');
+if (saved === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  const toggle = document.getElementById('theme-toggle');
+  if (toggle) toggle.textContent = 'Light';
+}
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 20);
+});
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+navToggle?.addEventListener('click', () => {
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', String(!expanded));
+  navLinks?.classList.toggle('active');
+});</script>
+</body>
+</html>

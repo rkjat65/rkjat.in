@@ -261,7 +261,6 @@ MIT License - See LICENSE file for details
 **RK Jat**  
 Data Analyst | Content Creator | UPSC Aspirant
 
-- 🐦 Twitter: [@rkjat65](https://twitter.com/rkjat65)
 - 🌐 Website: [rkjat.in](https://rkjat.in)
 - 💼 LinkedIn: [Connect via website]
 - 📧 Email: [Contact form on website]
@@ -286,7 +285,6 @@ I'm a data analyst transitioning from UPSC preparation, specializing in Indian e
 
 ### Questions?
 - Open an issue on GitHub
-- DM on Twitter [@rkjat65](https://twitter.com/rkjat65)
 - Visit [rkjat.in](https://rkjat.in)
 
 ### For Media/Collaboration

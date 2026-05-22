@@ -1,5 +1,5 @@
 /**
- * Type definitions for DAwithRK website
+ * Type definitions for RKJat website
  */
 
 // Content types from JSON files

@@ -18,7 +18,7 @@ function getDefaultShareOptions(): Required<ShareOptions> {
   return {
     url: window.location.href,
     text: document.title,
-    hashtags: ['DataVisualization', 'Analytics', 'DAwithRK'],
+    hashtags: ['DataVisualization', 'Analytics', 'RKJat'],
   };
 }
 

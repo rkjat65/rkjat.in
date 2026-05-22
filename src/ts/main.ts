@@ -1,5 +1,5 @@
 /**
- * Main entry point for DAwithRK website
+ * Main entry point for RKJat website
  */
 
 import { initTheme } from './modules/theme';

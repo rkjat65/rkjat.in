@@ -45,7 +45,7 @@ export function toggleTheme(): void {
 export function updateThemeIcon(): void {
   const toggle = getElement(SELECTORS.themeToggle);
   if (toggle) {
-    toggle.textContent = isDarkTheme() ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    toggle.textContent = isDarkTheme() ? 'Light' : 'Dark';
   }
 }
 
