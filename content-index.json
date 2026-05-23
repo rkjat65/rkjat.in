@@ -94,7 +94,8 @@
       "description": "Interactive dashboard analyzing India's economic indicators including GDP, inflation, employment, and trade data.",
       "date": "2024-09-10",
       "tags": [
-        "Streamlit",
+        "React",
+        "FastAPI",
         "Python",
         "Economics",
         "Dashboard"

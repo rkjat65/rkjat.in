@@ -269,7 +269,7 @@ Data Analyst | Content Creator | UPSC Aspirant
 I'm a data analyst transitioning from UPSC preparation, specializing in Indian economy, policy analysis, and data visualization. This project combines my background in current affairs with developing technical skills in data analytics and web development.
 
 **Other Projects**:
-- Indian Economic Indicators Dashboard (Streamlit)
+- India Economic Pulse Dashboard (React/FastAPI)
 - NFHS-5 Healthcare Analytics
 - Indian Legislature Political Profile Analysis
 
