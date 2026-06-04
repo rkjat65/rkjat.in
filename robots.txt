@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
 
+# Block old duplicate dashboard directories (canonical case studies exist at /portfolio/*.html)
+Disallow: /portfolio/tax-devolution/
+Disallow: /portfolio/india-economic-pulse/
+Disallow: /portfolio/indian-healthcare-analysis/
+Disallow: /portfolio/indian-legislature-analysis/
+
+# Block utility / internal paths
+Disallow: /projects/
+Disallow: /GyanGram/
+Disallow: /portfolio/crickrida-showcase.html
+
 Sitemap: https://rkjat.in/sitemap.xml

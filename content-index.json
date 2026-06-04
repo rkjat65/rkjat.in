@@ -1,0 +1,108 @@
+{
+  "projects": [
+    {
+      "id": "gyangram",
+      "title": "GyanGram - UPSC Prep App",
+      "description": "A Flutter-based UPSC prep product that turns scroll behaviour into structured, retained learning.",
+      "date": "2026-05-22",
+      "tags": [
+        "Flutter",
+        "AI-Augmented",
+        "EdTech",
+        "Product"
+      ],
+      "image": "/images/gyangram_poster.png",
+      "link": "/portfolio/gyangram.html",
+      "featured": true
+    },
+
+    {
+      "id": "IPL Analytics",
+      "title": "IPL Complete Analytics Dashboard",
+      "description": "Comprehensive analysis of IPL data including player performance, team statistics, and match insights",
+      "date": "2026-03-27",
+      "tags": [
+        "FastAPI",
+        "DuckDB",
+        "Tailwing"
+      ],
+      "image": "/portfolio/ipl.png",
+      "link": "/portfolio/ipl-analytics.html",
+      "featured": true
+    },
+    {
+      "id": "t20-india-analysis",
+      "title": "India T20 World Cup 2026 - Analytics",
+      "description": "Full-tournament cricket analytics dashboard covering India's championship campaign. Batting, bowling, fielding, phase-wise breakdowns",
+      "date": "2026-03-12",
+      "tags": [
+        "React",
+        "JavaScript",
+        "Cricket Analytics"
+      ],
+      "image": "/portfolio/t20.png",
+      "link": "https://datacric.netlify.app/",
+      "featured": true
+    },
+    {
+      "id": "tax-devolution-analysis",
+      "title": "India's Fiscal Federalism Analysis",
+      "description": "Interactive visualization of India's tax devolution system, analyzing ₹111 lakh crore in taxes across 28 states from FY 2020-21 to 2024-25.",
+      "date": "2024-12-09",
+      "tags": [
+        "JavaScript",
+        "Chart.js",
+        "Data Viz",
+        "Economics"
+      ],
+      "image": "/portfolio/tax-devolution/cover.png",
+      "link": "/portfolio/tax-devolution/",
+      "featured": true
+    },
+    {
+      "id": "indian-healthcare-analysis",
+      "title": "Indian Healthcare System Analysis",
+      "description": "Comprehensive analysis of 707 districts across India using NFHS-5 data, examining healthcare improvements and challenges.",
+      "date": "2024-11-15",
+      "tags": [
+        "Python",
+        "SQL",
+        "Power BI"
+      ],
+      "image": "/portfolio/indian-healthcare-analysis/cover.png",
+      "link": "/portfolio/indian-healthcare-analysis/",
+      "featured": true
+    },
+    {
+      "id": "indian-legislature-analysis",
+      "title": "Indian Legislature Analysis",
+      "description": "Analysis of 8,338 Lok Sabha 2024 candidates examining party dynamics, criminal cases, education, and wealth declarations.",
+      "date": "2024-10-20",
+      "tags": [
+        "Python",
+        "Plotly",
+        "Data Analysis",
+        "Politics"
+      ],
+      "image": "/portfolio/indian-legislature-analysis/cover.png",
+      "link": "/portfolio/indian-legislature-analysis/",
+      "featured": true
+    },
+    {
+      "id": "india-economic-pulse",
+      "title": "India Economic Pulse Dashboard",
+      "description": "Interactive dashboard analyzing India's economic indicators including GDP, inflation, employment, and trade data.",
+      "date": "2024-09-10",
+      "tags": [
+        "React",
+        "FastAPI",
+        "Python",
+        "Economics",
+        "Dashboard"
+      ],
+      "image": "/images/dash3.png",
+      "link": "/portfolio/india-economic-pulse.html",
+      "featured": false
+    }
+  ]
+}

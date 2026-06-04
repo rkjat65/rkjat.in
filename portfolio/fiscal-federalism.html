@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="India fiscal federalism case study: visualising centre-state transfers, tax devolution, grants, and fiscal flows across Indian states.">
+  <title>India Fiscal Federalism - Case Study | Radhakishan Jat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <style>
+    .cs-hero { padding: 128px 0 56px; }
+    .cs-kicker { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,113,227,0.08); color: var(--primary); border: 1px solid rgba(0,113,227,0.2); border-radius: 999px; font-size: 13px; font-weight: 600; padding: 7px 16px; margin-bottom: 24px; }
+    .cs-hero h1 { font-size: clamp(2.35rem, 5vw, 4rem); line-height: 1.05; margin-bottom: 18px; max-width: 920px; }
+    .cs-tagline { font-size: 1.14rem; color: var(--text-secondary); max-width: 760px; line-height: 1.7; margin-bottom: 28px; }
+    .badge { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; font-size: 12px; font-weight: 600; padding: 6px 11px; color: var(--text); display: inline-block; margin: 4px 4px 4px 0; }
+    .cs-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 22px; border-radius: var(--radius); font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid transparent; cursor: pointer; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+    .btn-secondary { background: var(--bg-secondary); color: var(--text); border-color: var(--border); }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+    .btn-disabled { background: var(--bg-secondary); color: var(--text-secondary); border-color: var(--border); cursor: not-allowed; opacity: 0.78; }
+    .cs-meta-row { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 40px; }
+    .cs-meta-item { display: flex; flex-direction: column; gap: 4px; min-width: 145px; }
+    .cs-meta-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); }
+    .cs-meta-value { font-size: 14px; font-weight: 600; color: var(--text); }
+    .cs-section { padding: 64px 0; border-top: 1px solid var(--border); }
+    .cs-section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
+    .cs-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 16px; max-width: 780px; }
+    .cs-section p, .cs-section li { font-size: 1rem; color: var(--text-secondary); line-height: 1.75; }
+    .cs-section p { max-width: 760px; margin-bottom: 16px; }
+    .cs-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 32px; }
+    .cs-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; min-height: 100%; }
+    .cs-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 9px; color: var(--text); }
+    .cs-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+    .cs-highlight { background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(166,77,255,0.06)); border: 1px solid rgba(0,113,227,0.15); border-radius: var(--radius-lg); padding: clamp(26px, 5vw, 42px); margin: 40px 0; max-width: 900px; }
+    .cs-highlight blockquote { font-size: clamp(1.15rem, 2.5vw, 1.45rem); font-weight: 500; line-height: 1.55; margin: 0; color: var(--text); }
+    .cs-list { max-width: 800px; margin: 18px 0 0 18px; }
+    .timeline { display: grid; gap: 16px; margin-top: 28px; max-width: 860px; }
+    .timeline-item { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 18px 0; border-top: 1px solid var(--border); }
+    .timeline-time { color: var(--primary); font-weight: 700; font-size: 14px; }
+    .timeline-copy { color: var(--text-secondary); line-height: 1.7; }
+    .next-project { text-align: center; padding: 80px 0; border-top: 1px solid var(--border); }
+    .next-project p { color: var(--text-secondary); font-size: 14px; margin-bottom: 8px; }
+    .next-project h3 { font-size: 1.5rem; margin-bottom: 24px; }
+    @media (max-width: 640px) { .cs-hero { padding-top: 112px; } .cs-meta-row { gap: 18px; } .timeline-item { grid-template-columns: 1fr; gap: 6px; } .cs-actions .btn { width: 100%; } }
+  </style>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://rkjat.in/portfolio/fiscal-federalism.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RKJat">
+  <meta property="og:title" content="India Fiscal Federalism - Case Study | RKJat">
+  <meta property="og:description" content="India fiscal federalism case study: visualising centre-state transfers, tax devolution, grants, and fiscal flows across Indian states.">
+  <meta property="og:url" content="https://rkjat.in/portfolio/fiscal-federalism.html">
+  <meta property="og:image" content="https://rkjat.in/images/og-cover.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="India Fiscal Federalism - Case Study | RKJat">
+  <meta name="twitter:description" content="India fiscal federalism case study: visualising centre-state transfers, tax devolution, grants, and fiscal flows across Indian states.">
+  <meta name="twitter:image" content="https://rkjat.in/images/og-cover.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V7XW1QPZ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4V7XW1QPZ8');
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>RK</span>Jat</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio/" class="active" aria-current="page">My Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/portfolio/gyangram.html">GyanGram</a></li>
+        <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button></li>
+      </ul>
+    </div>
+  </nav>
+  <main id="main-content">
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-kicker">Policy Research & Data Analysis &middot; Solo Analyst</div>
+        <h1>India's Fiscal Federalism - Visualising Rs. 111 Lakh Crore</h1>
+        <p class="cs-tagline">Interactive analysis of India's centre-state financial transfer system: tax devolution, grants-in-aid, and fiscal flows across 28 states from FY 2020-21 to 2024-25.</p>
+        <div><span class="badge">JavaScript</span>
+          <span class="badge">Chart.js</span>
+          <span class="badge">Data Visualization</span>
+          <span class="badge">Economics</span>
+          <span class="badge">Policy Research</span></div>
+        <div class="cs-actions"><a href="/portfolio/tax-devolution/index.html" onclick="event.stopPropagation()" class="btn btn-primary">View Interactive Dashboard</a></div>
+        <div class="cs-meta-row"><div class="cs-meta-item"><span class="cs-meta-label">Year</span><span class="cs-meta-value">2024-2025</span></div>
+          <div class="cs-meta-item"><span class="cs-meta-label">Role</span><span class="cs-meta-value">Research Analyst & Developer</span></div>
+          <div class="cs-meta-item"><span class="cs-meta-label">Stack</span><span class="cs-meta-value">JavaScript, Chart.js</span></div>
+          <div class="cs-meta-item"><span class="cs-meta-label">Status</span><span class="cs-meta-value">Live</span></div></div>
+      </div>
+    </section>
+
+    <section class="cs-section"><div class="container">
+      <div class="cs-section-label">The Problem</div>
+      <h2>A consequential policy system is public, but not accessible.</h2>
+      <p>India's fiscal federalism affects education funding, infrastructure, and public services in every state. The data exists in Finance Commission reports and Union Budgets, but public understanding is limited because the system is not visualized clearly.</p>
+      <div class="cs-card-grid"><div class="cs-card"><h3>Policy complexity</h3><p>Finance Commission formulae, tied grants, untied grants, CSS schemes, and centre-state politics make the system hard to parse.</p></div>
+          <div class="cs-card"><h3>Public impact</h3><p>Transfers shape what state governments can actually spend on education, health, infrastructure, and welfare.</p></div>
+          <div class="cs-card"><h3>Domain-led framing</h3><p>Six years of UPSC preparation shaped the questions: who contributes, who receives, and why that pattern exists.</p></div></div>
+    </div></section>
+
+    <section class="cs-section"><div class="container">
+      <div class="cs-section-label">Approach</div>
+      <h2>Turn abstract fiscal flows into state-level comparisons.</h2>
+      <p>The dashboard lets users explore net contributor/receiver status, devolution trends across five years, and per-capita transfer metrics. Every data point is sourced from Finance Commission and Union Budget documents rather than secondary summaries.</p>
+      
+    </div></section>
+
+    <section class="cs-section"><div class="container">
+      <div class="cs-section-label">Key Decisions</div>
+      <h2>The key design choices make the fiscal system understandable.</h2>
+      <div class="cs-card-grid"><div class="cs-card"><h3>Net contributor vs receiver framing</h3><p>This lens makes the abstract concrete: Maharashtra, Karnataka, and Gujarat contribute more, while many northeastern and low-income states receive more.</p></div>
+          <div class="cs-card"><h3>Five-year trend view</h3><p>Single-year snapshots hide direction. A five-year view shows whether states are becoming more or less fiscally autonomous.</p></div>
+          <div class="cs-card"><h3>Per-capita normalization</h3><p>Absolute transfers favor large states. Per-capita comparisons reveal the equity logic, or its absence, in the devolution formula.</p></div></div>
+    </div></section>
+
+    
+
+    <section class="cs-section"><div class="container">
+      <div class="cs-section-label">Outcome</div>
+      <h2>An interactive map and chart system for India's fiscal flows.</h2>
+      <p>The project shows state-level net fiscal positions, devolution trend lines from FY 2020-21 to FY 2024-25, and per-capita transfer comparisons. It demonstrates quantitative research, policy domain knowledge, and accessible public data storytelling.</p>
+      <div class="cs-actions"><a href="/portfolio/tax-devolution/index.html" onclick="event.stopPropagation()" class="btn btn-primary">Open dashboard</a></div>
+    </div></section>
+
+    <section class="cs-section"><div class="container">
+      <div class="cs-section-label">Reflection</div>
+      <h2>What I learned</h2>
+      <p>This is the clearest demonstration of what domain expertise adds to data work. The numbers are public, but insight depends on knowing which states are underserved, which instruments drive equity, and where the formula may be failing.</p>
+    </div></section>
+
+    <div class="next-project"><div class="container">
+      <p>Next project</p>
+      <h3>India's Economic Pulse</h3>
+      <a href="/portfolio/economic-pulse.html" onclick="event.stopPropagation()" class="btn btn-secondary">View case study -&gt;</a>
+    </div></div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Radhakishan Jat &middot; Built with domain expertise and AI tools</p>
+      <div class="footer-links">
+        <a href="https://github.com/rkjat65" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/rkjat65" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
