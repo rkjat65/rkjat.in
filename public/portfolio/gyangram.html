@@ -10,6 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <style>
+    :root {
+      --primary: #F5A524;
+      --primary-hover: #D98E1A;
+      --shadow-glow: 0 0 100px rgba(245, 165, 36, 0.15);
+      --gradient-text: linear-gradient(135deg, #F5A524 0%, #D98E1A 100%);
+    }
+    [data-theme="dark"] {
+      --shadow-glow: 0 0 120px rgba(245, 165, 36, 0.25);
+    }
+
     /* ── Page layout ── */
     .cs-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
     .cs-wide  { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -19,8 +29,8 @@
     .cs-hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr); align-items: center; gap: 56px; }
     .cs-kicker {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(0,113,227,0.08); color: var(--primary);
-      border: 1px solid rgba(0,113,227,0.2); border-radius: 999px;
+      background: rgba(245, 165, 36, 0.08); color: var(--primary);
+      border: 1px solid rgba(245, 165, 36, 0.2); border-radius: 999px;
       font-size: 13px; font-weight: 500; padding: 6px 18px; margin-bottom: 28px;
     }
     .cs-hero h1 {
@@ -74,8 +84,8 @@
 
     /* ── Highlight block ── */
     .cs-highlight {
-      background: linear-gradient(135deg, rgba(0,113,227,0.06), rgba(166,77,255,0.06));
-      border: 1px solid rgba(0,113,227,0.15); border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(245,165,36,0.06), rgba(217,142,26,0.06));
+      border: 1px solid rgba(245,165,36,0.15); border-radius: var(--radius-lg);
       padding: 40px; margin: 40px 0;
     }
     .cs-highlight blockquote { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 400; line-height: 1.55; margin-bottom: 12px; }
@@ -84,10 +94,10 @@
     /* ── Tab cards ── */
     .tab-card { border-radius: var(--radius); padding: 28px 24px; border: 1px solid var(--border); position: relative; overflow: hidden; }
     .tab-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-    .tab-home::before  { background: #0071e3; }
-    .tab-scroll::before { background: #a64dff; }
-    .tab-learn::before  { background: #00c88c; }
-    .tab-review::before { background: #ff9500; }
+    .tab-home::before  { background: #F5A524; }
+    .tab-explore::before { background: #3BC6F0; }
+    .tab-profile::before  { background: #00c88c; }
+    .tab-loops::before { background: #7C7FFD; }
     .tab-num { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 8px; font-family: var(--font-body); }
     .tab-card h3 { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
     .tab-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 14px; }
@@ -164,6 +174,32 @@
       .cs-highlight { padding: 28px; }
     }
   </style>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://rkjat.in/portfolio/gyangram.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RKJat">
+  <meta property="og:title" content="GyanGram — Product Case Study | RKJat">
+  <meta property="og:description" content="GyanGram — a Flutter-based UPSC prep app that turns scattered study into a guided mastery journey. Built solo by Radhakishan Jat.">
+  <meta property="og:url" content="https://rkjat.in/portfolio/gyangram.html">
+  <meta property="og:image" content="https://rkjat.in/images/og-cover.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GyanGram — Product Case Study | RKJat">
+  <meta name="twitter:description" content="GyanGram — a Flutter-based UPSC prep app that turns scattered study into a guided mastery journey. Built solo by Radhakishan Jat.">
+  <meta name="twitter:image" content="https://rkjat.in/images/og-cover.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V7XW1QPZ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4V7XW1QPZ8');
+  </script>
 </head>
 <body>
 
@@ -207,13 +243,15 @@
         <span class="badge">AI-Augmented</span>
         <span class="badge">EdTech</span>
         <span class="badge">Solo-built</span>
-        <span class="badge">Android, iOS, Web, Windows</span>
-        <span class="badge">108+ Cards</span>
-        <span class="badge">Launching 2026</span>
+        <span class="badge">Android & Web (iOS planned)</span>
+        <span class="badge">1,600+ PYQs Mapped</span>
+        <span class="badge">16 Subjects</span>
       </div>
       <div class="cs-ctas">
-        <span class="btn btn-disabled">Play Store - Launching soon</span>
-        <a href="/contact.html" class="btn btn-ghost">Talk to the founder -></a>
+        <a href="https://play.google.com/store/apps/details?id=com.gyangram.app" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="vertical-align: middle; margin-right: 4px;"><path d="M3.6 2.2 13 12 3.6 21.8a1 1 0 0 1-.6-.9V3.1a1 1 0 0 1 .6-.9Z"/></svg> Get it on Google Play
+        </a>
+        <a href="https://app.gyangram.com" class="btn btn-ghost" target="_blank" rel="noopener">Try the Web App →</a>
       </div>
     </div>
 
@@ -244,11 +282,11 @@
     </div>
     <div class="cs-meta-cell">
       <div class="cs-meta-label">Content</div>
-      <div class="cs-meta-value">108+ cards · Interactive markdown articles</div>
+      <div class="cs-meta-value">1,600+ PYQs · 16 Subjects · 432 Topics</div>
     </div>
     <div class="cs-meta-cell">
       <div class="cs-meta-label">Status</div>
-      <div class="cs-meta-value">Pre-launch · Content seeding in progress</div>
+      <div class="cs-meta-value">Live · Deployed on Google Play & Web</div>
     </div>
   </div>
 </div>
@@ -396,46 +434,46 @@
     <div class="card-grid-4" style="margin-top: 36px;">
       <div class="tab-card tab-home">
         <div class="tab-num">Tab 01</div>
-        <h3>Home</h3>
-        <p>Your daily coach. Not a generic dashboard — a prioritised list of exactly what to do today.</p>
+        <h3>Home (Dashboard)</h3>
+        <p>Your daily study coach. A personalized dashboard prompting you with exactly what to study today.</p>
         <ul class="tab-features">
-          <li>Goal-based daily study plan</li>
-          <li>Spaced repetition scheduling</li>
-          <li>Previous-day performance signals</li>
-          <li>Weak areas and due revisions surfaced</li>
+          <li>Daily card goal ring & streak tracker</li>
+          <li>"Falling behind" nudge banners</li>
+          <li>Deterministic daily Card of the Day</li>
+          <li>Trending decks list</li>
         </ul>
       </div>
-      <div class="tab-card tab-scroll">
+      <div class="tab-card tab-explore">
         <div class="tab-num">Tab 02</div>
-        <h3>Scroll</h3>
-        <p>Discovery with purpose. 108+ cards — scroll to learn, not to waste time.</p>
+        <h3>Explore</h3>
+        <p>Your syllabus map. Browse content hierarchically from subject down to micro-topics and active decks.</p>
         <ul class="tab-features">
-          <li>MCQ, flashcard, true/false, fill-in, match templates</li>
-          <li>Horizontal decks for concept depth</li>
-          <li>Long press → linked article handoff</li>
-          <li>Like, bookmark, share per card</li>
+          <li>16 Subjects (Polity, History, Geo...)</li>
+          <li>Unit completion progress bars</li>
+          <li>Spaced repetition due count indicators</li>
+          <li>Direct access to cards, PYQs, and quizzes</li>
         </ul>
       </div>
-      <div class="tab-card tab-learn">
+      <div class="tab-card tab-profile">
         <div class="tab-num">Tab 03</div>
-        <h3>Learn</h3>
-        <p>The syllabus as a mastery map. Structured study from subject down to micro-topic.</p>
+        <h3>Profile & Stats</h3>
+        <p>Your progress record. A central hub tracking consistency, bookmarks, and gamified milestones.</p>
         <ul class="tab-features">
-          <li>PYQ-signal-based syllabus structure</li>
-          <li>Mastery node per topic</li>
-          <li>Linked articles, cards, quizzes, PYQs</li>
-          <li>Completion and progress tracking</li>
+          <li>FCM notifications & settings</li>
+          <li>Milestone streak badges (3d to 100d)</li>
+          <li>Global XP ranking leaderboard</li>
+          <li>Saved cards / bookmarks list</li>
         </ul>
       </div>
-      <div class="tab-card tab-review">
-        <div class="tab-num">Tab 04</div>
-        <h3>Review</h3>
-        <p>Active repair, not a static resource shelf. Return to what needs attention.</p>
+      <div class="tab-card tab-loops">
+        <div class="tab-num">Core Loop</div>
+        <h3>Swipe & Quiz</h3>
+        <p>Active recall engines. Swipe visual cards to recall concepts, then test retention with quizzes.</p>
         <ul class="tab-features">
-          <li>Due topics and weak areas</li>
-          <li>Wrong PYQs queue for retry</li>
-          <li>Bookmarked cards and articles</li>
-          <li>PYQ trend analysis and exam tools</li>
+          <li>Vertical card swiper with audio TTS</li>
+          <li>Hard / Medium / Easy active recall rating</li>
+          <li>Gemini AI-generated MCQ quizzes</li>
+          <li>Head-to-head friend challenge duels</li>
         </ul>
       </div>
     </div>
@@ -443,18 +481,31 @@
     <!-- Tab screenshots -->
     <div class="screenshot-row three" style="margin-top: 40px;">
       <figure class="cs-figure">
-        <img src="/images/gyangram-learn.png" alt="GyanGram Learn tab — syllabus mastery grid" loading="lazy">
-        <figcaption>Learn tab — the UPSC syllabus as mastery nodes</figcaption>
+        <img src="/images/gyangram-dashboard.png" alt="GyanGram Home Dashboard tab" loading="lazy">
+        <figcaption>Home Dashboard — Daily study plan, target progress, and Card of the Day</figcaption>
       </figure>
       <figure class="cs-figure">
-        <img src="/images/gyangram-article.png" alt="GyanGram article view — interactive markdown deep reading" loading="lazy">
-        <figcaption>Article view — deep reading linked from scroll cards via long press</figcaption>
+        <img src="/images/gyangram-scroll.png" alt="GyanGram Swipe Feed tab" loading="lazy">
+        <figcaption>Swipe Feed — Bite-sized visual card decks with active recall rating</figcaption>
       </figure>
-    
       <figure class="cs-figure">
-      <img src="/images/gyangram-scroll.png" alt="GyanGram Scroll tab — card with full action row" loading="lazy">
-      <figcaption>Scroll tab — card with like, bookmark, deck player, article, and share</figcaption>
-    </figure>
+        <img src="/images/gyangram-pyq.png" alt="GyanGram UPSC Previous Year Questions" loading="lazy">
+        <figcaption>UPSC PYQs — Practise authentic Prelims & Mains questions per unit</figcaption>
+      </figure>
+    </div>
+    <div class="screenshot-row three" style="margin-top: 20px;">
+      <figure class="cs-figure">
+        <img src="/images/gyangram-learn.png" alt="GyanGram Syllabus Explore tab" loading="lazy">
+        <figcaption>Explore tab — The UPSC syllabus mapped to units and mastery progress</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="/images/gyangram-analytics.png" alt="GyanGram Analytics tab" loading="lazy">
+        <figcaption>Analytics — Stats grid, weekly chart, and GitHub-style study heatmap</figcaption>
+      </figure>
+      <figure class="cs-figure">
+        <img src="/images/gyangram-profile.png" alt="GyanGram Profile & Badges tab" loading="lazy">
+        <figcaption>Profile — Track XP milestones, unlocked streak badges, and global rank</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -479,19 +530,19 @@
         <p>Visually rich but fragile at scale. One factual error requires a completely new image. No searchability as the card count grows. Switched to Flutter widget templates — accuracy, speed, and searchability together.</p>
       </div>
       <div class="decision-card">
-        <span class="decision-tag tag-no">✕ Rejected</span>
-        <h3>Heavy gamification</h3>
-        <p>Streaks, leaderboards, and reward systems optimise for app-opens, not learning. UPSC Mains is a six-hour writing examination. Streaks kept for psychological value. Everything else removed.</p>
+        <span class="decision-tag tag-yes">✓ Deliberate</span>
+        <h3>Active-Recall Gamification</h3>
+        <p>Instead of cheap streaks that optimize for screen time, GyanGram uses a targeted XP system. Earn 5 XP for rating cards (Easy/Med/Hard) and 10+ XP for quiz completions. Milestone badges (3d to 100d) and a global leaderboard motivate daily consistency without distracting from deep work.</p>
       </div>
       <div class="decision-card">
-        <span class="decision-tag tag-no">✕ Rejected</span>
-        <h3>Generic MCQ banks</h3>
-        <p>Generic MCQs give false confidence. PYQs are the actual exam signal — 15 years of them analysed to structure the syllabus. Interactive card formats (fill-in, match, true/false) do what MCQs do without abandoning depth.</p>
+        <span class="decision-tag tag-yes">✓ Deliberate</span>
+        <h3>Contextual AI Quizzes</h3>
+        <p>While generic mock test platforms offer random MCQs, GyanGram leverages Gemini AI to generate contextual quizzes directly from card content. Students get immediate feedback, score tracking, and detailed explanations to reinforce active recall alongside past exam questions (PYQs).</p>
       </div>
       <div class="decision-card">
-        <span class="decision-tag tag-no">✕ Rejected</span>
-        <h3>Social comments on cards</h3>
-        <p>GyanGram is a study tool, not a social platform. Every aspirant's learning journey is different. Comments would fragment focus without adding learning value. Deliberately not built.</p>
+        <span class="decision-tag tag-yes">✓ Deliberate</span>
+        <h3>Threaded Peer Comments</h3>
+        <p>Aspirants learn best together. Rather than a chaotic social chat, card comments are built as an academic discussion space. Students can clarify concepts, suggest mnemonics, ask doubts, or report errata right under the card, keeping conversations hyper-focused.</p>
       </div>
       <div class="decision-card">
         <span class="decision-tag tag-yes">✓ Deliberate</span>
@@ -582,17 +633,17 @@
       <li class="timeline-item">
         <div class="tl-phase">Now</div>
         <div class="tl-content">
-          <span class="tl-status status-active">In progress</span>
-          <h4>Content seeding</h4>
-          <p>Building the initial content base across Geography, Polity, History, Economy, and Environment before public launch. Quality before velocity.</p>
+          <span class="tl-status status-active">Live</span>
+          <h4>Play Store & Web App Deployed</h4>
+          <p>The core scroll &rarr; learn &rarr; review loop is fully live on Android and web with 1,600+ UPSC PYQs mapped across 16 subjects.</p>
         </div>
       </li>
       <li class="timeline-item">
-        <div class="tl-phase">Month 1</div>
+        <div class="tl-phase">Month 1–3</div>
         <div class="tl-content">
           <span class="tl-status status-next">Next</span>
-          <h4>Play Store launch (Android)</h4>
-          <p>Public release when content demonstrates the full scroll → learn → review loop across at least three subjects.</p>
+          <h4>Content Expansion</h4>
+          <p>Expanding the seeded database to include current affairs and ethics card decks, keeping content fresh and highly aligned with the latest UPSC prelims trends.</p>
         </div>
       </li>
       <li class="timeline-item">
@@ -600,23 +651,23 @@
         <div class="tl-content">
           <span class="tl-status status-planned">Planned</span>
           <h4>Feedback-driven iteration</h4>
-          <p>Roadmap shaped by real user behaviour. Target: 10,000 active users before adding any major new feature.</p>
+          <p>Refining card rendering performance, fixing image caching/pre-loading issues, and aiming for 10,000 active users before building additional features.</p>
         </div>
       </li>
       <li class="timeline-item">
         <div class="tl-phase">Year 1</div>
         <div class="tl-content">
           <span class="tl-status status-planned">Planned</span>
-          <h4>1 lakh users · iOS · Hindi vernacular</h4>
-          <p>Expansion to iOS and web. Hindi vernacular card support — content creators needed, Flutter feature is one build away.</p>
+          <h4>iOS App & Hindi Vernacular</h4>
+          <p>Expanding native support to iOS devices and introducing Hindi language localization to assist vernacular medium UPSC aspirants.</p>
         </div>
       </li>
       <li class="timeline-item">
         <div class="tl-phase">Later</div>
         <div class="tl-content">
           <span class="tl-status status-planned">Planned</span>
-          <h4>AI learning companion</h4>
-          <p>AI integrated into the study journey — helping users understand their gaps and what to do next. Complement to content, not a replacement for it.</p>
+          <h4>Predictive AI Tutor</h4>
+          <p>Deeper integration of LLM tools to dynamically assess personal knowledge gaps, predict weak areas, and generate highly targeted study recommendations.</p>
         </div>
       </li>
     </ul>
