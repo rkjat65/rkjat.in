@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">GyanGram UPSC Prep App</title>
+  <desc id="desc">Product poster for a UPSC prep app with scroll, learn, review workflow.</desc>
+  <rect width="1200" height="675" fill="#102a43"/>
+  <text x="78" y="118" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">PRODUCT</text>
+  <text x="78" y="210" fill="#ffffff" font-family="Georgia, serif" font-size="78" font-weight="700">GyanGram</text>
+  <text x="82" y="278" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="28">Scroll behaviour turned into structured learning</text>
+  <g transform="translate(122 392)">
+    <rect width="190" height="96" rx="16" fill="#ffffff"/><text x="95" y="58" text-anchor="middle" fill="#102a43" font-family="Arial, sans-serif" font-size="24" font-weight="700">Scroll</text>
+    <rect x="230" width="190" height="96" rx="16" fill="#ffffff"/><text x="325" y="58" text-anchor="middle" fill="#102a43" font-family="Arial, sans-serif" font-size="24" font-weight="700">Learn</text>
+    <rect x="460" width="190" height="96" rx="16" fill="#f45b16"/><text x="555" y="58" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="700">Review</text>
+  </g>
+  <rect x="850" y="116" width="190" height="390" rx="30" fill="#07111f"/>
+  <rect x="872" y="158" width="146" height="288" rx="18" fill="#ffffff"/>
+  <rect x="898" y="198" width="94" height="14" rx="7" fill="#f45b16"/>
+  <rect x="898" y="236" width="94" height="76" rx="14" fill="#e0f2fe"/>
+  <path d="M914 360h62M914 390h86" stroke="#102a43" stroke-width="9" stroke-linecap="round"/>
+</svg>

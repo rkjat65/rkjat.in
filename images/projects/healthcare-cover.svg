@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Indian Healthcare Analysis</title>
+  <desc id="desc">Healthcare policy analysis poster with access and outcome signals.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="58" y="58" width="1084" height="559" rx="22" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="104" y="132" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">POLICY ANALYSIS</text>
+  <text x="104" y="220" fill="#102a43" font-family="Georgia, serif" font-size="72" font-weight="700">Indian Healthcare</text>
+  <text x="104" y="282" fill="#475569" font-family="Arial, sans-serif" font-size="27">Access, infrastructure, and outcomes by region</text>
+  <g transform="translate(122 398)">
+    <rect width="180" height="122" rx="16" fill="#102a43"/>
+    <path d="M90 36v50M65 61h50" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+    <rect x="240" width="180" height="122" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="330" cy="61" r="42" fill="#dbeafe"/><path d="M306 61h48M330 37v48" stroke="#102a43" stroke-width="10" stroke-linecap="round"/>
+    <rect x="480" width="180" height="122" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <path d="M516 88c22-56 54-56 76 0 16-36 36-36 52 0" fill="none" stroke="#f45b16" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

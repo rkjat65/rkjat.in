@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">India's Economic Pulse</title>
+  <desc id="desc">Macroeconomic dashboard poster with key indicator tiles.</desc>
+  <rect width="1200" height="675" fill="#102a43"/>
+  <text x="78" y="124" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">MACRO DASHBOARD</text>
+  <text x="78" y="220" fill="#ffffff" font-family="Georgia, serif" font-size="74" font-weight="700">India's Economic</text>
+  <text x="78" y="298" fill="#ffffff" font-family="Georgia, serif" font-size="74" font-weight="700">Pulse</text>
+  <text x="82" y="360" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="27">GDP, inflation, fiscal deficit, trade, sectors</text>
+  <g transform="translate(84 440)">
+    <rect width="210" height="98" rx="16" fill="#ffffff"/><text x="30" y="42" fill="#102a43" font-family="Arial" font-size="22" font-weight="700">GDP</text><path d="M30 74h42l28-28 34 20 42-42" fill="none" stroke="#f45b16" stroke-width="7" stroke-linecap="round"/>
+    <rect x="250" width="210" height="98" rx="16" fill="#ffffff"/><text x="280" y="42" fill="#102a43" font-family="Arial" font-size="22" font-weight="700">Inflation</text><rect x="280" y="66" width="128" height="10" rx="5" fill="#f45b16"/>
+    <rect x="500" width="210" height="98" rx="16" fill="#ffffff"/><text x="530" y="42" fill="#102a43" font-family="Arial" font-size="22" font-weight="700">Trade</text><circle cx="614" cy="68" r="18" fill="#bfdbfe"/>
+  </g>
+</svg>

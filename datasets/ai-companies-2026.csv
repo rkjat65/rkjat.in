@@ -1,0 +1,11 @@
+company,type,headquarters,est_revenue_usd_bn,total_funding_usd_bn,employees,api_adoption_index,research_impact_index,compute_spend_index,open_models_count,enterprise_deals_index
+OpenAI,Foundation Model Lab,San Francisco,12.0,57.0,3500,95,98,100,4,94
+Anthropic,Foundation Model Lab,San Francisco,4.0,18.0,1800,82,92,85,2,88
+Google DeepMind,Big Tech AI Lab,London,0.0,0.0,5000,90,100,95,6,96
+Microsoft AI,Big Tech Platform,Redmond,25.0,0.0,12000,92,85,90,5,99
+Meta AI,Big Tech Research,Menlo Park,0.0,0.0,4000,75,88,80,8,72
+xAI,Foundation Model Lab,Austin,1.0,12.0,900,45,70,75,1,40
+Cohere,Enterprise AI,Toronto,0.5,1.0,500,55,65,40,2,78
+Mistral AI,Foundation Model Lab,Paris,0.3,1.0,350,60,78,55,5,65
+Stability AI,Open Model Lab,London,0.2,0.4,200,35,60,45,12,30
+Nvidia AI,Infrastructure,Santa Clara,60.0,0.0,36000,88,90,100,3,97

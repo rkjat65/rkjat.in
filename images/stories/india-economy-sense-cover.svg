@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Making Sense of India's Economy</title>
+  <desc id="desc">Minimal poster with macroeconomic indicators arranged as readable blocks.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="56" y="56" width="1088" height="563" rx="22" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="104" y="132" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">MAKING SENSE</text>
+  <text x="104" y="220" fill="#102a43" font-family="Georgia, serif" font-size="70" font-weight="700">India's Economy</text>
+  <text x="104" y="282" fill="#475569" font-family="Arial, sans-serif" font-size="27">Not one number. A stack of signals.</text>
+  <g transform="translate(104 376)">
+    <rect width="210" height="112" rx="16" fill="#102a43"/>
+    <text x="28" y="46" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700">Growth</text>
+    <path d="M30 82h38l26-34 30 20 42-48" fill="none" stroke="#f45b16" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(352 376)">
+    <rect width="210" height="112" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="28" y="46" fill="#102a43" font-family="Arial, sans-serif" font-size="22" font-weight="700">Prices</text>
+    <rect x="30" y="72" width="34" height="20" fill="#60a5fa"/>
+    <rect x="78" y="58" width="34" height="34" fill="#2563eb"/>
+    <rect x="126" y="38" width="34" height="54" fill="#f45b16"/>
+  </g>
+  <g transform="translate(600 376)">
+    <rect width="210" height="112" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="28" y="46" fill="#102a43" font-family="Arial, sans-serif" font-size="22" font-weight="700">Jobs</text>
+    <circle cx="68" cy="78" r="18" fill="#dbeafe"/>
+    <circle cx="112" cy="78" r="18" fill="#bfdbfe"/>
+    <circle cx="156" cy="78" r="18" fill="#93c5fd"/>
+  </g>
+  <g transform="translate(848 376)">
+    <rect width="210" height="112" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="28" y="46" fill="#102a43" font-family="Arial, sans-serif" font-size="22" font-weight="700">Fiscal</text>
+    <path d="M36 88h140" stroke="#102a43" stroke-width="8" stroke-linecap="round"/>
+    <path d="M54 68h104" stroke="#f45b16" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

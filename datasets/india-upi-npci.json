@@ -1,0 +1,1017 @@
+{
+  "source": "NPCI Retail Payments Statistics (Excel, retrieved 2026-06-08 via npci.org.in API)",
+  "source_file": "RETAIL_PAYMENTS_STATISTICS_008_2405953935.xlsx",
+  "units": {
+    "volume_mn": "million transactions",
+    "value_bn": "INR billion (NPCI column label: Value in Bn)",
+    "value_lakh_cr": "INR lakh crore (value_bn / 1000)",
+    "avg_ticket_inr": "average transaction value in INR"
+  },
+  "quarterly": [
+    {
+      "period": "FY 2022-23 Q1",
+      "volume_mn": 17401.003,
+      "value_bn": 30392.0867,
+      "avg_ticket_inr": 1746.57,
+      "volume_billion": 17.4,
+      "value_lakh_cr": 30.39
+    },
+    {
+      "period": "FY 2022-23 Q2",
+      "volume_mn": 19648.8284,
+      "value_bn": 32522.2254,
+      "avg_ticket_inr": 1655.17,
+      "volume_billion": 19.65,
+      "value_lakh_cr": 32.52
+    },
+    {
+      "period": "FY 2022-23 Q3",
+      "volume_mn": 22444.3594,
+      "value_bn": 36842.309,
+      "avg_ticket_inr": 1641.5,
+      "volume_billion": 22.44,
+      "value_lakh_cr": 36.84
+    },
+    {
+      "period": "FY 2022-23 Q4",
+      "volume_mn": 24256.9452,
+      "value_bn": 39450.1626,
+      "avg_ticket_inr": 1626.35,
+      "volume_billion": 24.26,
+      "value_lakh_cr": 39.45
+    },
+    {
+      "period": "FY 2023-24 Q1",
+      "volume_mn": 27648.3866,
+      "value_bn": 43716.1732,
+      "avg_ticket_inr": 1581.15,
+      "volume_billion": 27.65,
+      "value_lakh_cr": 43.72
+    },
+    {
+      "period": "FY 2023-24 Q2",
+      "volume_mn": 31106.3074,
+      "value_bn": 46893.1494,
+      "avg_ticket_inr": 1507.51,
+      "volume_billion": 31.11,
+      "value_lakh_cr": 46.89
+    },
+    {
+      "period": "FY 2023-24 Q3",
+      "volume_mn": 34664.3019,
+      "value_bn": 52784.5838,
+      "avg_ticket_inr": 1522.74,
+      "volume_billion": 34.66,
+      "value_lakh_cr": 52.78
+    },
+    {
+      "period": "FY 2023-24 Q4",
+      "volume_mn": 37745.6984,
+      "value_bn": 56473.0652,
+      "avg_ticket_inr": 1496.15,
+      "volume_billion": 37.75,
+      "value_lakh_cr": 56.47
+    },
+    {
+      "period": "FY 2024-25 Q1",
+      "volume_mn": 41224.9748,
+      "value_bn": 60164.8275,
+      "avg_ticket_inr": 1459.43,
+      "volume_billion": 41.22,
+      "value_lakh_cr": 60.16
+    },
+    {
+      "period": "FY 2024-25 Q2",
+      "volume_mn": 44440.3463,
+      "value_bn": 61890.2267,
+      "avg_ticket_inr": 1392.66,
+      "volume_billion": 44.44,
+      "value_lakh_cr": 61.89
+    },
+    {
+      "period": "FY 2024-25 Q3",
+      "volume_mn": 48796.9996,
+      "value_bn": 68297.0876,
+      "avg_ticket_inr": 1399.62,
+      "volume_billion": 48.8,
+      "value_lakh_cr": 68.3
+    },
+    {
+      "period": "FY 2024-25 Q4",
+      "volume_mn": 51403.7032,
+      "value_bn": 70217.4042,
+      "avg_ticket_inr": 1366.0,
+      "volume_billion": 51.4,
+      "value_lakh_cr": 70.22
+    },
+    {
+      "period": "FY 2025-26 Q1",
+      "volume_mn": 54965.8859,
+      "value_bn": 73131.537,
+      "avg_ticket_inr": 1330.49,
+      "volume_billion": 54.97,
+      "value_lakh_cr": 73.13
+    },
+    {
+      "period": "FY 2025-26 Q2",
+      "volume_mn": 59109.6869,
+      "value_bn": 74837.0753,
+      "avg_ticket_inr": 1266.07,
+      "volume_billion": 59.11,
+      "value_lakh_cr": 74.84
+    },
+    {
+      "period": "FY 2025-26 Q3",
+      "volume_mn": 62802.5645,
+      "value_bn": 81561.3605,
+      "avg_ticket_inr": 1298.69,
+      "volume_billion": 62.8,
+      "value_lakh_cr": 81.56
+    },
+    {
+      "period": "FY 2025-26 Q4",
+      "volume_mn": 64738.7407,
+      "value_bn": 84702.5257,
+      "avg_ticket_inr": 1308.37,
+      "volume_billion": 64.74,
+      "value_lakh_cr": 84.7
+    }
+  ],
+  "annual": [
+    {
+      "fy": "FY 2022-23",
+      "period": "FY 2022-23",
+      "volume_mn": 83751.136,
+      "value_bn": 139206.7837,
+      "quarters": 4,
+      "avg_ticket_inr": 1662.15,
+      "volume_billion": 83.75,
+      "value_lakh_cr": 139.21
+    },
+    {
+      "fy": "FY 2023-24",
+      "period": "FY 2023-24",
+      "volume_mn": 131164.6943,
+      "value_bn": 199866.9716,
+      "quarters": 4,
+      "avg_ticket_inr": 1523.79,
+      "volume_billion": 131.16,
+      "value_lakh_cr": 199.87
+    },
+    {
+      "fy": "FY 2024-25",
+      "period": "FY 2024-25",
+      "volume_mn": 185866.0239,
+      "value_bn": 260569.546,
+      "quarters": 4,
+      "avg_ticket_inr": 1401.92,
+      "volume_billion": 185.87,
+      "value_lakh_cr": 260.57
+    },
+    {
+      "fy": "FY 2025-26",
+      "period": "FY 2025-26",
+      "volume_mn": 241616.878,
+      "value_bn": 314232.4985,
+      "quarters": 4,
+      "avg_ticket_inr": 1300.54,
+      "volume_billion": 241.62,
+      "value_lakh_cr": 314.23
+    }
+  ],
+  "monthly_recent": [
+    {
+      "month": "2026-04-01",
+      "period": "Apr 2026",
+      "volume_mn": 22346.7962,
+      "value_bn": 29029.8805,
+      "avg_ticket_inr": 1299.06,
+      "volume_billion": 22.35,
+      "value_lakh_cr": 29.03
+    },
+    {
+      "month": "2026-05-01",
+      "period": "May 2026",
+      "volume_mn": 23201.9276,
+      "value_bn": 29904.2421,
+      "avg_ticket_inr": 1288.87,
+      "volume_billion": 23.2,
+      "value_lakh_cr": 29.9
+    }
+  ],
+  "rail_share": {
+    "period": "FY 2025-26 Q1",
+    "rails": [
+      {
+        "rail": "UPI",
+        "slug": "upi",
+        "volume_mn": 54965.8859,
+        "share_pct": 93.4
+      },
+      {
+        "rail": "IMPS",
+        "slug": "imps",
+        "volume_mn": 1361.0168,
+        "share_pct": 2.3
+      },
+      {
+        "rail": "NFS (ATM)",
+        "slug": "nfs",
+        "volume_mn": 804.8351,
+        "share_pct": 1.4
+      },
+      {
+        "rail": "NACH",
+        "slug": "nach",
+        "volume_mn": 1717.0262,
+        "share_pct": 2.9
+      }
+    ]
+  },
+  "products": {
+    "upi": {
+      "slug": "upi",
+      "name": "UPI - Unified Payments Interface",
+      "records": [
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 17401.003
+        },
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Value (in Bn)",
+          "value": 30392.0867
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 19648.8284
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Value (in Bn)",
+          "value": 32522.2254
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 22444.3594
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Value (in Bn)",
+          "value": 36842.309
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 24256.9452
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Value (in Bn)",
+          "value": 39450.1626
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Volume (in Mn)",
+          "value": 83751.1359
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Value (in Bn)",
+          "value": 139206.7837
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 27648.3866
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Value (in Bn)",
+          "value": 43716.1732
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 31106.3074
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Value (in Bn)",
+          "value": 46893.1494
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 34664.3019
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Value (in Bn)",
+          "value": 52784.5838
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 37745.6984
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Value (in Bn)",
+          "value": 56473.0652
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 41224.9748
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Value (in Bn)",
+          "value": 60164.8275
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 44440.3463
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Value (in Bn)",
+          "value": 61890.2267
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 48796.9996
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Value (in Bn)",
+          "value": 68297.0876
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 51403.7032
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Value (in Bn)",
+          "value": 70217.4042
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 54965.8859
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Value (in Bn)",
+          "value": 73131.537
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 59109.6869
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Value (in Bn)",
+          "value": 74837.0753
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 62802.5645
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Value (in Bn)",
+          "value": 81561.3605
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 64738.7407
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Value (in Bn)",
+          "value": 84702.5257
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 22346.7962
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 29029.8805
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 23201.9276
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 29904.2421
+        }
+      ]
+    },
+    "imps": {
+      "slug": "imps",
+      "name": "IMPS",
+      "records": [
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1412.1409
+        },
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Value (in Bn)",
+          "value": 13407.7401
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1390.4308
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Value (in Bn)",
+          "value": 13455.8675
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1431.7718
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Value (in Bn)",
+          "value": 14073.1252
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1419.3813
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Value (in Bn)",
+          "value": 14924.7374
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Volume (in Mn)",
+          "value": 5653.7247
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Value (in Bn)",
+          "value": 55861.4702
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1451.6091
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Value (in Bn)",
+          "value": 15279.0712
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1451.7745
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Value (in Bn)",
+          "value": 15340.9618
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1464.0561
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Value (in Bn)",
+          "value": 16433.6625
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1624.0646
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Value (in Bn)",
+          "value": 17691.0753
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1624.8138
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Value (in Bn)",
+          "value": 17762.3964
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1373.5574
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Value (in Bn)",
+          "value": 17362.9717
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1315.9033
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Value (in Bn)",
+          "value": 17892.5827
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1310.6907
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Value (in Bn)",
+          "value": 18373.1466
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1361.0168
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Value (in Bn)",
+          "value": 18688.8968
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1353.8305
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Value (in Bn)",
+          "value": 18258.07
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1152.4547
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Value (in Bn)",
+          "value": 19195.9236
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1075.8022
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Value (in Bn)",
+          "value": 20556.3955
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 362.4864
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 7009.0917
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 358.0982
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 6957.0133
+        }
+      ]
+    },
+    "nfs": {
+      "slug": "nfs",
+      "name": "NFS - National Financial Switch",
+      "records": [
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1013.773
+        },
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Value (in Bn)",
+          "value": 4239.7372
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1000.4515
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Value (in Bn)",
+          "value": 4063.9014
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1015.5176
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Value (in Bn)",
+          "value": 4202.8047
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 988.4432
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Value (in Bn)",
+          "value": 4117.7463
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Volume (in Mn)",
+          "value": 4018.1853
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Value (in Bn)",
+          "value": 16624.1896
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 998.149
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Value (in Bn)",
+          "value": 4257.6216
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 976.7297
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Value (in Bn)",
+          "value": 4033.8306
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 985.7599
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Value (in Bn)",
+          "value": 4168.7832
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 948.4211
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Value (in Bn)",
+          "value": 4057.4586
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 924.527
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Value (in Bn)",
+          "value": 4029.9101
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 897.52
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Value (in Bn)",
+          "value": 3809.5317
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 903.1715
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Value (in Bn)",
+          "value": 3958.7337
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 852.43
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Value (in Bn)",
+          "value": 3820.92
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 804.8351
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Value (in Bn)",
+          "value": 3641.8156
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 793.1945
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Value (in Bn)",
+          "value": 3520.5945
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 799.725
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Value (in Bn)",
+          "value": 3653.1874
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 779.03
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Value (in Bn)",
+          "value": 3652.92
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 250.74
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 1192.34
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 257.84
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 1208.58
+        }
+      ]
+    },
+    "nach": {
+      "slug": "nach",
+      "name": "NACH- National Automated Clearing House",
+      "records": [
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1228.7129
+        },
+        {
+          "period": "FY22-23 Q1",
+          "metric": "Value (in Bn)",
+          "value": 6715.8838
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1233.5235
+        },
+        {
+          "period": "FY22-23 Q2",
+          "metric": "Value (in Bn)",
+          "value": 7053.5275
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1191.4536
+        },
+        {
+          "period": "FY22-23 Q3",
+          "metric": "Value (in Bn)",
+          "value": 8135.7764
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1405.7423
+        },
+        {
+          "period": "FY22-23 Q4",
+          "metric": "Value (in Bn)",
+          "value": 8787.9921
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Volume (in Mn)",
+          "value": 5059.4322
+        },
+        {
+          "period": "F.Y-2022-23",
+          "metric": "Value (in Bn)",
+          "value": 30693.1798
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1214.139
+        },
+        {
+          "period": "F.Y-2023-24 Q1",
+          "metric": "Value (in Bn)",
+          "value": 7992.7542
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1499.1314
+        },
+        {
+          "period": "F.Y-2023-24 Q2",
+          "metric": "Value (in Bn)",
+          "value": 8345.3769
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1464.6446
+        },
+        {
+          "period": "F.Y-2023-24 Q3",
+          "metric": "Value (in Bn)",
+          "value": 9284.4418
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1675.74
+        },
+        {
+          "period": "F.Y-2023-24 Q4",
+          "metric": "Value (in Bn)",
+          "value": 10321.8124
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1568.8154
+        },
+        {
+          "period": "F.Y-2024-25 Q1",
+          "metric": "Value (in Bn)",
+          "value": 9814.2797
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1714.0001
+        },
+        {
+          "period": "F.Y-2024-25 Q2",
+          "metric": "Value (in Bn)",
+          "value": 10294.5522
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1812.3696
+        },
+        {
+          "period": "F.Y-2024-25 Q3",
+          "metric": "Value (in Bn)",
+          "value": 11720.1188
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1871.3712
+        },
+        {
+          "period": "F.Y-2024-25 Q4",
+          "metric": "Value (in Bn)",
+          "value": 12406.876
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Volume (in Mn)",
+          "value": 1717.0262
+        },
+        {
+          "period": "F.Y-2025-26 Q1",
+          "metric": "Value (in Bn)",
+          "value": 12063.1956
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Volume (in Mn)",
+          "value": 1958.8995
+        },
+        {
+          "period": "F.Y-2025-26 Q2",
+          "metric": "Value (in Bn)",
+          "value": 11856.8031
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Volume (in Mn)",
+          "value": 1865.2577
+        },
+        {
+          "period": "F.Y-2025-26 Q3",
+          "metric": "Value (in Bn)",
+          "value": 13816.5177
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Volume (in Mn)",
+          "value": 1822.7543
+        },
+        {
+          "period": "F.Y-2025-26 Q4",
+          "metric": "Value (in Bn)",
+          "value": 14546.0949
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 528.6575
+        },
+        {
+          "period": "2026-04-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 4528.3508
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Volume (in Mn)",
+          "value": 468.6075
+        },
+        {
+          "period": "2026-05-01 00:00:00",
+          "metric": "Value (in Bn)",
+          "value": 4626.1203
+        }
+      ]
+    }
+  }
+}

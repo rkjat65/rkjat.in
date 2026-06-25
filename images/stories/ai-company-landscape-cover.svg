@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Mapping the AI Company Landscape</title>
+  <desc id="desc">Minimal network and ranking poster for AI company comparison.</desc>
+  <rect width="1200" height="675" fill="#07111f"/>
+  <circle cx="976" cy="146" r="220" fill="#102a43" opacity=".55"/>
+  <text x="78" y="120" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">DATA STORY</text>
+  <text x="78" y="210" fill="#ffffff" font-family="Georgia, serif" font-size="68" font-weight="700">Mapping the AI</text>
+  <text x="78" y="286" fill="#ffffff" font-family="Georgia, serif" font-size="68" font-weight="700">Company Landscape</text>
+  <text x="82" y="348" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="26">Revenue, adoption, research, compute, and reach</text>
+  <g stroke="#94a3b8" stroke-width="2" opacity=".75">
+    <path d="M768 180l142 76 112-92M768 180l70 190M910 256l-72 114 184 84M1022 164v290M838 370l184-206"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="768" cy="180" r="18"/><circle cx="910" cy="256" r="18"/><circle cx="1022" cy="164" r="18"/><circle cx="838" cy="370" r="18"/><circle cx="1022" cy="454" r="18"/>
+  </g>
+  <circle cx="910" cy="256" r="26" fill="none" stroke="#f45b16" stroke-width="7"/>
+  <g transform="translate(82 440)" fill="#f45b16">
+    <rect width="78" height="118" rx="10"/><rect x="110" y="58" width="78" height="60" rx="10"/><rect x="220" y="26" width="78" height="92" rx="10"/>
+  </g>
+</svg>

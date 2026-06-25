@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">What Data Storytelling Means</title>
+  <desc id="desc">Poster explaining data storytelling as evidence, context, and clarity.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="58" y="58" width="1084" height="559" rx="22" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="104" y="138" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">DATA VIZ</text>
+  <text x="104" y="230" fill="#102a43" font-family="Georgia, serif" font-size="74" font-weight="700">What Data</text>
+  <text x="104" y="308" fill="#102a43" font-family="Georgia, serif" font-size="74" font-weight="700">Storytelling Means</text>
+  <text x="108" y="368" fill="#475569" font-family="Arial, sans-serif" font-size="27">Not prettier charts. Clearer decisions.</text>
+  <g transform="translate(132 456)">
+    <circle cx="50" cy="50" r="48" fill="#102a43"/><text x="50" y="60" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">DATA</text>
+    <path d="M116 50h82" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="250" cy="50" r="48" fill="#ffffff" stroke="#cbd5e1"/><text x="250" y="60" text-anchor="middle" fill="#102a43" font-family="Arial, sans-serif" font-size="20" font-weight="700">CONTEXT</text>
+    <path d="M316 50h82" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="450" cy="50" r="48" fill="#f45b16"/><text x="450" y="60" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="700">CLARITY</text>
+  </g>
+</svg>

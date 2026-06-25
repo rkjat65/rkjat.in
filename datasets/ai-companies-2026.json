@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "AI Companies Comparative Snapshot 2026",
+    "description": "Illustrative cross-company metrics for data storytelling demo. Not investment advice.",
+    "updated": "2026-06-01",
+    "units": {
+      "est_revenue_usd_bn": "USD billions (estimated annualized AI-related revenue where applicable)",
+      "total_funding_usd_bn": "USD billions (cumulative venture funding, 0 for big-tech internal labs)",
+      "api_adoption_index": "0-100 developer adoption proxy",
+      "research_impact_index": "0-100 citation and benchmark influence proxy",
+      "compute_spend_index": "0-100 relative compute infrastructure spend proxy",
+      "enterprise_deals_index": "0-100 Fortune 500 / government contract penetration proxy"
+    }
+  },
+  "companies": [
+    {
+      "company": "OpenAI",
+      "type": "Foundation Model Lab",
+      "headquarters": "San Francisco",
+      "est_revenue_usd_bn": 12.0,
+      "total_funding_usd_bn": 57.0,
+      "employees": 3500,
+      "api_adoption_index": 95,
+      "research_impact_index": 98,
+      "compute_spend_index": 100,
+      "open_models_count": 4,
+      "enterprise_deals_index": 94
+    },
+    {
+      "company": "Anthropic",
+      "type": "Foundation Model Lab",
+      "headquarters": "San Francisco",
+      "est_revenue_usd_bn": 4.0,
+      "total_funding_usd_bn": 18.0,
+      "employees": 1800,
+      "api_adoption_index": 82,
+      "research_impact_index": 92,
+      "compute_spend_index": 85,
+      "open_models_count": 2,
+      "enterprise_deals_index": 88
+    },
+    {
+      "company": "Google DeepMind",
+      "type": "Big Tech AI Lab",
+      "headquarters": "London",
+      "est_revenue_usd_bn": 0.0,
+      "total_funding_usd_bn": 0.0,
+      "employees": 5000,
+      "api_adoption_index": 90,
+      "research_impact_index": 100,
+      "compute_spend_index": 95,
+      "open_models_count": 6,
+      "enterprise_deals_index": 96
+    },
+    {
+      "company": "Microsoft AI",
+      "type": "Big Tech Platform",
+      "headquarters": "Redmond",
+      "est_revenue_usd_bn": 25.0,
+      "total_funding_usd_bn": 0.0,
+      "employees": 12000,
+      "api_adoption_index": 92,
+      "research_impact_index": 85,
+      "compute_spend_index": 90,
+      "open_models_count": 5,
+      "enterprise_deals_index": 99
+    },
+    {
+      "company": "Meta AI",
+      "type": "Big Tech Research",
+      "headquarters": "Menlo Park",
+      "est_revenue_usd_bn": 0.0,
+      "total_funding_usd_bn": 0.0,
+      "employees": 4000,
+      "api_adoption_index": 75,
+      "research_impact_index": 88,
+      "compute_spend_index": 80,
+      "open_models_count": 8,
+      "enterprise_deals_index": 72
+    },
+    {
+      "company": "xAI",
+      "type": "Foundation Model Lab",
+      "headquarters": "Austin",
+      "est_revenue_usd_bn": 1.0,
+      "total_funding_usd_bn": 12.0,
+      "employees": 900,
+      "api_adoption_index": 45,
+      "research_impact_index": 70,
+      "compute_spend_index": 75,
+      "open_models_count": 1,
+      "enterprise_deals_index": 40
+    },
+    {
+      "company": "Cohere",
+      "type": "Enterprise AI",
+      "headquarters": "Toronto",
+      "est_revenue_usd_bn": 0.5,
+      "total_funding_usd_bn": 1.0,
+      "employees": 500,
+      "api_adoption_index": 55,
+      "research_impact_index": 65,
+      "compute_spend_index": 40,
+      "open_models_count": 2,
+      "enterprise_deals_index": 78
+    },
+    {
+      "company": "Mistral AI",
+      "type": "Foundation Model Lab",
+      "headquarters": "Paris",
+      "est_revenue_usd_bn": 0.3,
+      "total_funding_usd_bn": 1.0,
+      "employees": 350,
+      "api_adoption_index": 60,
+      "research_impact_index": 78,
+      "compute_spend_index": 55,
+      "open_models_count": 5,
+      "enterprise_deals_index": 65
+    },
+    {
+      "company": "Stability AI",
+      "type": "Open Model Lab",
+      "headquarters": "London",
+      "est_revenue_usd_bn": 0.2,
+      "total_funding_usd_bn": 0.4,
+      "employees": 200,
+      "api_adoption_index": 35,
+      "research_impact_index": 60,
+      "compute_spend_index": 45,
+      "open_models_count": 12,
+      "enterprise_deals_index": 30
+    },
+    {
+      "company": "Nvidia AI",
+      "type": "Infrastructure",
+      "headquarters": "Santa Clara",
+      "est_revenue_usd_bn": 60.0,
+      "total_funding_usd_bn": 0.0,
+      "employees": 36000,
+      "api_adoption_index": 88,
+      "research_impact_index": 90,
+      "compute_spend_index": 100,
+      "open_models_count": 3,
+      "enterprise_deals_index": 97
+    }
+  ]
+}

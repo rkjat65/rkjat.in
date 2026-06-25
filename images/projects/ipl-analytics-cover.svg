@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">IPL Analytics Dashboard</title>
+  <desc id="desc">Cricket analytics poster with wagon wheel, phases, and score bars.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="58" y="58" width="1084" height="559" rx="22" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="104" y="132" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">DATA DASHBOARD</text>
+  <text x="104" y="220" fill="#102a43" font-family="Georgia, serif" font-size="72" font-weight="700">IPL Analytics</text>
+  <text x="104" y="282" fill="#475569" font-family="Arial, sans-serif" font-size="27">Ball-by-ball data, teams, players, phases</text>
+  <circle cx="862" cy="344" r="128" fill="#ffffff" stroke="#102a43" stroke-width="10"/>
+  <path d="M862 344l110-58M862 344l-88-84M862 344l70 104M862 344l-118 42" stroke="#f45b16" stroke-width="8" stroke-linecap="round"/>
+  <g transform="translate(116 402)" fill="#102a43">
+    <rect width="54" height="112" rx="8"/><rect x="82" y="48" width="54" height="64" rx="8"/><rect x="164" y="18" width="54" height="94" rx="8"/><rect x="246" y="70" width="54" height="42" rx="8"/>
+  </g>
+</svg>

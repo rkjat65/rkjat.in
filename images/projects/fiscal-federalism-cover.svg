@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">India's Fiscal Federalism</title>
+  <desc id="desc">Policy analysis poster with centre-state transfer flow.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="58" y="58" width="1084" height="559" rx="22" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="104" y="132" fill="#f45b16" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">POLICY ANALYSIS</text>
+  <text x="104" y="220" fill="#102a43" font-family="Georgia, serif" font-size="72" font-weight="700">Fiscal Federalism</text>
+  <text x="104" y="282" fill="#475569" font-family="Arial, sans-serif" font-size="27">How money moves between Union and states</text>
+  <rect x="118" y="404" width="210" height="96" rx="16" fill="#102a43"/>
+  <text x="223" y="462" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="700">Centre</text>
+  <path d="M350 452h430" stroke="#f45b16" stroke-width="12" stroke-linecap="round"/>
+  <path d="M760 420l48 32-48 32" fill="none" stroke="#f45b16" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="842" y="368" width="210" height="68" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="842" y="464" width="210" height="68" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="947" y="411" text-anchor="middle" fill="#102a43" font-family="Arial, sans-serif" font-size="22" font-weight="700">States</text>
+  <text x="947" y="507" text-anchor="middle" fill="#102a43" font-family="Arial, sans-serif" font-size="22" font-weight="700">Transfers</text>
+</svg>
