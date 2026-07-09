@@ -1,0 +1,29 @@
+metric,entity,year,value,unit,notes
+revenue_surplus,Uttar Pradesh,2024-25,59327,INR crore,Highest among 13 surplus states; ~half of combined surplus
+combined_surplus_13_states,Thirteen surplus states,2024-25,127000,INR crore,Rounded from reported ₹1.27 lakh crore
+budgeted_total_receipts,Uttar Pradesh,2024-25,606802.4,INR crore,
+actual_total_receipts,Uttar Pradesh,2024-25,510213,INR crore,~16% short of budget
+budgeted_revenue_expenditure,Uttar Pradesh,2024-25,532655.3,INR crore,
+actual_revenue_expenditure,Uttar Pradesh,2024-25,450886,INR crore,-15.35% vs budget
+budgeted_total_receipts,Maharashtra,2024-25,499462.8,INR crore,
+actual_total_receipts,Maharashtra,2024-25,481906,INR crore,
+budgeted_revenue_expenditure,Maharashtra,2024-25,519513.5,INR crore,
+actual_revenue_expenditure,Maharashtra,2024-25,511901,INR crore,
+revenue_balance,Maharashtra,2024-25,-29995,INR crore,Deficit
+counterfactual_surplus_if_spent_as_budgeted,Uttar Pradesh,2024-25,-22442,INR crore,Would turn surplus into deficit
+counterfactual_surplus_if_mh_spend_rate,Uttar Pradesh,2024-25,-14612,INR crore,Spend rate -1.47%
+counterfactual_surplus_if_mp_spend_rate,Uttar Pradesh,2024-25,3445,INR crore,Spend rate -4.86%
+counterfactual_surplus_if_all_states_avg,Uttar Pradesh,2024-25,9996,INR crore,Spend rate -6.09%
+revenue_expenditure_underspend_pct,Uttar Pradesh,2024-25,-15.4,percent_of_budget,
+capital_expenditure_underspend_pct,Uttar Pradesh,2024-25,-27,percent_of_budget,
+central_schemes_budgeted_goi_share,Uttar Pradesh,2024-25,99197,INR crore,
+central_schemes_expenditure,Uttar Pradesh,2024-25,32640.7,INR crore,-38.4% underspend
+central_schemes_underspend_pct,Uttar Pradesh,2024-25,-38.4,percent,
+central_schemes_underspend_pct,Madhya Pradesh,2024-25,-10.3,percent,
+central_schemes_underspend_pct,Maharashtra,2024-25,0.2,percent,Slight overspend
+central_schemes_underspend_pct,Tamil Nadu,2024-25,-0.7,percent,
+central_transfers_share_of_revenue,Uttar Pradesh,2024-25,55.11,percent,
+central_transfers_share_of_revenue,Uttar Pradesh,2015-16,54.09,percent,
+central_transfers_share_peer_group,MP_WB_AP_Rajasthan,2024-25,48.7,percent,Approximate group end value
+central_transfers_share_peer_group,MH_TN_KA_GJ_TG,2024-25,24.3,percent,Approximate group end value
+book_transfer_sinking_fund,Uttar Pradesh,2019-20,71180,INR crore,One-time book transfer distorting transfer share

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">U.P. Revenue Surplus: Prudence or Underspending?</title>
+  <desc id="desc">Editorial cover with left headline stats and right counterfactual bars — no overlap.</desc>
+
+  <!-- background -->
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="40" y="40" width="1120" height="595" rx="22" fill="#faf9f6" stroke="#e5e1d8"/>
+
+  <!-- left column panel -->
+  <rect x="40" y="40" width="560" height="595" rx="22" fill="#faf9f6"/>
+  <!-- clip-ish divider (hard edge between columns) -->
+  <rect x="580" y="40" width="20" height="595" fill="#faf9f6"/>
+  <line x1="600" y1="64" x2="600" y2="611" stroke="#d6d1c7" stroke-width="1.5"/>
+
+  <!-- ========== LEFT COLUMN (x: 72–560) ========== -->
+  <text x="72" y="100" fill="#f45b16" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3.5">DATA STORY · ECONOMY WATCH</text>
+
+  <text x="72" y="168" fill="#102a43" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700">U.P.&#8217;s &#8377;59,327 Cr</text>
+  <text x="72" y="220" fill="#102a43" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700">&#8220;Revenue Surplus&#8221;</text>
+  <text x="72" y="270" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="18">Prudence &#8212; or persistent underspending?</text>
+
+  <!-- primary stat -->
+  <rect x="72" y="310" width="480" height="96" rx="14" fill="#102a43"/>
+  <text x="96" y="350" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" letter-spacing="1">REVENUE SURPLUS 2024-25</text>
+  <text x="96" y="392" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">&#8377;59,327 Cr</text>
+
+  <!-- secondary stats row -->
+  <rect x="72" y="430" width="228" height="88" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="92" y="466" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" letter-spacing="1">REVEX GAP</text>
+  <text x="92" y="502" fill="#dc2626" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">&#8722;15.4%</text>
+
+  <rect x="324" y="430" width="228" height="88" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="344" y="466" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" letter-spacing="1">CAPEX GAP</text>
+  <text x="344" y="502" fill="#dc2626" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">&#8722;27%</text>
+
+  <!-- left footer strip -->
+  <text x="72" y="580" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="13">CAG / RBI State Finances · FY 2024-25</text>
+
+  <!-- ========== RIGHT COLUMN (x: 632–1136) ========== -->
+  <text x="632" y="100" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">If U.P. spent more like peers&#8230;</text>
+  <text x="632" y="128" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="13">Counterfactual revenue balance (&#8377; crore)</text>
+
+  <!-- bars + labels, right-aligned labels outside bars when short -->
+  <!-- row 1: actual surplus -->
+  <rect x="632" y="160" width="360" height="40" rx="8" fill="#2563eb"/>
+  <text x="648" y="186" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600">Actual surplus &#183; +59,327</text>
+
+  <!-- row 2 -->
+  <rect x="632" y="218" width="250" height="36" rx="8" fill="#fca5a5"/>
+  <text x="648" y="242" fill="#7f1d1d" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600">As budgeted &#183; &#8722;22,442</text>
+
+  <!-- row 3 -->
+  <rect x="632" y="270" width="210" height="36" rx="8" fill="#fecaca"/>
+  <text x="648" y="294" fill="#7f1d1d" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600">MH rate &#183; &#8722;14,612</text>
+
+  <!-- row 4 -->
+  <rect x="632" y="322" width="110" height="36" rx="8" fill="#93c5fd"/>
+  <text x="756" y="346" fill="#1e3a8a" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600">MP rate &#183; +3,445</text>
+
+  <!-- row 5 -->
+  <rect x="632" y="374" width="140" height="36" rx="8" fill="#60a5fa"/>
+  <text x="788" y="398" fill="#1e3a8a" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600">All-states avg &#183; +9,996</text>
+
+  <!-- insight box - fully within right column -->
+  <rect x="632" y="440" width="504" height="140" rx="14" fill="#ffffff" stroke="#e5e1d8"/>
+  <text x="656" y="482" fill="#102a43" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">The surplus is real. The story is incomplete.</text>
+  <text x="656" y="516" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="14">A revenue surplus is receipts minus revenue spend.</text>
+  <text x="656" y="542" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="14">Leave money unspent and the gap becomes a &#8220;win.&#8221;</text>
+</svg>
