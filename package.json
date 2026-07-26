@@ -15,7 +15,6 @@
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,html}\"",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf dist",
     "optimize:images": "node scripts/optimize-images.js",
     "deploy": "npm run build && gh-pages -d dist"
   },
