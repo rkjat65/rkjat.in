@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {{> head title="Selected Work" description="Research, data analysis, and product work by Radhakishan Jat, with case studies explaining the thinking behind each project." canonicalPath="/portfolio/"}}
+    {{> head title="Selected Work" description="Independent initiatives, writing, research, and data analysis by Radhakishan Jat. Explore Signals & Systems, Cricket Wicket, and project case studies." canonicalPath="/portfolio/" extraCss="/css/initiatives.css"}}
   </head>
 
   <body>
@@ -12,12 +12,18 @@
     <header class="page-header" id="main-content">
       <div class="container">
         <h1>Selected Work</h1>
-        <p>Research, data analysis, and product work - each with a case study explaining the thinking behind it.</p>
+        <p>Independent initiatives, writing, research, and data analysis — explore what I build and the thinking behind it.</p>
       </div>
     </header>
 
-    <section class="section">
+    {{> initiatives}}
+
+    <section class="section section-alt">
       <div class="container container-wide">
+        <div class="section-header">
+          <h2>Projects &amp; Case Studies</h2>
+          <p>A closer look at my research, product, and data work.</p>
+        </div>
         <div class="grid grid-2">
           <article class="card fade-in-section" onclick="window.location.href='/portfolio/gyangram.html'" style="cursor: pointer;">
             <div class="card-image-placeholder">

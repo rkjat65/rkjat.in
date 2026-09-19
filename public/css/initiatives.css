@@ -1,0 +1,117 @@
+/* Shared by the source build and the static portfolio pages. */
+.initiatives-eyebrow {
+  display: block;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.initiative-card {
+  --initiative-accent: #986325;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.initiative-cricket { --initiative-accent: #0071c5; }
+[data-theme='dark'] .initiative-substack { --initiative-accent: #e1b574; }
+[data-theme='dark'] .initiative-cricket { --initiative-accent: #76c3ff; }
+
+.initiative-card:hover {
+  color: var(--text);
+  border-color: var(--initiative-accent);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.initiative-card:focus-visible {
+  outline: 3px solid var(--initiative-accent);
+  outline-offset: 5px;
+}
+
+.initiative-art {
+  position: relative;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  background: #02121b;
+}
+
+.initiative-art img { width: 100%; height: 100%; object-fit: cover; }
+.initiative-art-substack img { object-fit: contain; }
+.initiative-art-cricket img { object-position: center 60%; }
+.initiative-art-cricket::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 13, 35, 0.65), transparent 80%);
+}
+
+.initiative-art-label {
+  position: absolute;
+  z-index: 1;
+  top: 18%;
+  left: 6%;
+  color: #fff;
+}
+
+.initiative-art-label > span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: clamp(0.6rem, 1vw, 0.8rem);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.initiative-art-label strong {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.3vw, 3.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.initiative-art-label strong span { color: #eeac58; }
+.initiative-body { display: flex; flex-direction: column; flex: 1; padding: 32px; }
+.initiative-category {
+  color: var(--initiative-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.initiative-body h3 { font-size: 1.75rem; margin-bottom: 14px; }
+.initiative-body p { color: var(--text); opacity: 0.8; line-height: 1.75; margin-bottom: 24px; }
+.initiative-topics { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: auto 0 24px; padding: 0; }
+.initiative-topics li { font-size: 0.75rem; padding: 5px 10px; background: var(--bg-secondary); border-radius: 6px; }
+.initiative-cta { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--initiative-accent); font-weight: 600; font-size: 0.95rem; }
+.initiative-cta > [aria-hidden] { font-size: 1.4rem; }
+.initiative-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+@media (max-width: 700px) {
+  .initiatives-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .initiative-body { padding: 24px; }
+  .initiative-body h3 { font-size: 1.5rem; }
+  .initiative-art-label strong { font-size: clamp(2rem, 8vw, 3.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .initiative-card { transition: none; }
+  .initiative-card:hover { transform: none; }
+}
