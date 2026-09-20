@@ -87,22 +87,6 @@
       "image": "/portfolio/indian-legislature-analysis/cover.png",
       "link": "/portfolio/indian-legislature-analysis/",
       "featured": true
-    },
-    {
-      "id": "india-economic-pulse",
-      "title": "India Economic Pulse Dashboard",
-      "description": "Interactive dashboard analyzing India's economic indicators including GDP, inflation, employment, and trade data.",
-      "date": "2024-09-10",
-      "tags": [
-        "React",
-        "FastAPI",
-        "Python",
-        "Economics",
-        "Dashboard"
-      ],
-      "image": "/images/dash3.png",
-      "link": "/portfolio/india-economic-pulse.html",
-      "featured": false
     }
   ]
 }

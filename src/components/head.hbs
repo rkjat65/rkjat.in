@@ -1,23 +1,25 @@
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} | Radhakishan Jat</title>
 <meta name="description" content="{{description}}">
-<title>{{title}} | {{siteName}}</title>
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- CSS -->
-<link rel="stylesheet" href="/css/style.css">
-{{#if extraCss}}
-<link rel="stylesheet" href="{{extraCss}}">
-{{/if}}
-
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#f7f8f5">
+<meta name="color-scheme" content="light dark">
+{{#if noindex}}<meta name="robots" content="noindex,follow">{{/if}}
+<link rel="canonical" href="https://rkjat.in{{canonicalPath}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Radhakishan Jat">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="https://rkjat.in{{canonicalPath}}">
+<meta property="og:image" content="https://rkjat.in{{#if image}}{{image}}{{else}}/images/profile.webp{{/if}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{description}}">
+<meta name="twitter:image" content="https://rkjat.in{{#if image}}{{image}}{{else}}/images/profile.webp{{/if}}">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
-
+<script>try{const t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='dark'||t==='light'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
+<link rel="stylesheet" href="/css/site.css">
+{{{structuredData}}}
 {{> analytics}}

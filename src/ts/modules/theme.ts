@@ -25,7 +25,11 @@ export function isDarkTheme(): boolean {
  */
 export function setTheme(theme: Theme): void {
   document.documentElement.setAttribute(DATA_ATTRS.theme, theme);
-  localStorage.setItem(STORAGE_KEYS.theme, theme);
+  try {
+    localStorage.setItem(STORAGE_KEYS.theme, theme);
+  } catch {
+    // A theme should still work when storage is unavailable or blocked.
+  }
   updateThemeIcon();
   dispatchThemeChange(theme);
 }
@@ -61,7 +65,12 @@ function dispatchThemeChange(theme: Theme): void {
  * Get the initial theme based on saved preference or system preference
  */
 function getInitialTheme(): Theme {
-  const saved = localStorage.getItem(STORAGE_KEYS.theme) as Theme | null;
+  let saved: Theme | null = null;
+  try {
+    saved = localStorage.getItem(STORAGE_KEYS.theme) as Theme | null;
+  } catch {
+    // Fall through to the system preference.
+  }
 
   if (saved && (saved === 'light' || saved === 'dark')) {
     return saved;
@@ -93,7 +102,13 @@ export function initTheme(): void {
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
   mediaQuery.addEventListener('change', (e) => {
     // Only auto-switch if user hasn't set a preference
-    if (!localStorage.getItem(STORAGE_KEYS.theme)) {
+    let hasSavedTheme = false;
+    try {
+      hasSavedTheme = Boolean(localStorage.getItem(STORAGE_KEYS.theme));
+    } catch {
+      // Keep following the system theme when persistence is unavailable.
+    }
+    if (!hasSavedTheme) {
       setTheme(e.matches ? 'dark' : 'light');
     }
   });

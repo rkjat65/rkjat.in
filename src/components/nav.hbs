@@ -1,21 +1,10 @@
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="logo"><span>RK</span>Jat</a>
-
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="/" aria-label="Radhakishan Jat, home"><span class="brand-monogram" aria-hidden="true">rk.</span><span>Radhakishan Jat</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">☰</span></button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="/"{{#if isHome}} class="active" aria-current="page"{{/if}}>Home</a></li>
-      <li><a href="/portfolio/"{{#if isPortfolio}} class="active" aria-current="page"{{/if}}>My Work</a></li>
-      <!-- <li><a href="/blog/"{{#if isBlog}} class="active" aria-current="page"{{/if}}>Blogs</a></li> -->
-      <li><a href="/about.html"{{#if isAbout}} class="active" aria-current="page"{{/if}}>About</a></li>
-      <li><a href="/contact.html"{{#if isContact}} class="active" aria-current="page"{{/if}}>Contact</a></li>
-      <li><a href="/portfolio/gyangram.html"{{#if isGyanGram}} class="active" aria-current="page"{{/if}}>GyanGram</a></li>
-      <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button></li>
+      <li><a href="/">Home</a></li><li><a href="/platforms/">Platforms</a></li><li><a href="/gallery.html">Visual stories</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li>
     </ul>
-  </div>
-</nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">Theme</button>
+  </nav>
+</header>

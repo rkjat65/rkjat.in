@@ -1,0 +1,75 @@
+[
+  {
+    "id": "gyangram", "name": "GyanGram", "category": "Learning", "label": "Visual UPSC learning", "path": "/platforms/gyangram.html", "url": "https://gyangram.com/", "action": "Explore GyanGram", "image": "/images/platforms/gyangram.webp", "alt": "The current GyanGram homepage with visual semiconductor learning decks", "imageClass": "",
+    "description": "Visual lessons, daily current affairs, syllabus paths, and authentic previous-year questions for UPSC preparation.",
+    "intro": "GyanGram connects an idea to its context and then to exam practice. Visual topic decks provide a clear starting point, with articles, syllabus paths, and previous-year questions for deeper study.",
+    "tags": ["Visual lessons", "Current affairs", "PYQ practice"],
+    "features": [
+      {"title":"See the concept", "text":"Explore visual decks that break a topic into connected lessons, from geography and polity to economics and science."},
+      {"title":"Connect it to the syllabus", "text":"Follow subject paths and companion articles to understand where a topic fits in UPSC preparation."},
+      {"title":"Practice and return", "text":"Study authentic previous-year questions and save useful lessons for a focused revision queue."}
+    ],
+    "sections": [{"title":"A connected learning space", "text":"Built for aspirants who need context as well as coverage, GyanGram brings concepts, daily current affairs, and exam practice into one learning experience. It is available on the web, Android, and iOS."}],
+    "links": [{"label":"Open the web app", "url":"https://app.gyangram.com/"},{"label":"Read current affairs", "url":"https://gyangram.com/current-affairs"},{"label":"Explore PYQ Lab", "url":"https://gyangram.com/pyq"}],
+    "note":"GyanGram is freemium. Some features may require payment on supported platforms. Platform overview refreshed in September 2026."
+  },
+  {
+    "id":"crickrida", "name":"Crickrida", "category":"Cricket", "label":"IPL analytics", "path":"/platforms/crickrida.html", "url":"https://crickrida.rkjat.in/dashboard", "action":"Open IPL dashboard", "image":"/images/platforms/crickrida.webp", "alt":"Crickrida's current IPL dashboard with season filters, records, and team charts", "imageClass":"",
+    "description":"Explore IPL seasons, batting and bowling leaders, team rivalries, player impact, venues, and match records.",
+    "intro":"Crickrida is a dedicated IPL analytics platform. Start with a season overview, compare performance across years, then move into player, team, venue, and match-level detail.",
+    "tags":["IPL seasons", "Player & team stats", "Match analysis"],
+    "features":[{"title":"Choose the seasons", "text":"Explore individual seasons through 2026, recent three-, five-, or ten-season windows, or a custom range."},{"title":"Compare performance", "text":"Sort batting and bowling leaderboards by runs, wickets, averages, strike rates, economy, and other measures."},{"title":"Follow the detail", "text":"Move between matches, teams, head-to-head comparisons, player impact, venues, and season views."}],
+    "sections":[{"title":"From overview to exploration", "text":"The current dashboard combines headline statistics with record tables, team wins, title winners, and recent matches. Its navigation also includes Insights, Ask AI, Studio, and Pulse."}],
+    "links":[{"label":"Batting leaders", "url":"https://crickrida.rkjat.in/batting"},{"label":"Bowling leaders", "url":"https://crickrida.rkjat.in/bowling"},{"label":"Team comparisons", "url":"https://crickrida.rkjat.in/h2h"}],
+    "note":"Some analytics, player profiles, and match details require sign-in. Preview captured from the current dashboard in September 2026; figures change as its data is updated."
+  },
+  {
+    "id":"cricket-wicket", "name":"Cricket Wicket", "category":"Cricket", "label":"International cricket", "path":"/platforms/cricket-wicket.html", "url":"https://cricket.rkjat.in/", "action":"Explore Cricket Wicket", "image":"/images/platforms/cricket-wicket.webp", "alt":"Cricket stumps and a red ball under stadium floodlights", "imageClass":"cricket-art",
+    "description":"International careers, player comparisons, scorecards, and visual analysis across men's and women's Tests, ODIs, and T20Is.",
+    "intro":"Cricket Wicket makes the international game easier to explore through records and visual explanations. Compare careers, follow qualified leaderboards, and read the patterns inside a scorecard.",
+    "tags":["Tests · ODIs · T20Is", "Men & women", "Career records"],
+    "features":[{"title":"Compare careers", "text":"Explore player profiles and compare international careers within a format."},{"title":"Read a match visually", "text":"Follow scoring through worm charts, over-by-over Manhattans, partnerships, and bowling spells where recorded data is available."},{"title":"Explore the archives", "text":"Discover World Cups, team rivalries, venues, milestones, and the performances behind the records."}],
+    "sections":[{"title":"Coverage you can understand", "text":"The platform distinguishes career records, scorecards, and ball-by-ball availability. Historical result-only matches are labeled so that missing detail is visible."}],
+    "links":[], "note":"International cricket is covered here; IPL analysis lives on Crickrida."
+  },
+  {
+    "id":"signals-systems", "name":"Signals & Systems", "category":"Writing", "label":"Independent publication", "path":"/platforms/signals-systems.html", "url":"https://rkjat65.substack.com/", "action":"Read on Substack", "image":"/images/platforms/signals-systems.webp", "alt":"Signals & Systems publication artwork showing a connected world map", "imageClass":"publication-art",
+    "description":"Essays on geopolitics, trade, technology, and the systems shaping global power. Published on Substack.",
+    "intro":"Signals & Systems is where I write about the forces behind the headlines: incentives, dependencies, institutions, and the way they shape decisions across countries and industries.",
+    "tags":["Geopolitics", "Trade", "Technology"],
+    "features":[{"title":"Global power", "text":"Explore the relationships between geography, state capacity, trade routes, and strategic choices."},{"title":"Technology in context", "text":"Think through the institutions, coordination problems, and economic incentives around emerging technologies."},{"title":"Connected arguments", "text":"Read essays and shorter notes that connect individual developments to wider systems."}],
+    "sections":[{"title":"A place for longer thinking", "text":"The publication brings together my interests in policy, economics, and technology. Read the archive or subscribe directly on Substack."}], "links":[], "note":"Published independently by Radhakishan Jat."
+  },
+  {
+    "id":"fiscal-federalism", "name":"India's Fiscal Federalism", "category":"Public data", "label":"Centre–state finances", "path":"/platforms/fiscal-federalism.html", "url":"/portfolio/tax-devolution/index.html", "action":"Explore fiscal flows", "image":"/images/platforms/fiscal-federalism.webp", "alt":"India's Fiscal Federalism dashboard preview", "imageClass":"",
+    "description":"Explore centre–state financial flows, tax devolution, grants, and per-capita comparisons across Indian states.",
+    "intro":"An interactive platform for understanding how public money moves between the Union and the states, with views that make an intricate fiscal system easier to compare.",
+    "tags":["Tax devolution", "28 states", "Policy research"],
+    "features":[{"title":"Follow the flows", "text":"Explore tax devolution and grants across 28 states for FY 2020–21 to FY 2024–25."},{"title":"Compare fairly", "text":"View both absolute transfers and per-capita measures to see how population changes the comparison."},{"title":"Look across years", "text":"Use the five-year view to understand direction and variation beyond a single budget."}],
+    "sections":[{"title":"Public data, policy context", "text":"The analysis draws on Finance Commission and Union Budget documents. Its focus is the relationship between contributions, transfers, and the equity questions behind the allocation formula."}], "links":[], "note":"This is a historical analysis for FY 2020–21 to FY 2024–25, not a live budget feed."
+  },
+  {
+    "id":"healthcare", "name":"Indian Healthcare", "category":"Public data", "label":"Health & regional disparities", "path":"/platforms/healthcare.html", "url":"/portfolio/indian-healthcare-analysis/index.html", "action":"Explore healthcare analysis", "image":"/images/platforms/healthcare.webp", "alt":"Indian healthcare analysis dashboard with regional comparisons", "imageClass":"",
+    "description":"Explore differences in healthcare access, infrastructure, outcomes, and financial protection across India.",
+    "intro":"National averages can hide very different health experiences. This analysis compares regions through multiple measures, connecting service delivery to outcomes and household costs.",
+    "tags":["NFHS-5", "Regional comparisons", "Health policy"],
+    "features":[{"title":"Access and infrastructure", "text":"Compare the inputs that make healthcare accessible, including facilities and service availability."},{"title":"Outcomes and utilisation", "text":"Consider health outcomes alongside whether people are able to use services."},{"title":"Financial protection", "text":"Read household financial burden as part of healthcare access, rather than treating infrastructure alone as success."}],
+    "sections":[{"title":"A multidimensional view", "text":"The research uses public datasets including NFHS-5, National Health Profile, and National Health Mission reports. Its purpose is to reveal regional patterns, not to collapse every health system into one ranking."}], "links":[], "note":"Historical public-health analysis. Refer to the underlying dataset periods when interpreting comparisons."
+  },
+  {
+    "id":"t20-india", "name":"India's T20 World Cup", "category":"Cricket", "label":"Tournament analytics", "path":"/platforms/t20-india.html", "url":"https://datacric.netlify.app/", "action":"Explore tournament dashboard", "image":"/images/platforms/t20-india.webp", "alt":"India T20 World Cup tournament analytics dashboard", "imageClass":"",
+    "description":"A dedicated dashboard for India's 2026 T20 World Cup campaign, with batting, bowling, and match-by-match views.",
+    "intro":"A focused tournament view of India's performances, built to move between the overall campaign and the individual matches and players behind it.",
+    "tags":["T20 World Cup", "India", "Tournament analysis"],
+    "features":[{"title":"Follow the campaign", "text":"Explore a match-by-match view of India's tournament performances."},{"title":"Compare contributions", "text":"Read batting and bowling contributions in the context of the whole campaign."},{"title":"Explore match phases", "text":"Use visual breakdowns to examine how different stages of an innings shaped results."}],
+    "sections":[{"title":"One tournament, in detail", "text":"This dedicated tournament dashboard complements the wider international archive on Cricket Wicket and the IPL analysis on Crickrida."}], "links":[], "note":"A tournament-specific analysis of the 2026 campaign."
+  },
+  {
+    "id":"legislature", "name":"Indian Legislature", "category":"Public data", "label":"Election & candidate data", "path":"/platforms/legislature.html", "url":"/portfolio/indian-legislature-analysis/index.html", "action":"Explore election analysis", "image":"/images/platforms/legislature.webp", "alt":"Indian Legislature analysis preview with election data charts", "imageClass":"",
+    "description":"Explore the 2024 Lok Sabha candidate landscape through party representation, education, declared assets, and criminal-case declarations.",
+    "intro":"An interactive view of public candidate data from the 2024 Lok Sabha election, designed to make patterns across parties and candidates easier to inspect.",
+    "tags":["Lok Sabha 2024", "Candidate data", "Public records"],
+    "features":[{"title":"Party representation", "text":"Explore the candidate landscape and the distribution of representation across political parties."},{"title":"Education and assets", "text":"Compare declared qualifications and assets through visual summaries."},{"title":"Read declarations carefully", "text":"Explore criminal-case declarations as reported data. A declared case is not a finding of guilt."}],
+    "sections":[{"title":"Explore, then inspect", "text":"The platform brings together charts and an interactive dashboard so that broad patterns can be followed into more detailed comparisons."}], "links":[], "note":"Historical analysis of the 2024 Lok Sabha election. Declarations reflect the source records for that election."
+  }
+]

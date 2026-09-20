@@ -64,6 +64,19 @@ describe('Theme Module', () => {
   });
 
   describe('initTheme', () => {
+    it('still initializes when storage access is blocked', () => {
+      vi.mocked(localStorage.getItem).mockImplementation(() => { throw new Error('Storage blocked'); });
+      document.body.innerHTML = '<button id="theme-toggle">Theme</button>';
+      expect(() => initTheme()).not.toThrow();
+      expect(document.querySelector('#theme-toggle')?.textContent).toMatch(/Light|Dark/);
+    });
+
+    it('still changes theme when storage writes are blocked', () => {
+      vi.mocked(localStorage.setItem).mockImplementation(() => { throw new Error('Storage blocked'); });
+      expect(() => setTheme('dark')).not.toThrow();
+      expect(getCurrentTheme()).toBe('dark');
+    });
+
     it('should use stored theme if available', () => {
       vi.mocked(localStorage.getItem).mockReturnValue('dark');
       initTheme();

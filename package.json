@@ -1,11 +1,11 @@
 {
-  "name": "rkjat-portfolio",
+  "name": "rkjat-personal-site",
   "private": true,
   "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/finalize-site.mjs && node scripts/check-site.mjs",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -16,7 +16,8 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css,html}\"",
     "typecheck": "tsc --noEmit",
     "optimize:images": "node scripts/optimize-images.js",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "check:site": "node scripts/check-site.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0",

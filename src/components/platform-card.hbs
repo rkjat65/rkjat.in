@@ -1,0 +1,11 @@
+<article class="platform-card" data-category="{{category}}" data-name="{{name}}">
+  <a href="{{path}}" class="platform-preview {{imageClass}}" tabindex="-1" aria-hidden="true">
+    <img src="{{image}}" srcset="/images/platforms/{{id}}-640.webp 640w, {{image}} 1200w" sizes="(max-width: 620px) calc(100vw - 40px), (max-width: 1000px) 46vw, 380px" alt="" width="1200" height="675" loading="lazy" decoding="async">
+    {{#if cricketArt}}<span class="preview-wordmark">CRICKET<br>WICKET<span>.</span></span>{{/if}}
+  </a>
+  <div class="platform-body">
+    <p class="eyebrow card-label">{{label}}</p><h3><a href="{{path}}">{{name}}</a></h3><p class="platform-description">{{description}}</p>
+    <ul class="tags" aria-label="Topics">{{#each tags}}<li>{{this}}</li>{{/each}}</ul>
+    <div class="card-actions"><a href="{{url}}" {{#if external}}target="_blank" rel="noopener noreferrer"{{/if}}>{{action}} <span aria-hidden="true">{{#if external}}↗{{else}}→{{/if}}</span>{{#if external}}<span class="sr-only"> (opens in a new tab)</span>{{/if}}</a><a href="{{path}}" aria-label="About {{name}}">About <span aria-hidden="true">→</span></a></div>
+  </div>
+</article>

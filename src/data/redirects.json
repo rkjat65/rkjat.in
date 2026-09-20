@@ -1,0 +1,13 @@
+{
+  "/portfolio/": "/platforms/",
+  "/projects/": "/platforms/",
+  "/portfolio/gyangram.html": "/platforms/gyangram.html",
+  "/portfolio/ipl-analytics.html": "/platforms/crickrida.html",
+  "/portfolio/crickrida-showcase.html": "/platforms/crickrida.html",
+  "/portfolio/economic-pulse.html": "/platforms/",
+  "/portfolio/india-economic-pulse.html": "/platforms/",
+  "/portfolio/fiscal-federalism.html": "/platforms/fiscal-federalism.html",
+  "/portfolio/healthcare.html": "/platforms/healthcare.html",
+  "/portfolio/t20-cricket-india.html": "/platforms/t20-india.html",
+  "/blog/": "/platforms/signals-systems.html"
+}

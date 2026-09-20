@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "image": "/images/visuals/story-1.webp",
+    "original": "/images/gallery/most6.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Cricket",
+    "title": "Rohit Sharma and six-hitting records"
+  },
+  {
+    "id": 2,
+    "image": "/images/visuals/story-2.webp",
+    "original": "/images/gallery/MostMoM.jpg",
+    "width": 512,
+    "height": 512,
+    "category": "Cricket",
+    "title": "Sachin Tendulkar and match awards"
+  },
+  {
+    "id": 3,
+    "image": "/images/visuals/story-3.webp",
+    "original": "/images/gallery/T201K.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Cricket",
+    "title": "Virat Kohli and T20I milestones"
+  },
+  {
+    "id": 4,
+    "image": "/images/visuals/story-4.webp",
+    "original": "/images/gallery/ODI2025.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Cricket",
+    "title": "India at the 2025 Champions Trophy"
+  },
+  {
+    "id": 5,
+    "image": "/images/visuals/story-5.webp",
+    "original": "/images/gallery/odichase.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Cricket",
+    "title": "MS Dhoni and Virat Kohli: ODI chases"
+  },
+  {
+    "id": 6,
+    "image": "/images/visuals/story-6.webp",
+    "original": "/images/gallery/teslacar.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Economics",
+    "title": "Tesla and the Indian market"
+  },
+  {
+    "id": 7,
+    "image": "/images/visuals/story-7.webp",
+    "original": "/images/gallery/currency.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Economics",
+    "title": "Currency movements in context"
+  },
+  {
+    "id": 8,
+    "image": "/images/visuals/story-8.webp",
+    "original": "/images/gallery/TaxG.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Economics",
+    "title": "India’s tax contributors"
+  },
+  {
+    "id": 9,
+    "image": "/images/visuals/story-9.webp",
+    "original": "/images/gallery/TaxR.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Economics",
+    "title": "Tax transfers across Indian states"
+  },
+  {
+    "id": 10,
+    "image": "/images/visuals/story-10.webp",
+    "original": "/images/gallery/inr.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Economics",
+    "title": "The rupee and the dollar"
+  },
+  {
+    "id": 11,
+    "image": "/images/visuals/story-11.webp",
+    "original": "/images/gallery/AIindex.jpg",
+    "width": 640,
+    "height": 349,
+    "category": "Technology",
+    "title": "Comparing AI readiness"
+  },
+  {
+    "id": 12,
+    "image": "/images/visuals/story-12.webp",
+    "original": "/images/gallery/15thFC.jpg",
+    "width": 640,
+    "height": 640,
+    "category": "Economics",
+    "title": "The 15th Finance Commission"
+  }
+]
