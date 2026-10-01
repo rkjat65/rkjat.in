@@ -7,7 +7,6 @@ import visuals from './src/data/visuals.json';
 const platforms = catalog.map((item) => ({
   ...item,
   external: item.url.startsWith('https://'),
-  cricketArt: item.id === 'cricket-wicket',
   features: item.features.map((feature, index) => ({ ...feature, number: index + 1 })),
 }));
 const pages = ['index.html', 'about.html', 'contact.html', 'gallery.html', '404.html', 'platforms/index.html', ...catalog.map((item) => item.path.slice(1))];

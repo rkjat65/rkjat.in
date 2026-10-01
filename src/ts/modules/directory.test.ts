@@ -6,9 +6,9 @@ describe('Platform directory enhancement', () => {
     document.body.innerHTML = `<section data-directory>
       <div class="directory-tools" hidden><button data-filter="All">All</button><button data-filter="Cricket">Cricket</button><input type="search"></div>
       <p class="results-count" aria-live="polite"></p>
-      <article class="platform-card" data-category="Cricket">Crickrida IPL analytics</article>
-      <article class="platform-card" data-category="Cricket">Cricket Wicket international</article>
+      <article class="platform-card" data-category="Cricket">Crickrida international cricket and IPL analytics</article>
       <article class="platform-card" data-category="Learning">GyanGram UPSC</article>
+      <article class="platform-card" data-category="Writing">Signals & Systems</article>
       <div class="empty-state" hidden><button data-reset>Clear filters</button></div>
     </section>`;
   });
@@ -23,15 +23,15 @@ describe('Platform directory enhancement', () => {
     initDirectory();
     const filter = document.querySelector<HTMLButtonElement>('[data-filter="Cricket"]')!;
     filter.click();
-    expect(visibleCards()).toHaveLength(2);
+    expect(visibleCards()).toHaveLength(1);
     expect(filter.getAttribute('aria-pressed')).toBe('true');
     const input = document.querySelector('input')!;
     input.value = 'cricket';
     input.dispatchEvent(new Event('input'));
-    expect(visibleCards()).toHaveLength(2);
+    expect(visibleCards()).toHaveLength(1);
     input.value = '  IPL  ';
     input.dispatchEvent(new Event('input'));
-    expect(visibleCards().map((item) => item.textContent)).toEqual(['Crickrida IPL analytics']);
+    expect(visibleCards().map((item) => item.textContent)).toEqual(['Crickrida international cricket and IPL analytics']);
     expect(document.querySelector('.results-count')?.textContent).toBe('1 of 3 platforms and publications');
   });
   it('recovers from no results and returns focus to search', () => {

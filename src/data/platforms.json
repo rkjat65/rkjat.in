@@ -14,23 +14,14 @@
     "note":"GyanGram is freemium. Some features may require payment on supported platforms. Platform overview refreshed in September 2026."
   },
   {
-    "id":"crickrida", "name":"Crickrida", "category":"Cricket", "label":"IPL analytics", "path":"/platforms/crickrida.html", "url":"https://crickrida.rkjat.in/dashboard", "action":"Open IPL dashboard", "image":"/images/platforms/crickrida.webp", "alt":"Crickrida's current IPL dashboard with season filters, records, and team charts", "imageClass":"",
-    "description":"Explore IPL seasons, batting and bowling leaders, team rivalries, player impact, venues, and match records.",
-    "intro":"Crickrida is a dedicated IPL analytics platform. Start with a season overview, compare performance across years, then move into player, team, venue, and match-level detail.",
-    "tags":["IPL seasons", "Player & team stats", "Match analysis"],
-    "features":[{"title":"Choose the seasons", "text":"Explore individual seasons through 2026, recent three-, five-, or ten-season windows, or a custom range."},{"title":"Compare performance", "text":"Sort batting and bowling leaderboards by runs, wickets, averages, strike rates, economy, and other measures."},{"title":"Follow the detail", "text":"Move between matches, teams, head-to-head comparisons, player impact, venues, and season views."}],
-    "sections":[{"title":"From overview to exploration", "text":"The current dashboard combines headline statistics with record tables, team wins, title winners, and recent matches. Its navigation also includes Insights, Ask AI, Studio, and Pulse."}],
-    "links":[{"label":"Batting leaders", "url":"https://crickrida.rkjat.in/batting"},{"label":"Bowling leaders", "url":"https://crickrida.rkjat.in/bowling"},{"label":"Team comparisons", "url":"https://crickrida.rkjat.in/h2h"}],
-    "note":"Some analytics, player profiles, and match details require sign-in. Preview captured from the current dashboard in September 2026; figures change as its data is updated."
-  },
-  {
-    "id":"cricket-wicket", "name":"Cricket Wicket", "category":"Cricket", "label":"International cricket", "path":"/platforms/cricket-wicket.html", "url":"https://cricket.rkjat.in/", "action":"Explore Cricket Wicket", "image":"/images/platforms/cricket-wicket.webp", "alt":"Cricket stumps and a red ball under stadium floodlights", "imageClass":"cricket-art",
-    "description":"International careers, player comparisons, scorecards, and visual analysis across men's and women's Tests, ODIs, and T20Is.",
-    "intro":"Cricket Wicket makes the international game easier to explore through records and visual explanations. Compare careers, follow qualified leaderboards, and read the patterns inside a scorecard.",
-    "tags":["Tests · ODIs · T20Is", "Men & women", "Career records"],
-    "features":[{"title":"Compare careers", "text":"Explore player profiles and compare international careers within a format."},{"title":"Read a match visually", "text":"Follow scoring through worm charts, over-by-over Manhattans, partnerships, and bowling spells where recorded data is available."},{"title":"Explore the archives", "text":"Discover World Cups, team rivalries, venues, milestones, and the performances behind the records."}],
-    "sections":[{"title":"Coverage you can understand", "text":"The platform distinguishes career records, scorecards, and ball-by-ball availability. Historical result-only matches are labeled so that missing detail is visible."}],
-    "links":[], "note":"International cricket is covered here; IPL analysis lives on Crickrida."
+    "id":"crickrida", "name":"Crickrida", "category":"Cricket", "label":"International cricket & IPL", "path":"/platforms/crickrida.html", "url":"https://crickrida.com/", "action":"Explore Crickrida", "image":"/images/platforms/crickrida.webp", "alt":"Crickrida's official artwork for international cricket records, profiles, and analysis, with IPL and T20 World Cup coverage", "imageClass":"",
+    "description":"Explore international cricket records, player profiles and scorecards alongside IPL and T20 World Cup analytics in one platform.",
+    "intro":"Crickrida brings international cricket and IPL analytics together at crickrida.com. Explore careers, records and scorecards across men's and women's Tests, ODIs and T20Is, then follow dedicated IPL and T20 World Cup dashboards.",
+    "tags":["International cricket", "IPL analytics", "Scorecards"],
+    "features":[{"title":"Explore international cricket", "text":"Browse player profiles, career records, match scorecards and comparisons across men's and women's Tests, ODIs and T20Is."},{"title":"Dive into the IPL", "text":"Use the IPL dashboard to explore seasons, batting and bowling leaders, teams, venues and match-level analysis."},{"title":"Follow the tournaments", "text":"Move from the international archive into dedicated IPL and T20 World Cup analysis, all within the same cricket platform."}],
+    "sections":[{"title":"One home for the game", "text":"The international archive and IPL dashboard now share the Crickrida name and domain. Career totals, scorecards and ball-by-ball views have different data coverage; the site makes those boundaries visible where detail is unavailable."}],
+    "links":[{"label":"International records", "url":"https://crickrida.com/records/"},{"label":"Player profiles", "url":"https://crickrida.com/players/"},{"label":"IPL dashboard", "url":"https://crickrida.com/ipl/dashboard"}],
+    "note":"Crickrida is the combined platform at crickrida.com. Statistics and available match detail change as its data is updated."
   },
   {
     "id":"signals-systems", "name":"Signals & Systems", "category":"Writing", "label":"Independent publication", "path":"/platforms/signals-systems.html", "url":"https://rkjat65.substack.com/", "action":"Read on Substack", "image":"/images/platforms/signals-systems.webp", "alt":"Signals & Systems publication artwork showing a connected world map", "imageClass":"publication-art",
@@ -62,7 +53,7 @@
     "intro":"A focused tournament view of India's performances, built to move between the overall campaign and the individual matches and players behind it.",
     "tags":["T20 World Cup", "India", "Tournament analysis"],
     "features":[{"title":"Follow the campaign", "text":"Explore a match-by-match view of India's tournament performances."},{"title":"Compare contributions", "text":"Read batting and bowling contributions in the context of the whole campaign."},{"title":"Explore match phases", "text":"Use visual breakdowns to examine how different stages of an innings shaped results."}],
-    "sections":[{"title":"One tournament, in detail", "text":"This dedicated tournament dashboard complements the wider international archive on Cricket Wicket and the IPL analysis on Crickrida."}], "links":[], "note":"A tournament-specific analysis of the 2026 campaign."
+    "sections":[{"title":"One tournament, in detail", "text":"This dedicated tournament dashboard complements the broader international and IPL coverage on Crickrida."}], "links":[], "note":"A tournament-specific analysis of the 2026 campaign."
   },
   {
     "id":"legislature", "name":"Indian Legislature", "category":"Public data", "label":"Election & candidate data", "path":"/platforms/legislature.html", "url":"/portfolio/indian-legislature-analysis/index.html", "action":"Explore election analysis", "image":"/images/platforms/legislature.webp", "alt":"Indian Legislature analysis preview with election data charts", "imageClass":"",

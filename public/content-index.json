@@ -17,17 +17,17 @@
     },
 
     {
-      "id": "IPL Analytics",
-      "title": "IPL Complete Analytics Dashboard",
-      "description": "Comprehensive analysis of IPL data including player performance, team statistics, and match insights",
-      "date": "2026-03-27",
+      "id": "crickrida",
+      "title": "Crickrida",
+      "description": "One cricket platform for international records, player profiles and scorecards, plus IPL and T20 World Cup analytics.",
+      "date": "2026-10-01",
       "tags": [
-        "FastAPI",
-        "DuckDB",
-        "Tailwing"
+        "International cricket",
+        "IPL",
+        "Cricket analytics"
       ],
-      "image": "/portfolio/ipl.png",
-      "link": "/portfolio/ipl-analytics.html",
+      "image": "/images/platforms/crickrida.webp",
+      "link": "https://crickrida.com/",
       "featured": true
     },
     {
